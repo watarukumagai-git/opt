@@ -29,7 +29,6 @@ MathJax.Hub.Config({
 - 引用数：0？（8644 Accesses、2022年2月24日時点）
 - キーワード：計算機、*de novo*タンパク質設計、分子設計
 
-<img src="https://github.com/watarukumagai-git/denovo/blob/main/survey/survey_20220301_kumagai/images/shot1.jpg?raw=true" width="90%">
 
 
 ## Abstruct
@@ -86,6 +85,10 @@ SCUBAを用いた構造設計は、既存のタンパク質構造の断片を使
 
 
 ## 翻訳
+
+<img src="https://images.readcube-cdn.com/publishers/nature/figures/0c5501f655eed52f69af6d3e4d69002b15740740d00f404328bbc5e25d8403b5/1.jpg" width="90%">
+Fig. 1: Template-free protein design facilitated by explicit representation of the backbone-centred energy landscape.
+
 1章　はじめに
 計算機によるタンパク質設計は大きな可能性を秘めており、新しい構造と機能を持つde novoタンパク質の設計を実証する画期的な研究6-13があり、そのほとんどは最先端のRosettaDesign法を用いて実施された6,13,14。
 新しいバックボーンは、既存の構造モジュール（またはテンプレート）間の相対的な形状をパラメトリックに変化させ、ヘリックスバンドル11,15,16や繰り返しタンパク質17を設計するか、既存の構造からペプチドフラグメントを組み立てることで構築された6,8。
@@ -107,8 +110,6 @@ NC-NNは統計的ポテンシャルの構築における主な技術的課題を
 我々は、それぞれ独自に設計された配列と構造を持つ9つのde novoタンパク質のX線構造を報告する。
 
 
-Fig. 1 | Template-free protein design facilitated by explicit representation 
-of the backbone-centred energy landscape.
 
 
 2章　Building statistical potentials with NC-NN
@@ -146,9 +147,6 @@ SCUBAは、バックボーンを中心としたエネルギーランドスケー
 最終的に決定されたエネルギー重みをシミュレーションに使用した場合、中央値 主鎖の二乗平均平方根偏差（r.m.s.d.）が自然界と異なる。
 構造は、ネイティブの側鎖を使用した場合1.60Å、2.78Åでした。LVGで簡略化された側鎖（後述）を使用した場合（Extended Data Fig. 2b; 全体的な構造のコンパクトさを抑制した場合 シミュレーションの結果、r.m.s.d.の中央値は、Native 配列、LVG配列を用いた場合は2.23Å)。
 
-Fig. 2 | The de novo protein EXTD-3 integrates pre-existing and newly 
-designed parts to form a single rigid architecture not yet observed in 
-nature. a
 
 4章　Template-free protein design using SCUBA
 バックボーン生成にSCUBA、配列選択にABACUS2（文献28）を用いたde novoタンパク質設計ワークフローを考案した。
@@ -185,8 +183,11 @@ SCUBA駆動型SSDでは、拡張データ図4と図5aの構造を見るとわか
 この問題を解決するために、ループの再サンプリングと最適化のステップ（SCUBA-driven SDも使用）を追加して、バックボーン最適化プロトコルを改良しました（Supplementary Methods）。
 2本らせん/4本鎖（H2E4）スケッチ（拡張データ図5a）に適用したところ、改良されたプロトコルはループ領域のエネルギーを大幅に改善し（拡張データ図6a）、Rosettaバイアス順折りたたみ10、15を用いた場合の最終配列の計算による折りたたみの成功率を改善しました（拡張データ図6b、c）。
 
-Fig. 3 | Successfully designed two-layered α/β proteins and
-four-helix bundle proteins
+<img src="https://images.readcube-cdn.com/publishers/nature/figures/0c5501f655eed52f69af6d3e4d69002b15740740d00f404328bbc5e25d8403b5/2.jpg" width="90%">
+Fig. 2: The de novo protein EXTD-3 integrates pre-existing and newly designed parts to form a single rigid architecture not yet observed in  nature.
+
+<img src="https://images.readcube-cdn.com/publishers/nature/figures/0c5501f655eed52f69af6d3e4d69002b15740740d00f404328bbc5e25d8403b5/3.jpg" width="90%">
+Fig. 3: Successfully designed two-layered α/β proteins and four-helix bundle proteins.
 
 
 5章　Verifying designs of given architecture
@@ -217,7 +218,8 @@ SCUBAで設計したバックボーンは、X線構造と設計構造の間で�
 これらの結果から、SCUBA+ABACUS2は、最先端のRosettaDesign法6,14と並んで、de novoタンパク質設計に有用な方法であることが示唆された。
 
 
-Fig. 4 | Structures of successfully designed de novo proteins that fold into novel architectures
+<img src="https://images.readcube-cdn.com/publishers/nature/figures/0c5501f655eed52f69af6d3e4d69002b15740740d00f404328bbc5e25d8403b5/4.jpg" width="90%">
+Fig. 4: Structures of successfully designed de novo proteins that fold into novel architectures.
 
 6章　Verifying designs of novel architecture
 実験的に調べた3番目のタンパク質は、計算によって見出された新しい構造を持っていた（Extended Data 図9）。
