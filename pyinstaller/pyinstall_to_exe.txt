@@ -1,0 +1,24 @@
+cd <dir>
+# add variables proxy and trust-host to C:\Users\30029875\AppData\Roaming\pip\pip.ini
+pipenv --python 3.9
+pipenv shell
+pipenv install pyinstaller pandas
+pyinstaller test.py --onefile --clean
+pyinstaller test.py --onefile --clean --exclude numpy --exclude pandas --exclude youtube-dl --exclude pymol --exclude pymol-launcher --exclude jupyterlab --exclude matplotlib --exclude notebook --exclude scikit-learn --exclude scipy
+
+# exe for preprocessing
+cd C:\Users\30029875\Desktop\python_src\PredictTool\forpyinstaller\Preprocessing
+pipenv --python 3.9
+pipenv shell
+pipenv install pyinstaller pandas scikit-learn
+pyinstaller preprocessing.py --onefile --clean
+
+# exe for predict
+cd C:\Users\30029875\Desktop\python_src\PredictTool\forpyinstaller\Predict
+pipenv --python 3.9
+pipenv shell
+pipenv install pyinstaller pandas scikit-learn matplotlib
+pyinstaller predict.py --onefile --clean
+# ModuleNotFoundError: No module named ** to hidden-import in predict.spec
+# ['sklearn.utils._typedefs','sklearn.utils._heap', 'sklearn.utils._sorting']
+pyinstaller predict.spec
