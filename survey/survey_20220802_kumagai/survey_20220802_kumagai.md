@@ -103,6 +103,8 @@ CBMに疎水性残基や正電荷残基を付加する変異はセルロース�
     - P30DとV27Eは、試験した変異体の中で最も大きなセルロース選択性を有していた。
 - このため、CBMをD（アスパラギン酸ASP）やE（グルタミン酸GLU）の変異でスキャンすることは、より高いセルロース選択性を持つ変異体を見つけるための有益な戦略であろう。
 
+<img src="https://images.readcube-cdn.com/publishers/wiley/figures/13004c04fdef7d664942a9c2ef6c82344de53d3f069e6126a25dc833437caa68/1.jpg?raw=true" width="100%">
+
 
 <img src="https://github.com/watarukumagai-git/denovo/blob/main/survey/survey_20220301_kumagai/images/fig1ab.jpg?raw=true" width="100%">
 
@@ -134,7 +136,7 @@ Fig. 1a,b,c: 主鎖エネルギーランドスケープの明示的表現によ�
 - 我々の最も優れたリンカー変異体は、正電荷を除去すると同時に、予測されるグリコシル化部位を追加した。
 - これらの変異がリグニン結合を減少させるメカニズムを解明するために、さらなる実験が必要である。
 
-<img src="https://github.com/watarukumagai-git/denovo/blob/main/survey/survey_20220301_kumagai/images/fig1ab.jpg?raw=true" width="100%">
+<img src="https://images.readcube-cdn.com/publishers/wiley/figures/13004c04fdef7d664942a9c2ef6c82344de53d3f069e6126a25dc833437caa68/2.jpg?raw=true" width="100%">
 
 Fig. 2a,b,c: 主鎖エネルギーランドスケープの明示的表現によって促進されるテンプレートフリータンパク質設計
 
@@ -172,7 +174,7 @@ Fig. 2a,b,c: 主鎖エネルギーランドスケープの明示的表現によ�
 - しかし、Trで正電荷を除去し、グリコシル化を増加させるようにデザインされたリンカー変異の限られたセットを発現し、スクリーニングすることにより、改良された変異体が得られると考えられる。
 
 
-<img src="https://github.com/watarukumagai-git/denovo/blob/main/survey/survey_20220301_kumagai/images/fig1ab.jpg?raw=true" width="100%">
+<img src="https://images.readcube-cdn.com/publishers/wiley/figures/13004c04fdef7d664942a9c2ef6c82344de53d3f069e6126a25dc833437caa68/3.jpg?raw=true" width="100%">
 
 Fig. 3a,b,c: 主鎖エネルギーランドスケープの明示的表現によって促進されるテンプレートフリータンパク質設計
 
@@ -189,4 +191,4 @@ Fig. 3a,b,c: 主鎖エネルギーランドスケープの明示的表現によ�
 ## 参考になる文献
 - [33]: Bakerラボ, "What has de novo protein design taught us about protein folding and biophysics?," biorxiv (2020, 7)【[URL][url_refer12]】
 
-[url1]: <https://www.nature.com/articles/s41586-021-04383-5>
+[url1]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
