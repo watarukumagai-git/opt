@@ -277,7 +277,7 @@ Ståhlberg J, Stals I, Tan Z, Beckham GT.: "Glycosylated linkers in multimodular
 - [ref16]: Hamby SE, Hirst JD.: "Prediction of glycosylation sites using random forests." BMC Bioinformatics 9:500 (2008).【[URL][url_refer16]】
 
 [url1]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer1]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
+[url_refer1]: <https://pubmed.ncbi.nlm.nih.gov/21702025/>
 [url_refer2]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
 [url_refer3]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
 [url_refer4]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
