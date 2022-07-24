@@ -255,41 +255,40 @@ Fig. S1
 
 
 ### <a name="ref">refernce</a>
-- [ref1]: Rahikainen JL, Mikander S, Marjamaa K, Tamminen T, Lappas A, Viikari L, Kruus K. : "Inhibition of enzymatic hydrolysis by residual lignins from softwood study of enzyme binding and inactivation on lignin-rich surface," Biotechnol and Bioeng 108:2823–2834. (2011)【[URL][url_refer1]】
-- [ref2]: Payne CM, Knott BC, Mayes HB, Hansson H, Himmel ME, Sandgren M, Ståhlberg J, Beckham GT.: "Fungal cellulases," Chem Rev 115:1308–1448. (2015)【[URL][url_refer2]】
-- [ref3]: Boraston AB, Bolam DN, Gilbert HJ, Davies GJ.: "Carbohydrate-binding modules: Fine-tuning polysaccharide recognition," Biochem J 382:769–781. (2004)【[URL][url_refer3]】
+- [ref1]: Rahikainen JL, Mikander S, Marjamaa K, Tamminen T, Lappas A, Viikari L, Kruus K. : "Inhibition of enzymatic hydrolysis by residual lignins from softwood study of enzyme binding and inactivation on lignin-rich surface," Biotechnol and Bioeng, 108:2823–2834. (2011)【[URL][url_refer1]】
+- [ref2]: Payne CM, Knott BC, Mayes HB, Hansson H, Himmel ME, Sandgren M, Ståhlberg J, Beckham GT.: "Fungal cellulases," Chem Rev, 115:1308–1448. (2015)【[URL][url_refer2]】
+- [ref3]: Boraston AB, Bolam DN, Gilbert HJ, Davies GJ.: "Carbohydrate-binding modules: Fine-tuning polysaccharide recognition," Biochem J, 382:769–781. (2004)【[URL][url_refer3]】
 - [ref4]: Palonen H, Tjerneld F, Zacchi G, Tenkanen M.: "Adsorption of trichoderma reesei CBH I and EG II and their catalytic domains on steam pretreated softwood
- and isolated lignin," Journal Biotechnol 107:65–72. (2004)【[URL][url_refer4]】
+ and isolated lignin," Journal Biotechnol, 107:65–72. (2004)【[URL][url_refer4]】
 - [ref5]: Pfeiffer KA, Sorek H, Roche C, Strobel K, Blanch HW, Clark DS.: "Evaluating endoglucanase cel7b-lignin interaction mechanisms and kinetics using quartz crystal microgravimetry," Biotechnol Bioeng, DOI: 10.1002/bit.25657. (2015)【[URL][url_refer5]】
-- [ref6]: Rahikainen JL, Evans JD, Mikander S, Kalliola A, Puranen T, Tamminen T, Marjamaa K, Kruus K.: "Cellulase-lignin interactions-the role of carbohydrate binding module and ph in non-productive binding," Enzyme Microb Technol 53:315–321. (2013a)【[URL][url_refer6]】
-- [ref7]: Sammond DW, Yarbrough JM, Mansfield E, Bomble YJ, Hobdey SE, Decker SR, Taylor LE, Resch MG, Bozell JJ, Himmel ME, Vinzant TB, Crowley MF.: "Predicting enzyme adsorption to lignin films by calculating enzyme surface hydrophobicity," Journal Biology Chemistory 289:20960–20969. (2014)【[URL][url_refer7]】
+- [ref6]: Rahikainen JL, Evans JD, Mikander S, Kalliola A, Puranen T, Tamminen T, Marjamaa K, Kruus K.: "Cellulase-lignin interactions-the role of carbohydrate binding module and ph in non-productive binding," Enzyme Microb Technol, 53:315–321. (2013a)【[URL][url_refer6]】
+- [ref7]: Sammond DW, Yarbrough JM, Mansfield E, Bomble YJ, Hobdey SE, Decker SR, Taylor LE, Resch MG, Bozell JJ, Himmel ME, Vinzant TB, Crowley MF.: "Predicting enzyme adsorption to lignin films by calculating enzyme surface hydrophobicity," Journal Biology Chemistory, 289:20960–20969. (2014)【[URL][url_refer7]】
 - [ref8]: Nakagame S, Chandra RP, Kadla JF, Saddler JN.: "Enhancing the enzymatic hydrolysis of lignocellulosic biomass by increasing the carboxylic acid content of
- the associated lignin," Biotechnol Bioeng 108:538–548. (2011) 【[URL][url_refer8]】
-- [ref9]: Nordwald EM, Brunecky R, Himmel ME, Beckham GT, Kaar JL.: "Charge engineering of cellulases improves ionic liquid tolerance and reduces lignin inhibition," Biotechnol and Bioeng 111:1541. (2014)【[URL][url_refer9]】
-- [ref10]: Borjesson J, Engqvist M, Sipos B, Tjerneld F.: "Effect of poly(ethylene glycol) on enzymatic hydrolysis and adsorption of cellulase enzymes to pretreated lignocellulose," Enzyme Microb Technol 41:186–195. (2007)【[URL][url_refer10]】
-- [ref11]: Lou H, Zhu JY, Lan TQ, Lai H, Qiu X.: "PH-Induced lignin surface modification to reduce nonspecific cellulase binding and enhance enzymatic saccharification of lignocelluloses," ChemSusChem 6:919–927. (2013)【[URL][url_refer11]】
-- [ref12]: Yang B, Wyman CE.: "BSA treatment to enhance enzymatic hydrolysis of
-cellulose in lignin containing substrates," Biotechnol Bioeng 94:611–617. (2006)【[URL][url_refer12]】
-- [ref13]: Strobel KL, Pfeiffer KA, Blanch HW, Clark DS.: "Structural insights into the affinity of cel7a carbohydrate-binding module for lignin," J Biol Chem M115:673467.(2015)【[URL][url_refer13]】
+ the associated lignin," Biotechnol Bioeng, 108:538–548. (2011) 【[URL][url_refer8]】
+- [ref9]: Nordwald EM, Brunecky R, Himmel ME, Beckham GT, Kaar JL.: "Charge engineering of cellulases improves ionic liquid tolerance and reduces lignin inhibition," Biotechnol and Bioeng, 111:1541. (2014)【[URL][url_refer9]】
+- [ref10]: Borjesson J, Engqvist M, Sipos B, Tjerneld F.: "Effect of poly (ethylene glycol) on enzymatic hydrolysis and adsorption of cellulase enzymes to pretreated lignocellulose," Enzyme Microb Technol, 41:186–195. (2007)【[URL][url_refer10]】
+- [ref11]: Lou H, Zhu JY, Lan TQ, Lai H, Qiu X.: "PH-Induced lignin surface modification to reduce nonspecific cellulase binding and enhance enzymatic saccharification of lignocelluloses," ChemSusChem, 6:919–927. (2013)【[URL][url_refer11]】
+- [ref12]: Yang B, Wyman CE.: "BSA treatment to enhance enzymatic hydrolysis of cellulose in lignin containing substrates," Biotechnol Bioeng, 94:611–617. (2006)【[URL][url_refer12]】
+- [ref13]: Strobel KL, Pfeiffer KA, Blanch HW, Clark DS.: "Structural insights into the affinity of cel7a carbohydrate-binding module for lignin," J Biol Chem M, 115:673467.(2015)【[URL][url_refer13]】
 - [ref14]: Payne CM, Resch MG, Chen L, Crowley MF, Himmel ME, Taylor LE, Sandgren M,
-Ståhlberg J, Stals I, Tan Z, Beckham GT.: "Glycosylated linkers in multimodular lignocellulose-degrading enzymes dynamically bind to cellulose," Proc Natl Acad Sci USA 110:14646–14651.(2013)【[URL][url_refer14]】
-- [ref15]: Chen L, Drake MR, Resch MG, Greene ER, Himmel ME, Chaffey PK, Beckham GT, Tan Z.: "Specificity of o-glycosylation in enhancing the stability and cellulose binding affinity of family 1 carbohydrate-binding modules," Proc Natl Acad Sci USA 111:7612–7617. (2014)【[URL][url_refer15]】
-- [ref16]: Hamby SE, Hirst JD.: "Prediction of glycosylation sites using random forests." BMC Bioinformatics 9:500 (2008).【[URL][url_refer16]】
+Ståhlberg J, Stals I, Tan Z, Beckham GT.: "Glycosylated linkers in multimodular lignocellulose-degrading enzymes dynamically bind to cellulose," Proc Natl Acad Sci USA, 110:14646–14651.(2013)【[URL][url_refer14]】
+- [ref15]: Chen L, Drake MR, Resch MG, Greene ER, Himmel ME, Chaffey PK, Beckham GT, Tan Z.: "Specificity of o-glycosylation in enhancing the stability and cellulose binding affinity of family 1 carbohydrate-binding modules," Proc Natl Acad Sci USA, 111:7612–7617. (2014)【[URL][url_refer15]】
+- [ref16]: Hamby SE, Hirst JD.: "Prediction of glycosylation sites using random forests." BMC Bioinformatics, Vol.9, Np.500 (2008).【[URL][url_refer16]】
 
 [url1]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
 [url_refer1]: <https://pubmed.ncbi.nlm.nih.gov/21702025/>
-[url_refer2]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer3]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer4]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer5]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer6]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer7]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer8]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer9]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer10]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer11]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer12]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer13]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer14]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer15]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
-[url_refer16]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
+[url_refer2]: <https://pubmed.ncbi.nlm.nih.gov/25629559/>
+[url_refer3]: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1133952/>
+[url_refer4]: <https://pubmed.ncbi.nlm.nih.gov/14687972/>
+[url_refer5]: <https://pubmed.ncbi.nlm.nih.gov/25994114/>
+[url_refer6]: <https://pubmed.ncbi.nlm.nih.gov/24034430/>
+[url_refer7]: <https://pubmed.ncbi.nlm.nih.gov/24876380/>
+[url_refer8]: <https://pubmed.ncbi.nlm.nih.gov/21246506/>
+[url_refer9]: <https://pubmed.ncbi.nlm.nih.gov/24522957/>
+[url_refer10]: <https://www.sciencedirect.com/science/article/abs/pii/S0141022907000191>
+[url_refer11]: <https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cssc.201200859>
+[url_refer12]: <https://pubmed.ncbi.nlm.nih.gov/16673419/>
+[url_refer13]: <https://pubmed.ncbi.nlm.nih.gov/26209638/>
+[url_refer14]: <https://www.pnas.org/doi/10.1073/pnas.1309106110>
+[url_refer15]: <https://www.pnas.org/doi/10.1073/pnas.1402518111>
+[url_refer16]: <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-500>
