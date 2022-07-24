@@ -40,7 +40,8 @@ CBMに疎水性残基や正電荷残基を付加する変異はセルロース�
 
 
 ## 背景
-- リグニン吸着を低減するためにセルラーゼを改変すれば、セルラーゼの利用可能濃度を高めることができ、その結果、酵素の負荷量を低減し、リグノセルロース系バイオ燃料のコストを低減できる。
+- セルラーゼの利用可能濃度を高めることは、リグノセルロース系バイオ燃料のコストを低減することに繋がる。
+- その手段として、リグニン吸着を低減するようにセルラーゼを改変することが挙げられる。
     - セルラーゼの効率は、バイオマスの主要な非炭水化物成分であるリグニンへの非生産的な吸着によって著しく阻害される。
     - セルロース（Avicel）にリグニンを添加すると、加水分解収率が80%も低下し、リグニン吸着による有害な影響が強調される（Rahikainen et al.、2011）。
     - 真菌セルラーゼの多くは、触媒ドメイン（CD）とセルロース結合モジュール（CBM）が、柔軟で高度にグリコシル化されたリンカーで接続されている（Payne et al.、2015年）。
@@ -189,6 +190,22 @@ Fig. 3a,b,c: 主鎖エネルギーランドスケープの明示的表現によ�
 
 
 ## 参考になる文献
+- [1]: Rahikainen J, Mikander S, Marjamaa K, Tamminen T, Lappas A, Viikari L, Kruus K. 2011. Inhibition of enzymatic hydrolysis by residual lignins from softwood study of enzyme binding and inactivation on lignin-rich surface. Biotechnol
+ Bioeng 108:2823–2834.【[URL][url_refer1]】
+- [2]: Payne CM, Knott BC, Mayes HB, Hansson H, Himmel ME, Sandgren M, Ståhlberg J, Beckham GT. 2015. Fungal cellulases. Chem Rev 115:1308–1448.
+- [3]:Boraston AB, Bolam DN, Gilbert HJ, Davies GJ. 2004. Carbohydrate-binding modules: Fine-tuning polysaccharide recognition. Biochem J 382:769–781.
+- [4]: Palonen H, Tjerneld F, Zacchi G, Tenkanen M. 2004. Adsorption of trichoderma reesei CBH I and EG II and their catalytic domains on steam pretreated softwood
+ and isolated lignin. J Biotechnol 107:65–72.
+- [5]: Pfeiffer KA, Sorek H, Roche C, Strobel K, Blanch HW, Clark DS. 2015. Evaluating endoglucanase cel7b-lignin interaction mechanisms and kinetics using quartz
+ crystal microgravimetry. Biotechnol Bioeng DOI: 10.1002/bit.25657.
+- [6]: Rahikainen JL, Evans JD, Mikander S, Kalliola A, Puranen T, Tamminen T, Marjamaa K, Kruus K. 2013a. Cellulase-lignin interactions-the role of carbohydrate binding module and ph in non-productive binding. Enzyme Microb Technol
+ 53:315–321.
+- [7]: Sammond DW, Yarbrough JM, Mansfield E, Bomble YJ, Hobdey SE, Decker SR, Taylor LE, Resch MG, Bozell JJ, Himmel ME, Vinzant TB, Crowley MF. 2014. Predicting
+ enzyme adsorption to lignin films by calculating enzyme surface hydrophobicity. J Biol Chem 289:20960–20969.
+- Nakagame S, Chandra RP, Kadla JF, Saddler JN. 2011. Enhancing the enzymatic hydrolysis of lignocellulosic biomass by increasing the carboxylic acid content of
+ the associated lignin. Biotechnol Bioeng 108:538–548.
+- Nordwald EM, Brunecky R, Himmel ME, Beckham GT, Kaar JL. 2014. Charge engineering of cellulases improves ionic liquid tolerance and reduces lignin
+ inhibition. Biotechnol Bioeng 111:1541.
 - [33]: Bakerラボ, "What has de novo protein design taught us about protein folding and biophysics?," biorxiv (2020, 7)【[URL][url_refer12]】
 
 [url1]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
