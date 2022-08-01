@@ -26,6 +26,7 @@ MathJax.Hub.Config({
 	- 1: University of California (USA)
 - 引用数：40（2022年7月25日時点）
 - キーワード：バイオマス変換、セルラーゼ、リグニン、タンパク質設計
+	- Strobelの学位論文: "Understanding and Engineering Cellulase Binding to Biomass Components", 2015【[URL][url2]】
 
 
 
@@ -74,15 +75,20 @@ CBMに疎水性残基や正電荷残基を付加する変異はセルロース�
 - 本章では、CBMの変異とセルロース/リグニン吸着量の関係を確認する。
 - 本研究では、リグニン存在下でのセルロース加水分解活性の向上には、CBMのリグニンよりもセルロース結合選択性の向上が必要だと仮定している。
 - Te-Tr-Cel7A（Te-Tr-chimera）を使用した。
-    - Tr-linkerとCBM（1cbh）を合体させたTe-Cel7A CDをイーストで発現させたもの。
+    - Tr-linkerとCBM（1cbh）を合体させたTe-Cel7A CDを酵母で発現させたもの。
     - Te-Tr-chimeraの生成のために、Cel7Aの遺伝子を含むSc（酵母）をSC-Trp（培地）に移植し、培養させた。
 
-株：セルロース分解性糸状菌
-- Tr: _Trichoderma reesei_（トリコデルマ・リーセイ）
-- Te: _Talaromyces emersonii_（タラロミケス・エメルソニイイ）
+菌株（由来微生物）
+- _Trichoderma reesei_（_Tr_; トリコデルマ・リーセイ）: 軟腐朽菌の一つ。糸状菌。
+- _Talaromyces emersonii_（_Te_; タラロミケス・エメルソニイイ）: 軟腐朽菌の一つ。糸状菌。
+- _Phanerochaete chrysosporium_（_Pc_; ファネロケーテ・クリソスポリウム）: 白色腐朽菌の一つ。（我々の実験で使用）
+	- 軟腐朽菌: 水分を多く含む木材表面を軟化させ，セルロースとリグニンを分解する（ただし、セルロース分解性が強い）
+	- 白色腐朽菌: セルロースとリグニンを分解する（ただし、残留するセルロースを白色に変色させる）
+	- 褐色腐朽菌: セルロースのみを分解し、リグニンは分解されずに残留する（ただし、白色よりもセルロース分解性は弱い）
 
-出芽酵母（イースト）
-- Sc: _Saccharomyces cerevisiae_（サッカロミケス・セレビシエ）
+酵母発現系（宿主）
+- _Saccharomyces cerevisiae_（_Sc_; サッカロミケス・セレビシエ）: 出芽酵母。エタノール耐性。
+- _Pichia pastoris_（ピキア・パストリス）: メタノール資化酵母の一つ。最少培地で高密度培養が可能。（我々の実験で使用予定）
 
 CBM変異体
 - 7つの残基について、5グループのCBM変異体（合計24個）を実験した。
@@ -191,7 +197,7 @@ Fig. 2b
 
 <img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig3a.jpg?raw=true" width="80%">
 
-Fig. 3a: 新規の各変異体の分配係数の散布図
+Fig. 3a: 各新変異体の分配係数の散布図
 
 Fig. 3a
 - 最良な各変異体のセルロースとリグニンへの分配係数の散布図。
@@ -203,7 +209,11 @@ Fig. 3a
 
 <img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig3b.jpg?raw=true" width="80%">
 
-Fig. 3b: 新規の各変異体のグルコース生成量（アビセル、アビセル＋リグニン）
+Fig. 3b: 各新変異体のグルコース生成量（アビセル、アビセル＋リグニン）
+
+<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/add_fig1.jpg?raw=true" width="80%">
+
+add_Fig. 1: 各新変異体のグルコース生成量比（（アビセル＋リグニン）／アビセル）【[URL][url2]】
 
 Fig. 3b
 - セルロース選択性が高い変異体が、リグニンによる阻害を受けるかどうかを調べるために、6つの変異体について、リグニン存在下でアビセルを加水分解する能力を検証した。
@@ -215,7 +225,8 @@ Fig. 3b
 
 <img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig3c.jpg?raw=true" width="80%">
 
-Fig. 3c: 新規の各変異体のグルコース生成量（ススキ）
+Fig. 3c: 各新変異体のグルコース生成量（ススキ）
+
 
 Fig. 3c
 - セルロース選択性が高い変異体について、商業的に重要な原料である希釈酸処理したススキを加水分解する能力も検証した。
@@ -225,7 +236,11 @@ Fig. 3c
 
 <img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/figS1.jpg?raw=true" width="75%">
 
-Fig. S1: 新規の各変異体のグルコース生成量（ススキ＋BSA前処理）
+Fig. S1: 各新変異体のグルコース生成量（ススキ＋BSA前処理）
+
+<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/add_fig2.jpg?raw=true" width="80%">
+
+add_Fig. 2: 各新変異体のグルコース生成量比（ススキ／（ススキ＋BSA前処理））【目視で自作】
 
 Fig. S1
 - 加水分解能力の向上が、リグニン結合の減少にどの程度起因しているかを調べる。
@@ -277,6 +292,7 @@ Ståhlberg J, Stals I, Tan Z, Beckham GT.: "Glycosylated linkers in multimodular
 - [ref16]: Hamby SE, Hirst JD.: "Prediction of glycosylation sites using random forests." BMC Bioinformatics, Vol.9, Np.500 (2008).【[URL][url_refer16]】
 
 [url1]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
+[url2]: <https://escholarship.org/uc/item/0tw1f2tz>
 [url_refer1]: <https://pubmed.ncbi.nlm.nih.gov/21702025/>
 [url_refer2]: <https://pubmed.ncbi.nlm.nih.gov/25629559/>
 [url_refer3]: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1133952/>
