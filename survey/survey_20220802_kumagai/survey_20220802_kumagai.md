@@ -118,7 +118,7 @@ Fig. 1a
 - H4V, V18R, P30Kは、Te-Tr WTよりも、リグニン吸着量が多い。
 - その他の変異は、吸着量が同等あるいは減少した。
 
-<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig1c.jpg?raw=true" width="70%">
+<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig1c.jpg?raw=true" width="60%">
 
 Fig. 1c: 各CBM変異体の分配係数の散布図
 
@@ -165,7 +165,7 @@ Fig. 2a
     - Random Forestとペアワイズパターンを組み合わせている
     - この予測結果は正しいと仮定して議論を進める
 
-<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig2b.jpg?raw=true" width="80%">
+<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig2b.jpg?raw=true" width="70%">
 
 Fig. 2b: 各リンカー変異体の分配係数の散布図
 
@@ -195,7 +195,7 @@ Fig. 2b
 - 2点変異CBM：{V27E, P30D}（1個）
 - 2点変異CBM+リンカー変異（トリプル変異体）：{V27E,P30D,Link1}（1個）
 
-<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig3a.jpg?raw=true" width="80%">
+<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig3a.jpg?raw=true" width="70%">
 
 Fig. 3a: 各新変異体の分配係数の散布図
 
@@ -207,11 +207,11 @@ Fig. 3a
 - {V27E, P30D},{V27E,P30D,Link1}：セルロース結合量が増加し、リグニン結合量が減少。
 - {V27E,P30D,Link1}：リグニン結合量がTe-Tr WTよりも2.5倍減少し、セルロース結合性がわずかに増加した。最もセルロース選択性が高かった。
 
-<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig3b.jpg?raw=true" width="80%">
+<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig3b.jpg?raw=true" width="60%">
 
 Fig. 3b: 各新変異体のグルコース生成量（アビセル、アビセル＋リグニン）
 
-<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/add_fig1.jpg?raw=true" width="80%">
+<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/add_fig1.jpg?raw=true" width="55%">
 
 add_Fig. 1: 各新変異体のグルコース生成量比（（アビセル＋リグニン）／アビセル）【[URL][url2]】
 
@@ -223,7 +223,7 @@ Fig. 3b
 - 多くの各変異体は、Te-Tr WTとグルコース生成量がほぼ同じだった。
 - 一方、トリプル変異体は、リグニンによって有意に阻害されず、リグニンに関係なく同量のグルコースを生成していた。
 
-<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig3c.jpg?raw=true" width="80%">
+<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/fig3c.jpg?raw=true" width="60%">
 
 Fig. 3c: 各新変異体のグルコース生成量（ススキ）
 
@@ -234,13 +234,13 @@ Fig. 3c
 - トリプル変異体は、Te-Tr WTよりも40%多くグルコースを生成した。
 
 
-<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/figS1.jpg?raw=true" width="75%">
+<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/figS1.jpg?raw=true" width="55%">
 
 Fig. S1: 各新変異体のグルコース生成量（ススキ＋BSA前処理）
 
-<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/add_fig2.jpg?raw=true" width="80%">
+<img src="https://github.com/watarukumagai-git/opt/blob/main/survey/survey_20220802_kumagai/images/add_fig2.jpg?raw=true" width="60%">
 
-add_Fig. 2: 各新変異体のグルコース生成量比（ススキ／（ススキ＋BSA前処理））【目視で自作】
+add_Fig. 2: 各新変異体のグルコース生成量比（ススキ／（ススキ＋BSA前処理））【自作】
 
 Fig. S1
 - 加水分解能力の向上が、リグニン結合の減少にどの程度起因しているかを調べる。
