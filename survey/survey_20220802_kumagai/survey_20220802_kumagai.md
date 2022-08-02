@@ -268,6 +268,15 @@ Fig. S1
 - CBMの1点変異体で調べているため、残基の影響が割とわかりやすい。
 - 本論文では最大2点変異に留まっているため、もし変異数を増やしながら負電荷を強化させて、より改善する結果が得られるなら、研究成果とできる気がする。
 - 一方、リンカー変異が選択性に貢献している様子もあったため、そこが設計方針になるのかは考えどころ。
+- また、下記論文は本研究を参考に変異体を実験しているため、アドバンスな成果が期待できるかも。
+	- X. Lu, X. Feng, X. Li, J. Zhao: "Binding and hydrolysis properties of engineered cellobiohydrolases and endoglucanases", 2018【[URL][url3]】
+	- 本研究では、吸着効率と加水分解効率の改善のために、改変型CBHおよびエンドグルカナーゼ（EG）を構築した。
+		- 杉本さんの論文も引用している。「Tr-CBHのCBMはセルロースとの親和性が高いため、CBMを特定のタンパク質やセルラーゼに融合させてセルロースとの結合性を高める研究が数多く行われた」
+	- 2種類のセルラーゼCBH-TrCBM{V27E,P30D,Link1}およびEG-TrCBM{V27E,P30D,Link1}は、加水分解において良好な性能を発揮することがわかった。
+		- EG-TrCBM{V27E,P30D,Link1}は、Wild-Type酵素よりも、リグニンへの吸着能が相対的に低く、セルロース（特にアビセル）との親和性が高い。
+		- CBH-TrCBM{V27E,P30D,Link1}は、加水分解の様子が変化し、加水分解プロセスに有利になった（ただし、吸着特性は予想外であった）。
+	- 以上から、CBM上の多糖の様々な結合構造が、CBMの機能（基質表面での結合性/処理性/分解性など）の違いを生み出している可能性が示唆された。
+	- Tr-CBM{V27E,P30D,Link1}とセルラーゼ（CBH/EG）の融合は、吸着効率と加水分解効率を向上させた。
 
 
 ### <a name="ref">refernce</a>
@@ -293,6 +302,7 @@ Ståhlberg J, Stals I, Tan Z, Beckham GT.: "Glycosylated linkers in multimodular
 
 [url1]: <https://onlinelibrary.wiley.com/doi/10.1002/bit.25889>
 [url2]: <https://escholarship.org/uc/item/0tw1f2tz>
+[url3]: <https://doi.org/10.1016/j.biortech.2018.06.047>
 [url_refer1]: <https://pubmed.ncbi.nlm.nih.gov/21702025/>
 [url_refer2]: <https://pubmed.ncbi.nlm.nih.gov/25629559/>
 [url_refer3]: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1133952/>
