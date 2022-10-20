@@ -39,6 +39,10 @@
 - 
 
 ## Total Comment
-- The paper proposed an improved particle swarm optimization (PSO) and applied in three-dimensional path planning of UAV. The proposed method is the PSO algorithm introduced to the following several ideas: imporved operations (crossover/mutation/selection) in real-coded genetic algorithm (GA) and inertia weight parameter tuning. Moreover, the paper built a three-dimensional environment model for the problem and constructed a fitness function based on obstacles and path lengths.
+- This paper proposed an improved particle swarm optimization (PSO) and applied in three-dimensional path planning of UAV. The proposed method is the PSO algorithm introduced to the following several ideas: imporved operations (crossover/mutation/selection) in real-coded genetic algorithm (GA) and inertia weight parameter tuning. Moreover, the paper built a three-dimensional environment model for the problem and constructed a fitness function based on obstacles and path lengths.
 Finally, it is verified that the obtained path of the proposed method is superior to that of conventional PSO and GA by solving the problem through numerical simulations.
-- However, the current manuscript needs significant modification and explanation about 本論文の動機・目的、新規性・有用性について、大幅な修正と追記が必要だと感じたため、
+- It provides an interesting observation and data.
+- But, I think it still needs a considerable and major revision to be acceptable for publication in terms of motivation/object and originality/usability.
+- From this reason, the judge is C.
+- The authors should also clarify/correct the points listed below and improve the manuscript as necessary.
+
