@@ -71,7 +71,7 @@ Finally, it is verified that the obtained path of the proposed method is superio
 - It provides an interesting observation and data.
 - But, I think it still needs a considerable and major revision to be acceptable for publication in terms of motivation/object and originality/usability.
 - From this reason, the judge is C.
-- The authors should also clarify/correct the points listed below and improve the manuscript as necessary.
+- It should be revised according to following major comments and improved as necessary.
 
 ## [major comments]
 ## comment1(p1 left column)
