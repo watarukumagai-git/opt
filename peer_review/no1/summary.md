@@ -62,7 +62,36 @@ z(x,y)(2)
 where n represents the total number of mountain peaks, (xi,yi) represents the center coordinate of the i-th peak, and hi is the parameter that controls the height.
 xsi and ysi are the attenuations of the i-th peak along the x-axis and y-axis which can be used to control the slope, respectively.
 
+### 2.2 キュービックBスプライン曲線に基づく経路平滑化アルゴリズム 
+飛行中の頻繁な角度調整を避け、UAVの安全性を確保し、航行時間を短縮するために、キュービックBスプライン曲線を導入する(15). 
+m+n+1個の平面または空間頂点Pi(i=0,1,...,m+n)において, 緑色のパラメトリック曲線セグメントと呼ばれる.
+この曲線は,次のように定義される: Pk,n(t)= n i=0 Pi+kGi,n(t)t∈[0,1](3) 
+ここで, Pk,n(t) は, 数番目のセグメントの3次B曲線, 数番目のセグメントはn次Bsplinecurvesと呼ぶ. 
+Gi,n(t) は式（4）に従って定義された基本関数である. 
+Gi.n(t)=1 n! n-i j=0 (-1)jCj n+1(t+n-i-j)n t∈[0,1]i=0,1,...n (4) 
+経路の滑らかさを確保するために, 難易度を考慮し, n=3にして立方Bスプライン曲線で経路を平滑化した.
 
-## 3章
+## 3章　Improve Particle Swarm Optimization
+### 3.1 Particle Swarm Optimization
+Particle Swarm Optimization (PSO) is an evolutionary computational technique proposed by Dr. Eberhart and Dr. Kennedy (16) by simulating the foraging behavior of birds.
+A mass-less particle is designed to simulate a bird in a flock, and the particle has only two properties: velocity and position.
+The velocity represents the speed of movement and the position represents the direction of movement.
+Each particle individually searches
+
+### 3.2 Fitness Function Design
+The quality of the path length is one of the important indicators to measure the success of the algorithm improvement.
+Due to the lack of battery capacity of the UAV, the flight distance is limited.
+The shorter the flight path, the less time and energy it takes. 
+Based on the cubic B-spline curve fitting path, the interpolation process is performed, and the interpolation is differentiated to obtain the fitness function: 
+fitness=(xi+1−xi)2+(yi+1−yi)2+(zi+1−zi)2 (7) 
+The obstacle risk factor f is introduced to avoid the collision between the UAV and the obstacle.
+The barrier coefficient formula is described as follows: 
+f=0Lmin>Ld 1Lmin<Ld (8) 
+Considering the real environment, UAV is not a particle, and it has its own size.
+So, setting Lmin as the minimum distance close to the peak, and Ld as the safe distance.
+When f=1, the minimum distance is less than the safe distance, and it is easy to cause danger, so the fitness function needs to be increased.
+At the same time, the fitness function is modified to Eq.(9). 
+fitness = k fitness(9) 
+where k is the multiple of expansion, k=5.
 
 ## 4章
