@@ -51,6 +51,17 @@ Finally, the proposed algorithm is simulated by MATLAB to verify the effectivene
 - 本論文は、UAVの3次元経路計画問題を解くハイブリッドPSOを設計する。3次元環境モデル、障害と経路長に基づき適合度関数を構築する。同時に、PSOの慣性パラメータを改善する。GAの選択方法を導入し、交叉と突然変異の確率モデルを改善する。最後に、MATBLABによって提案手法の有効性を検証する。
 
 ## 2章
+### 2.1 Environmental Model
+The 3D path planning of the UAV needs to obtain in formation from the terrain model, and the actual situation should be considered when modeling the terrain.
+By considering obstacles, environment and other factors, the established terrain model (14) is described as follows.
+Z1(x,y)(1) 
+where x and y are the horizontal and vertical coordinates, and Zi are the corresponding height values.
+a,b,c,d,e,f,and g are constants used to control the height distribution of the map.
+For a mountain in 3D environment, it can be represented by the following model. 
+z(x,y)(2)
+where n represents the total number of mountain peaks, (xi,yi) represents the center coordinate of the i-th peak, and hi is the parameter that controls the height.
+xsi and ysi are the attenuations of the i-th peak along the x-axis and y-axis which can be used to control the slope, respectively.
+
 
 ## 3章
 
