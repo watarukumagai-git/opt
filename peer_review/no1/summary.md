@@ -52,11 +52,14 @@ Finally, the proposed algorithm is simulated by MATLAB to verify the effectivene
 
 ## 2章
 ### 2.1 Environmental Model
-The 3D path planning of the UAV needs to obtain in formation from the terrain model, and the actual situation should be considered when modeling the terrain.
-By considering obstacles, environment and other factors, the established terrain model (14) is described as follows.
-Z1(x,y)(1) 
-where x and y are the horizontal and vertical coordinates, and Zi are the corresponding height values.
-a,b,c,d,e,f,and g are constants used to control the height distribution of the map.
+- The 3D path planning of the UAV needs to obtain information from the terrain model, and the actual situation should be considered when modeling the terrain.
+- UAVの3次元経路計画は、terrainモデルから情報を得ることが必要で、terrainをモデリングするときは実際の状況を考えるべきである。
+- By considering obstacles, environment and other factors, the established terrain model (14) is described as follows.
+- 物体、環境、他の要素を考慮することで、確立されたterrainモデルは下記で書ける。Z1(x,y)
+- where x and y are the horizontal and vertical coordinates, and Zi are the corresponding height values.
+- xとyは、水平方向と垂直方向の座標、Ziは構成する高さである。
+- a,b,c,d,e,f,and g are constants used to control the height distribution of the map.
+- abcdefgは、マップ内の定数である。
 For a mountain in 3D environment, it can be represented by the following model. 
 z(x,y)(2)
 where n represents the total number of mountain peaks, (xi,yi) represents the center coordinate of the i-th peak, and hi is the parameter that controls the height.
