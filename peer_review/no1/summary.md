@@ -48,7 +48,11 @@ Build a 3D environment model, and constructing a fitness function based on obsta
 At the same time, the inertia weights of the particle swarm algorithm are improved. 
 The selection operation of Genetic Algorithm (GA) is introduced, and the crossover and mutation probability models are improved. 
 Finally, the proposed algorithm is simulated by MATLAB to verify the effectiveness.
-- 本論文は、UAVの3次元経路計画問題を解くハイブリッドPSOを設計する。3次元環境モデル、障害と経路長に基づき適合度関数を構築する。同時に、PSOの慣性パラメータを改善する。GAの選択方法を導入し、交叉と突然変異の確率モデルを改善する。最後に、MATBLABによって提案手法の有効性を検証する。
+- 本論文は、UAVの3次元経路計画問題を解くハイブリッドPSOを設計する。
+3次元環境モデル、障害と経路長に基づき適合度関数を構築する。同時に、PSOの慣性パラメータを改善する。
+GAの選択方法を導入し、交叉と突然変異の確率モデルを改善する。
+最後に、MATBLABによって提案手法の有効性を検証する。
+
 
 ## 2章
 ### 2.1 Environmental Model
@@ -59,20 +63,24 @@ Finally, the proposed algorithm is simulated by MATLAB to verify the effectivene
 - where x and y are the horizontal and vertical coordinates, and Zi are the corresponding height values.
 - xとyは、水平方向と垂直方向の座標、Ziは構成する高さである。
 - a,b,c,d,e,f,and g are constants used to control the height distribution of the map.
-- abcdefgは、マップ内の定数である。
-For a mountain in 3D environment, it can be represented by the following model. 
-z(x,y)(2)
-where n represents the total number of mountain peaks, (xi,yi) represents the center coordinate of the i-th peak, and hi is the parameter that controls the height.
-xsi and ysi are the attenuations of the i-th peak along the x-axis and y-axis which can be used to control the slope, respectively.
+- abcdefgは、マップ内の分布の高さを決定する定数である。
+- For a mountain in 3D environment, it can be represented by the following model. 
+- 3D環境の山は、下記の式で書ける。z(x,y)(2)
+- where n represents the total number of mountain peaks, (xi,yi) represents the center coordinate of the i-th peak, and hi is the parameter that controls the height.
+- nは山の総数、(xi, yi)はi番目のピークの中心座標、hiは高さを表すパラメータである。
+- xsi and ysi are the attenuations of the i-th peak along the x-axis and y-axis which can be used to control the slope, respectively.
+- xsiとysiは、i番目のピークのx軸,y軸に沿った減衰(傾き)を表す。
 
 ### 2.2 キュービックBスプライン曲線に基づく経路平滑化アルゴリズム 
-飛行中の頻繁な角度調整を避け、UAVの安全性を確保し、航行時間を短縮するために、キュービックBスプライン曲線を導入する(15). 
-m+n+1個の平面または空間頂点Pi(i=0,1,...,m+n)において, 緑色のパラメトリック曲線セグメントと呼ばれる.
-この曲線は,次のように定義される: Pk,n(t)= n i=0 Pi+kGi,n(t)t∈[0,1](3) 
-ここで, Pk,n(t) は, 数番目のセグメントの3次B曲線, 数番目のセグメントはn次Bsplinecurvesと呼ぶ. 
-Gi,n(t) は式（4）に従って定義された基本関数である. 
-Gi.n(t)=1 n! n-i j=0 (-1)jCj n+1(t+n-i-j)n t∈[0,1]i=0,1,...n (4) 
-経路の滑らかさを確保するために, 難易度を考慮し, n=3にして立方Bスプライン曲線で経路を平滑化した.
+- 飛行中の頻繁な角度調整を避け、UAVの安全性を確保し、航行時間を短縮するために、キュービックBスプライン曲線を導入する(15). 
+- m+n+1個の平面または空間頂点Pi(i=0,1,...,m+n)において, 緑色のパラメトリック曲線セグメントと呼ばれる.
+- この曲線は,次のように定義される: 
+- Pk,n(t)= n i=0 Pi+kGi,n(t)t∈[0,1](3) 
+- ここで, Pk,n(t) は, 数番目のセグメントの3次B曲線, 数番目のセグメントはn次Bsplinecurvesと呼ぶ. 
+- Gi,n(t) は式（4）に従って定義された基本関数である. 
+- Gi.n(t)=1 n! n-i j=0 (-1)jCj n+1(t+n-i-j)n t∈[0,1]i=0,1,...n (4) 
+- 経路の滑らかさを確保するために, 難易度を考慮し, n=3にして立方Bスプライン曲線で経路を平滑化した.
+
 
 ## 3章　Improve Particle Swarm Optimization
 ### 3.1 Particle Swarm Optimization
@@ -82,23 +90,35 @@ The velocity represents the speed of movement and the position represents the di
 Each particle individually searches
 
 ### 3.2 Fitness Function Design
-The quality of the path length is one of the important indicators to measure the success of the algorithm improvement.
-Due to the lack of battery capacity of the UAV, the flight distance is limited.
-The shorter the flight path, the less time and energy it takes. 
-Based on the cubic B-spline curve fitting path, the interpolation process is performed, and the interpolation is differentiated to obtain the fitness function: 
-fitness=(xi+1−xi)2+(yi+1−yi)2+(zi+1−zi)2 (7) 
-The obstacle risk factor f is introduced to avoid the collision between the UAV and the obstacle.
-The barrier coefficient formula is described as follows: 
-f=0Lmin>Ld 1Lmin<Ld (8) 
-Considering the real environment, UAV is not a particle, and it has its own size.
-So, setting Lmin as the minimum distance close to the peak, and Ld as the safe distance.
-When f=1, the minimum distance is less than the safe distance, and it is easy to cause danger, so the fitness function needs to be increased.
-At the same time, the fitness function is modified to Eq.(9). 
-fitness = k fitness (9) 
-where k is the multiple of expansion, k=5.
+- The quality of the path length is one of the important indicators to measure the success of the algorithm improvement.
+- 経路長の質は、アルゴリズムの改善成功を図る上で重要な指標である。
+- Due to the lack of battery capacity of the UAV, the flight distance is limited.
+- UAVのバッテリー容量不足のため、飛行距離は限られている。
+- The shorter the flight path, the less time and energy it takes. 
+- 飛行経路が短くなるほど、エネルギーと時間も少なくなる。
+- Based on the cubic B-spline curve fitting path, the interpolation process is performed, and the interpolation is differentiated to obtain the fitness function: 
+- 立体Bスプライン曲線の経路フィッテングにも基づいて補間プロセスは行われ、補間は適合度関数を獲得するために区分化されている。
+- fitness=(xi+1−xi)2+(yi+1−yi)2+(zi+1−zi)2 (7) 
+- The obstacle risk factor f is introduced to avoid the collision between the UAV and the obstacle.
+- 物体リスク係数fはUAVと物体の衝突を避けるために導入されている。
+- The barrier coefficient formula is described as follows: 
+- バリア係数の式は下記のように書ける。
+- f=0, Lmin>Ld; 1, Lmin<Ld (8) 
+- Considering the real environment, UAV is not a particle, and it has its own size.
+- 実環境を考慮すると、UAVは粒子ではなく、自身のサイズを持つ。
+- So, setting Lmin as the minimum distance close to the peak, and Ld as the safe distance.
+- そのため、ピークとの最短距離としてLminと、安全距離としてLdが設定されている。
+- When f=1, the minimum distance is less than the safe distance, and it is easy to cause danger, so the fitness function needs to be increased.
+- f=1のとき、最短距離が安全距離よりも短く、危険を引き起こしやすいため、適合度関数を増加させる必要がある。
+- At the same time, the fitness function is modified to Eq.(9). 
+- 同時に、適合度関数は式(9)に修正される。
+- fitness = k fitness (9) 
+- where k is the multiple of expansion, k=5.
+- kは拡張率を表し、k=5とする。
+
 
 ### 3.4 選択操作 
-遺伝的アルゴリズム（GA）は、ダーウィン生物進化の自然選択と遺伝のメカニズムを模擬した生物進化過程の計算モデルであり、自然進化過程を模擬して最適解を探索する手法である(18)。
+- 遺伝的アルゴリズム（GA）は、ダーウィン生物進化の自然選択と遺伝のメカニズムを模擬した生物進化過程の計算モデルであり、自然進化過程を模擬して最適解を探索する手法である(18)。
 その主な手順は、選択、交叉、変異、適合度関数設計である。
 選択操作とは、集団の中から良い個体を選び出し、悪い個体を排除する操作のことである。
 適性値の評価により、適性の高い個体ほど選択されやすく、次世代に引き継がれる確率が高くなる。
@@ -153,7 +173,7 @@ zmin < zj < zmax (13)
 
 ### 4.1 同一環境下での比較分析
 改良型PSOアルゴリズム、PSOアルゴリズム、GAアルゴリズムの3次元経路計画結果の正面図を図2,3,4に、3つのアルゴリズムの適応曲線を図5に示す。
-Fig.2,FIg.3,Fig.4に示すように、上記3つのアルゴリズムは、3次元環境における経路計画タスクを達成することができる。
+Fig.2,Fig.3,Fig.4に示すように、上記3つのアルゴリズムは、3次元環境における経路計画タスクを達成することができる。
 しかし、Fig.4では、複雑な環境のため、従来のGAアルゴリズムでは「デッドゾーン」に陥りやすく、生成される経路が複雑で長すぎることがわかります。
 一方、Fig.3では、従来のPSOはGAよりも優れた経路計画を行い、グローバルな探索能力にも優れています。
 Fig.2と比較すると、改良型PSOアルゴリズムは、局所最適に陥らないように後段で局所探索能力を強化し、計画された経路の長さと滑らかさは従来のPSOアルゴリズムより優れています。
@@ -164,7 +184,7 @@ PSOアルゴリズムでは、9回目の反復で局所最適に陥っている�
 反復回数が増加するにつれて、重みは減少する。局所探索能力を強化し、収束速度を上げ、基本的に23世代目で最適に到達することができる。
 遺伝的アルゴリズムにおける選択、交叉、突然変異の操作は、母集団の多様性を向上させ、探索能力を強化するために導入され、局所最適化探索は後期反復で引き続き実行される。
 
-###　4.2 Comparative Analysis In Random Environment 
+### 4.2 Comparative Analysis In Random Environment 
 制限環境を100×100×100m以内の3次元ランダム環境とし、開始点を(1,1,1)m、終了点を(100,100,50)mとし、ランダムに10個の障害物を生成し、200回反復させる。
 改良型PSOアルゴリズムの平均適応度はPSOやGAアルゴリズムより低く、良好なメリット探索能力を示している。また、分散比較により、改良型アルゴリズムは安定性が高いことがわかった。
 改良型アルゴリズムは PSO アルゴリズムよりも実行時間が長いが、表 2 の反復回数と平均適合度値に到達するまでの時間を比較すると、改良型アルゴ リズムは PSO アルゴリズムよりも優れていることがわかる。
