@@ -103,8 +103,8 @@ Constriction Method[7]や本論文で使用されているIWAは、慣性パラ�
 
 
 ## コメント5 (p5, Figure6)
-- Figure6は、提案手法が、ランドスケープが変更するにも関わらず、PSOとGAよりも安定して良い性能を示すという結果を示すと解釈できる。
-これは、一般的なメタヒューリスティクスの探索性能とランダム性の関係を言及することになる。
+- Figure6は、障害物のランドスケープがランダムに変更するにも関わらず、提案手法がPSOとGAよりも安定して良い性能を示すと解釈できる。
+これは、一般的なメタヒューリスティクスの探索性能とランダム性の関係を言及している。
 このとき、各試行の性能をそのまま記載するよりも、性能の統計分布(平均値/標準偏差/最大値/最小値)を比較可能なbox-and-whisker plotとエラーバー(横軸が手法、縦軸が性能の各統計量)で表現するほうが良い。
 
 
@@ -204,5 +204,5 @@ Please write the constraint handling technique used in algorithm section.
 
 
 ## comment7 (p2, chapter3)
-- Chapter 3 shows the proposed PSO's algorithm, but 3.3 and 3.6 sections shows the optimization problem's formulation.
-- So, in my opinion, better to add a new  section; for example, "2.3 optimization problem for path planning".
+Chapter 3 shows the proposed PSO's algorithm, but 3.3 and 3.6 sections shows the optimization problem's formulation.
+So, in my opinion, better to add a new  section; for example, "2.3 optimization problem for path planning".
