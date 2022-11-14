@@ -30,13 +30,13 @@
 しかしながら、現原稿では、数値実験を通じて各アイディアの有効性について示されていない。
 例えば、各アイディア単体を付加したアルゴリズム（dynamic weightだけを加えたPSO, 交叉・突然変異のみを工夫したGAなど）の探索性能との比較を通じて、この問題においてこれらのアイディアを組み合わせる必要性を示すべきである。
 
+
 ## 照会事項4 (p4, Chapter4)
-- 現原稿では、提案手法の探索性能が古いGAやPSOよりも優れていることを示しているが、
-本論文の提案手法の比較手法が適切であることは非常に疑問である。
-メタヒューリスティクスの分野では、多峰性関数を含めた多くのベンチマーク問題において、CMA-ES[1,2]やSHADE[3,4]、あるいはその改良手法の探索性能は、PSOやGAよりもはるかに優れていることが一般的に知られている。
-この事実は、CECやGECCOなどのトップカンファレンスで開催されるコンペティション[5]など、様々な文献を通じて示されている。
+- 現原稿では、提案手法の探索性能が古いGAやPSOよりも優れていることを示しているが、本論文の提案手法の比較手法が適切であることは非常に疑問である。
+- メタヒューリスティクスの分野では、多峰性関数を含めた多くのベンチマーク問題において、CMA-ES[1,2]やSHADE[3,4]、あるいはその改良手法の探索性能は、PSOやGAよりもはるかに優れていることが一般的に知られている。
+- この事実は、CECやGECCOなどのトップカンファレンスで開催されるコンペティション[5]など、様々な文献を通じて示されている。
 もし著者らがUAVの3次元経路問題を解く難しさが多峰性にあると問題視するならば、CMA-ESやSHADEベースのアルゴリズムはこの問題においても高速かつ良好な探索性能を示すことが十分期待されるだろう。
-これらの事実を踏まえると、本論文は、提案手法の比較手法が、CMA-ESやSHADEベースのアルゴリズムではなく、古いGAやPSOのみで十分である理由、あるいは、CMA-ESやSHADEベースのアルゴリズムのいずれかの探索性能と、この問題において直接比較する必要がある。以上を踏まえ、適切な文献を追加で引用すると共に、適切な比較手法を選定すべきである。
+- これらの事実を踏まえると、本論文は、提案手法の比較手法が、CMA-ESやSHADEベースのアルゴリズムではなく、古いGAやPSOのみで十分である理由、あるいは、CMA-ESやSHADEベースのアルゴリズムのいずれかの探索性能と、この問題において直接比較する必要がある。以上を踏まえ、適切な文献を追加で引用すると共に、適切な比較手法を選定すべきである。
 
 - [1]: CMAES、[2]: multistart CMAES、[3]: SHADE、[4]: LSHADE、[5]: BBOB
 
@@ -55,39 +55,34 @@ zmin<z_i<zmax; i=1,…,n
 q = [x_1, x_2, … , x_n, y_1, y_2, … , y_n, z_1, z_2, … , z_n]
 ただし、nはセグメント数、Nはthe dimension of search spaceでN = 3nで与えられる。
 ~~~~~~~~~~~~
-また、もし経路の始点(x_1,y_1,z_1)と終点(x_n,y_n,z_n)が計算前に与えられるなら、(x_1,y_1,z_1,x_n,y_n,z_n)がパラメータに固定されるという制約条件を最適化問題に追加すべきだ。
+- また、もし経路の始点(x_1,y_1,z_1)と終点(x_n,y_n,z_n)が計算前に与えられるなら、(x_1,y_1,z_1,x_n,y_n,z_n)がパラメータに固定されるという制約条件を最適化問題に追加すべきだ。
 
 
-## 照会事項6 (p4, Chapter4)
-- 紹介事項5と関連するが、現原稿の数値実験では、経路を構成する最適化変数の数が明記されていない。
-メタヒューリスティクスのアルゴリズムの探索ダイナミクスは、最適化変数の個数との関連性が強いため、原稿に明記すべきである。
 
-
-## 照会事項7 (p3, Chapter3)
+## 照会事項6 (p3, Chapter3)
 - 最適化問題の制約条件は、高さの上下限制約（式(13)）だけ記載されている。
-しかし、査読者は、x方向y方向の上下限制約も必要なように思うが、実際はどうなのか？もし他にも制約条件があるなら、全ての条件を示せ。
-さらに、制約対処法が記載されていないため、それを示せ。
-例えば、探索過程で解を更新したとき、上下限制約を逸脱するときに、上下限制約内に収めるなど。
+- しかし、査読者は、x方向y方向の上下限制約も必要なように思うが、実際はどうなのか？もし他にも制約条件があるなら、全ての条件を示せ。
+- さらに、制約対処法が記載されていないため、それを示せ。
+- 例えば、探索過程で解を更新したとき、上下限制約を逸脱するときに、上下限制約内に収めるなど。
 
 
-## コメント1 (p4, Chapter4)
-- 現原稿は、本論文の提案手法の計算効率・探索性能が古いGAやPSOよりも優れていることを主張している。
-一方、読者は、提案手法の性能が現実の応用問題でも耐えられるのか知りたいはずだが、新原稿では、その性能と応用問題での適用可能性が明記されていない。
-例えば、現実のUAVの自律制御の場面において広く使える水準を満たすのか、あるいは一部の場面なら使える水準を満たすのかなど、適用可能性について、先行研究を引用しながら、著者らの考えを明記すべきである。
+## 照会事項7 (General)
+- 現原稿は、静的かつ非常に簡易的な3D環境下における経路計画問題に対して、本論文の提案手法の計算効率・探索性能が古いGAやPSOよりも優れていることを主張しているが、応用問題での状況や適用可能性が明記されていない。
+- 例えば、文献[6]には、「UAVのガイダンスシステム開発においては、オペレータの介入無しで操作イベントを解決することが注目されている。例えば、脅威の検出、ミッションや環境設定の変更に伴う軌道の再計画などが挙げられる。」という記述がある。
+- 文献[7]、[8]のレビューでも、動的かつ複雑な環境を想定したUAVの研究も見られる。
+- このように、最新かつ網羅的なレビュー論文などを引用して、UAV経路計画に関する研究課題を取り上げると同時に、それに合致した数値実験を実施したり、その状況における適用可能性について言及することは、読者にとって非常に有益である。 
+- したがって、本論文の提案手法は、動的かつ複雑な環境にも適用可能でかつ高い効果が期待されるのか、あるいは、今後の課題としてそのような問題への拡張を考えているなど、より応用に近い問題に対する著者らの考えを新原稿に示しなさい。
 
-## コメント2  (p4, Chapter4)
-- 照会事項6に関連するが、もしUAVの3次元経路問題が30以上などの高次元ならば、PSOベースのアルゴリズムは元々不利である可能性がある。
-PSOのパラメータ空間には安定・不安定領域が存在しており、PSOの探索ダイナミクス（収束性／発散性）はその空間内での配置に強く依存すること、さらに、最適化変数の個数の増加に伴い、その安定領域は若干狭くなることが知られている[6]。
-Constriction Method[7]や本論文で使用されているIWAは、慣性パラメータの設定・調整方法だが、探索過程におけるPSOの探索ダイナミクスを明確に考慮しておらず、探索前にパラメータの時系列変化を決めているため、適切な多様化・集中化が実現せず、局所解に陥りやすい。
-したがって、高次元かつ多峰性の問題では、PSOのパラメータ調整としては[8]などの適応的な方法が望ましいと考えられる。
-このため、本論文の数値実験で提案手法と比較する必要はないが、今後の発展においては有力だろうとアドバイスする。
+- [6]: Present state and future prospect of autonomous control technology for industrial drones
 
-- [6]: PSO、[7]: CM
 
-## コメント3 (General)
+
+
+## コメント1 (General)
 - 現原稿の数式における文字が統一されておらず、読者を混乱させる恐れがある。
-査読者が読んだ範囲でも、下記の多くの点が統一されていない。
-読者が本論文を読んで再現できるように、これらの表現を修正・工夫してください。
+- 査読者が読んだ範囲でも、下記の多くの点が統一されていない。
+- 読者が本論文を読んで再現できるように、これらの表現を修正・工夫してください。
+
 - アルゴリズム中のイテレーションカウンター：Iter（式(10)） , t（式(5),(6)）, or i-th generation（式(11),(12)）
 - 3D環境モデル内のUAVの座標と最適化変数：式(1),(2),(5),(6),(7)
 - 確率P：式(3),(11),(12), or 表1（including p and P）
@@ -97,18 +92,20 @@ Constriction Method[7]や本論文で使用されているIWAは、慣性パラ�
 - k：拡大係数（式(9)）、GAの染色体数（表1）
 
 
-## コメント4 (p4, Chapter4)
+## コメント2 (p4, Chapter4)
 - 現原稿の数値実験における一部の条件が不明である。
 - ピーク数(4.1は7個、4.2は10個)
+- 紹介事項5と関連するが、現原稿の数値実験では、経路を構成する最適化変数の数が明記されていない。
+- メタヒューリスティクスのアルゴリズムの探索ダイナミクスは、最適化変数の個数との関連性が強いため、原稿に明記すべきである。
 
 
-## コメント5 (p5, Figure6)
+## コメント3 (p5, Figure6)
 - Figure6は、障害物のランドスケープがランダムに変更するにも関わらず、提案手法がPSOとGAよりも安定して良い性能を示すと解釈できる。
 これは、一般的なメタヒューリスティクスの探索性能とランダム性の関係を言及している。
 このとき、各試行の性能をそのまま記載するよりも、性能の統計分布(平均値/標準偏差/最大値/最小値)を比較可能なbox-and-whisker plotとエラーバー(横軸が手法、縦軸が性能の各統計量)で表現するほうが良い。
 
 
-## コメント6 (p2, 式(8))
+## コメント4 (p2, 式(8))
 査読者は、式(8)を、UAVと障害物が近過ぎるのを避けるためのペナルティ関数だと解釈している。
 LminはUAVの座標位置とピーク位置の最短距離だが、具体的な計算は何か？
 査読者は、全セグメント上におけるUAVの位置と全ピーク位置を毎回計算した後、その最短距離をLminとしていると判断した。
@@ -116,7 +113,7 @@ LminはUAVの座標位置とピーク位置の最短距離だが、具体的な�
 さらに、机上シミュレーションでは、開始地点、終着地点、各物体位置を静的な状態で正確に把握していることが前提だが、実応用では、Lminを含めてこれらの計算はどうするのか？(リアルタイムで物体位置を認識するのか、机上シミュレーションと同様に、事前に全ての物体位置を把握しておくのか)
 本論文におけるLminの具体的な計算方法、あるいは、実応用でのLminの考え方について述べよ。
 
-## コメント7 (p2, chapter3)
+## コメント5 (p2, chapter3)
 3章は提案PSOのアルゴリズムを記述する章だが、3.3節、3.6節は最適化問題と制約条件の内容である。
 これらは、PSOアルゴリズムの工夫ではなく、最適化問題の記述であるため、「2.3 optimization problem for path planning」などのように節を追加するのが良いと思った。
 
@@ -182,18 +179,25 @@ Moreover, if the start position (x_1, y_1, z_1) and goal position (x_n, y_n, z_n
 a constraint condition that variables (x_1,y_1,z_1,x_n,y_n,z_n) are fixed to the start or goal position should be added to the above problem. Please check.
  
 
-## comment6 (p4, Chapter4)
-- The performance of metaheuristic algorithm depends on the dimension of the search space.
-- But, there is no an explantion of the dimension in numerical simulation.
-Please write it.
 
 
-## comment7 (p3, Chapter3)
+## comment6 (p3, Chapter3)
 - The upper/lower limit of height is formulated by equation (13) as the constraint condition.
 - However, there is no an explanation of constraint handling technique; for example, search points outside the limit are projected to the nearest neighbor limit at each solution update.
 Please write the constraint handling technique used in algorithm section.
 - And, is there no an upper / lower limit of the x and y-axes?
 - If there are other constraints, show all of them.
+
+
+## comment7 (General)
+- 現原稿は、静的かつ簡易的な3D環境下における経路計画問題に対して、本論文の提案手法の計算効率・探索性能が古いGAやPSOよりも優れていることを主張している。
+- 一方、読者は、提案手法の性能が現実に近い応用問題でも耐えられるのか知りたいはずだが、応用問題での状況や適用可能性が明記されていない。
+- For example, literature [6] says "Currently, there is growing interest in increasing vehicle autonomy by developing guidance systems that are able to tackle several operational events without operator intervention."
+- Increasing researchs for assuming dynamic and more complicated environment are written in the reviewd papers [7] and [8].
+- このように、最新かつ網羅的なレビュー論文などを引用して、UAV経路計画に関する研究課題を取り上げると同時に、それに合致した数値実験を実施したり、その状況における適用可能性について言及することは、読者にとって非常に有益である。 
+- したがって、本論文の提案手法は、動的かつ複雑な環境にも適用可能でかつ高い効果が期待されるのか、あるいは、今後の課題としてそのような問題への拡張を考えているなど、より応用に近い問題に対する著者らの考えを新原稿に示しなさい。
+
+- [6]: "Present state and future prospect of autonomous control technology for industrial drones"
 
 
 ## [minor comments]
@@ -202,7 +206,29 @@ Please write the constraint handling technique used in algorithm section.
 - The readers may be concerned with the applicablity to real case, but the currect manuscript does not refer it; for example, whether or not the performance overcomes the widely/limited real cases. 
 - Please describe the author's opinion  about the applicablity citing appropriate reference.
 
+## comment2 (p4, Chapter4)
+- The performance of metaheuristic algorithm depends on the dimension of the search space.
+- But, there is no an explantion of the dimension in numerical simulation.
+Please write it.
 
-## comment7 (p2, chapter3)
+
+
+## comment3 (p5, Figure6)
+- Figure6は、障害物のランドスケープがランダムに変更するにも関わらず、提案手法がPSOとGAよりも安定して良い性能を示すと解釈できる。
+これは、一般的なメタヒューリスティクスの探索性能とランダム性の関係を言及している。
+このとき、各試行の性能をそのまま記載するよりも、性能の統計分布(平均値/標準偏差/最大値/最小値)を比較可能なbox-and-whisker plotとエラーバー(横軸が手法、縦軸が性能の各統計量)で表現するほうが良い。
+
+
+## comment4 (p2, 式(8))
+査読者は、式(8)を、UAVと障害物が近過ぎるのを避けるためのペナルティ関数だと解釈している。
+LminはUAVの座標位置とピーク位置の最短距離だが、具体的な計算は何か？
+査読者は、全セグメント上におけるUAVの位置と全ピーク位置を毎回計算した後、その最短距離をLminとしていると判断した。
+このとき、Lminの計算量はセグメント数やピーク数と関連が強いと推測する。
+さらに、机上シミュレーションでは、開始地点、終着地点、各物体位置を静的な状態で正確に把握していることが前提だが、実応用では、Lminを含めてこれらの計算はどうするのか？(リアルタイムで物体位置を認識するのか、机上シミュレーションと同様に、事前に全ての物体位置を把握しておくのか)
+本論文におけるLminの具体的な計算方法、あるいは、実応用でのLminの考え方について述べよ。
+
+
+
+## comment5 (p2, chapter3)
 Chapter 3 shows the proposed PSO's algorithm, but 3.3 and 3.6 sections shows the optimization problem's formulation.
 So, in my opinion, better to add a new  section; for example, "2.3 optimization problem for path planning".
