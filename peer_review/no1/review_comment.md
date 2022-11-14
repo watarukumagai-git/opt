@@ -74,7 +74,8 @@ q = [x_1, x_2, … , x_n, y_1, y_2, … , y_n, z_1, z_2, … , z_n]
 - したがって、本論文の提案手法は、動的かつ複雑な環境にも適用可能でかつ高い効果が期待されるのか、あるいは、今後の課題としてそのような問題への拡張を考えているなど、より応用に近い問題に対する著者らの考えを新原稿に示しなさい。
 
 - [6]: Present state and future prospect of autonomous control technology for industrial drones
-
+- [7]: A literature review of UAV 3D path planning
+- [8]: A Review on Viewpoints and Path-planning for UAV-based 3D Reconstruction
 
 
 
