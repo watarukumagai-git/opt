@@ -120,6 +120,9 @@ LminはUAVの座標位置とピーク位置の最短距離だが、具体的な�
 
 
 # English
+------------------------------------------
+Reviewer A
+
 ## total comment
 - This paper proposed an improved particle swarm optimization (PSO) and applied in three-dimensional path planning of UAV. 
 The proposed method is the PSO algorithm introduced to the following several ideas: imporved operations (crossover/mutation/selection) in real-coded genetic algorithm (GA) and inertia weight parameter tuning. 
@@ -127,7 +130,7 @@ Moreover, the paper built a three-dimensional environment model for the problem 
 Finally, it is verified that the obtained path of the proposed method is superior to that of conventional PSO and GA by solving the problem through numerical simulations.
 - It provides an interesting observation and data.
 - But, I think it still needs a considerable and major revision to be acceptable for publication in terms of originality or usability.
-- From this reason, the judge is C (major revision).
+- From this reason, the judgement is "C" (major revision).
 - It should be revised according to following major comments and improved as necessary.
 
 ## [major comments]
@@ -234,3 +237,5 @@ Please write it.
 ## comment5 (p2, chapter3)
 - Chapter 3 shows the proposed PSO's algorithm, but 3.3 and 3.6 sections shows the optimization problem's formulation.
 - So, in my opinion, better to add a new  section; for example, "2.3 optimization problem for path planning".
+
+------------------------------------------
