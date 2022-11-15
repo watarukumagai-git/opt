@@ -43,9 +43,9 @@
 
 ## 照会事項5 (p2, Chapter2)
 - equations(1)-(4)は、3次元環境モデルとスプライン曲線による経路生成を表す。
-しかしながら、現原稿では、上記のモデルに基づく経路計画のための最適化問題に関わる数式が式(7),(9)など定義が散らばっており、最終的な最適化問題が不明である。
-査読者は、基本的に目的関数f:R^N→RはUAVの経路長、最適化変数q$\in R^N$は、3次元空間内経路のスプライン曲線中の各セグメント座標だと推測している。
-よって、査読者が推測した下記例のように、目的関数、制約条件、最適化変数を数式で明示的せよ。
+- しかしながら、現原稿では、上記のモデルに基づく経路計画のための最適化問題に関わる数式が式(7),(9)など定義が散らばっており、最終的な最適化問題が不明である。
+- 査読者は、基本的に目的関数$f:mathbb{R}^N \rightarrow mathbb{R}$はUAVの経路長、最適化変数q$\in \mathbb{R}^N$は、3次元空間内経路のスプライン曲線中の各セグメント座標だと推測している。
+- よって、査読者が推測した下記例のように、目的関数、制約条件、最適化変数を数式で明示的せよ。
 ~~~~~~~~~~~~
 minimize 
 f(q) = ρ√(Σ_[i=1,n-1] (x_{i+1}-x_i)^2+(y_{i+1}-y_i)^2+(z_{i+1}-z_i)^2)
@@ -165,19 +165,20 @@ Finally, it is verified that the obtained path of the proposed method is superio
 
 ## comment5 (p2, Chapter2)
 - The formulas constituting the optimization problem for path planning are written in disparate parts of the current manuscript such as equations (7) and (9), and the problem to be dealed with finally is unclear.
-- To my understanding, the objective function $f: \mathbb{R}^N \rightarrow \mathbb{R}$ is the path length of UAV, the constraint condition is the  lower/upper limit of path's height, and the design variable $\bm{q} \in \mathbb{R}^N$ is the each segment position at the spline curve, basically.
+- To my understanding, the objective function $f: \mathbb{R}^N \rightarrow \mathbb{R}$ is the path length of UAV, the constraint condition is the  lower/upper limit of path's height, and the design variable $q \in \mathbb{R}^N$ is the each segment position at the spline curve, basically.
 - Please clarify the optimization problem consisted of the objective function, the constraint condition, and the design variables such as the following example:
 ~~~~~~~~~~~~[equation LaTeX style]
 minimize_{q\in \mathbb{R}^N} 
-f(q) = \rho √(Σ_[i=1,n-1] (x_{i+1}-x_i)^2+(y_{i+1}-y_i)^2+(z_{i+1}-z_i)^2)
-subj.to z_{min}<z_i<z_{max}; i=1,…,n
-q = [x_1, x_2, … , x_n, y_1, y_2, … , y_n, z_1, z_2, … , z_n]
-, where $n$ is a number of segments, $N$ is the dimension of the search space and determined by $N=3n$.
-$\rho$ is the barrier coefficient. If $L_{min}<L_d$, $\rho=k$; otherwise, $\rho=1$. 
+f(q) = \rho \sqrt{\sum_[i=1,n-1] (x_{i+1}-x_i)^2+(y_{i+1}-y_i)^2+(z_{i+1}-z_i)^2}
+subj.to z_{min} \le z_i \le z_{max}; i=1,…,n
+q = [x_1, x_2,... , x_n, y_1, y_2,... , y_n, z_1, z_2,... , z_n]
+, where $n$ is a number of segments, $N$ is the dimension of the search space and determined by $N=3n$, 
+and $\rho$ is the barrier coefficient. If $L_{min}<L_d$, $\rho=k$; otherwise, $\rho=1$. 
 ~~~~~~~~~~~~
 
-Moreover, if the start position (x_1, y_1, z_1) and goal position (x_n, y_n, z_n) are given before calculation,
-a constraint condition that variables (x_1,y_1,z_1,x_n,y_n,z_n) are fixed to the start or goal position should be added to the above problem. Please check.
+- Moreover, if the start position (x_1, y_1, z_1) and goal position (x_n, y_n, z_n) are given before calculation,
+a constraint condition that variables (x_1,y_1,z_1,x_n,y_n,z_n) are fixed to the start or goal position should be added to the above problem. 
+- Please check.
  
 
 
@@ -191,14 +192,20 @@ Please write the constraint handling technique used in algorithm section.
 
 
 ## comment7 (General)
-- 現原稿は、静的かつ簡易的な3D環境下における経路計画問題に対して、本論文の提案手法の計算効率・探索性能が古いGAやPSOよりも優れていることを主張している。
-- 一方、読者は、提案手法の性能が現実に近い応用問題でも耐えられるのか知りたいはずだが、応用問題での状況や適用可能性が明記されていない。
-- For example, literature [6] says "Currently, there is growing interest in increasing vehicle autonomy by developing guidance systems that are able to tackle several operational events without operator intervention."
+- 現原稿は、静的かつ非常に簡易的な3D環境下における経路計画問題に対して、本論文の提案手法の計算効率・探索性能が古いGAやPSOよりも優れていることを主張しているが、応用問題での状況や適用可能性が明記されていない。
+- 例えば、文献[6]には、「UAVのガイダンスシステム開発においては、オペレータの介入無しで操作イベントを解決することが注目されている。例えば、脅威の検出、ミッションや環境設定の変更に伴う軌道の再計画などが挙げられる。」という記述がある。
+- 文献[7]、[8]のレビューでも、動的かつ複雑な環境を想定したUAVの研究も見られる。
+- このように、最新かつ網羅的なレビュー論文などを引用して、UAV経路計画に関する研究課題を取り上げると同時に、それに合致した数値実験を実施したり、その状況における適用可能性について言及することは、読者にとって非常に有益である。 
+- したがって、本論文の提案手法は、動的かつ複雑な環境にも適用可能でかつ高い効果が期待されるのか、あるいは、今後の課題としてそのような問題への拡張を考えているなど、より応用に近い問題に対する著者らの考えを新原稿に示しなさい。
+
+- For example, the reviewed paper [6] says "Currently, there is growing interest in increasing vehicle autonomy by developing guidance systems that are able to tackle several operational events without operator intervention."
 - Increasing researchs for assuming dynamic and more complicated environment are written in the reviewd papers [7] and [8].
 - このように、最新かつ網羅的なレビュー論文などを引用して、UAV経路計画に関する研究課題を取り上げると同時に、それに合致した数値実験を実施したり、その状況における適用可能性について言及することは、読者にとって非常に有益である。 
 - したがって、本論文の提案手法は、動的かつ複雑な環境にも適用可能でかつ高い効果が期待されるのか、あるいは、今後の課題としてそのような問題への拡張を考えているなど、より応用に近い問題に対する著者らの考えを新原稿に示しなさい。
 
 - [6]: "Present state and future prospect of autonomous control technology for industrial drones"
+- [7]: A literature review of UAV 3D path planning
+- [8]: A Review on Viewpoints and Path-planning for UAV-based 3D Reconstruction
 
 
 ## [minor comments]
