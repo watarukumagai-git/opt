@@ -127,7 +127,7 @@ Moreover, the paper built a three-dimensional environment model for the problem 
 Finally, it is verified that the obtained path of the proposed method is superior to that of conventional PSO and GA by solving the problem through numerical simulations.
 - It provides an interesting observation and data.
 - But, I think it still needs a considerable and major revision to be acceptable for publication in terms of originality or usability.
-- From this reason, the judge is C.
+- From this reason, the judge is C (major revision).
 - It should be revised according to following major comments and improved as necessary.
 
 ## [major comments]
@@ -193,11 +193,6 @@ Please write the constraint handling technique used in algorithm section.
 
 ## comment7 (General)
 - 現原稿は、静的かつ非常に簡易的な3D環境下における経路計画問題に対して、本論文の提案手法の計算効率・探索性能が古いGAやPSOよりも優れていることを主張しているが、応用問題での状況や適用可能性が明記されていない。
-- 例えば、文献[6]には、「UAVのガイダンスシステム開発においては、オペレータの介入無しで操作イベントを解決することが注目されている。例えば、脅威の検出、ミッションや環境設定の変更に伴う軌道の再計画などが挙げられる。」という記述がある。
-- 文献[7]、[8]のレビューでも、動的かつ複雑な環境を想定したUAVの研究も見られる。
-- このように、最新かつ網羅的なレビュー論文などを引用して、UAV経路計画に関する研究課題を取り上げると同時に、それに合致した数値実験を実施したり、その状況における適用可能性について言及することは、読者にとって非常に有益である。 
-- したがって、本論文の提案手法は、動的かつ複雑な環境にも適用可能でかつ高い効果が期待されるのか、あるいは、今後の課題としてそのような問題への拡張を考えているなど、より応用に近い問題に対する著者らの考えを新原稿に示しなさい。
-
 - For example, the reviewed paper [6] says "Currently, there is growing interest in increasing vehicle autonomy by developing guidance systems that are able to tackle several operational events without operator intervention."
 - Increasing researchs for assuming dynamic and more complicated environment are written in the reviewd papers [7] and [8].
 - このように、最新かつ網羅的なレビュー論文などを引用して、UAV経路計画に関する研究課題を取り上げると同時に、それに合致した数値実験を実施したり、その状況における適用可能性について言及することは、読者にとって非常に有益である。 
@@ -220,7 +215,6 @@ Please write the constraint handling technique used in algorithm section.
 Please write it.
 
 
-
 ## comment3 (p5, Figure6)
 - Figure6は、障害物のランドスケープがランダムに変更するにも関わらず、提案手法がPSOとGAよりも安定して良い性能を示すと解釈できる。
 これは、一般的なメタヒューリスティクスの探索性能とランダム性の関係を言及している。
@@ -228,15 +222,15 @@ Please write it.
 
 
 ## comment4 (p2, 式(8))
-査読者は、式(8)を、UAVと障害物が近過ぎるのを避けるためのペナルティ関数だと解釈している。
-LminはUAVの座標位置とピーク位置の最短距離だが、具体的な計算は何か？
-査読者は、全セグメント上におけるUAVの位置と全ピーク位置を毎回計算した後、その最短距離をLminとしていると判断した。
-このとき、Lminの計算量はセグメント数やピーク数と関連が強いと推測する。
-さらに、机上シミュレーションでは、開始地点、終着地点、各物体位置を静的な状態で正確に把握していることが前提だが、実応用では、Lminを含めてこれらの計算はどうするのか？(リアルタイムで物体位置を認識するのか、机上シミュレーションと同様に、事前に全ての物体位置を把握しておくのか)
-本論文におけるLminの具体的な計算方法、あるいは、実応用でのLminの考え方について述べよ。
+- 査読者は、式(8)を、UAVと障害物が近過ぎるのを避けるためのペナルティ関数だと解釈している。
+- LminはUAVの座標位置とピーク位置の最短距離だが、具体的な計算は何か？
+- 査読者は、全セグメント上におけるUAVの位置と全ピーク位置を毎回計算した後、その最短距離をLminとしていると判断した。
+- このとき、Lminの計算量はセグメント数やピーク数と関連が強いと推測する。
+- さらに、机上シミュレーションでは、開始地点、終着地点、各物体位置を静的な状態で正確に把握していることが前提だが、実応用では、Lminを含めてこれらの計算はどうするのか？(リアルタイムで物体位置を認識するのか、机上シミュレーションと同様に、事前に全ての物体位置を把握しておくのか)
+- 本論文におけるLminの具体的な計算方法、あるいは、実応用でのLminの考え方について述べよ。
 
 
 
 ## comment5 (p2, chapter3)
-Chapter 3 shows the proposed PSO's algorithm, but 3.3 and 3.6 sections shows the optimization problem's formulation.
-So, in my opinion, better to add a new  section; for example, "2.3 optimization problem for path planning".
+- Chapter 3 shows the proposed PSO's algorithm, but 3.3 and 3.6 sections shows the optimization problem's formulation.
+- So, in my opinion, better to add a new  section; for example, "2.3 optimization problem for path planning".
