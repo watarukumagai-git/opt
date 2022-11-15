@@ -156,7 +156,7 @@ Finally, it is verified that the obtained path of the proposed method is superio
 
 
 ## comment4 (p4, Chapter4)
-- The currect manuscript shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning, but comparing them is questionable.
+- The current manuscript shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning, but comparing them is questionable.
 - In metaheuristic algorithm's field, CMA-ES[1,2] / SHADE[3,4] are known as novel algorithm and far superior to the classic GA and PSO in many benchmark problems including multimodality function.
 - The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[5].
 - If the authors think a difficulty to solve the path planning is the multimodality, CMA-ES / SHADE based algorithms are also expected to show high performance in the path planning.
@@ -195,15 +195,16 @@ Please write the constraint handling technique used in algorithm section.
 
 
 ## comment7 (General)
-- 現原稿は、静的かつ非常に簡易的な3D環境下における経路計画問題に対して、本論文の提案手法の計算効率・探索性能が古いGAやPSOよりも優れていることを主張しているが、応用問題での状況や適用可能性が明記されていない。
-- For example, the reviewed paper [6] says "Currently, there is growing interest in increasing vehicle autonomy by developing guidance systems that are able to tackle several operational events without operator intervention."
-- Increasing researchs for assuming dynamic and more complicated environment are written in the reviewd papers [7] and [8].
-- このように、最新かつ網羅的なレビュー論文などを引用して、UAV経路計画に関する研究課題を取り上げると同時に、それに合致した数値実験を実施したり、その状況における適用可能性について言及することは、読者にとって非常に有益である。 
+- The references are very selective from the viewpoint of algorithm for path planning and not enough assuming situation/applicablity to real case.
+- To show the research widely subjects about UAV path planning citing some exhaustive review papers, experiment suitable numerical simulation, and explain applicablity for them is beneficial for the readers.
+- For example, the reviewe paper [6] says "Currently, there is growing interest in increasing vehicle autonomy by developing guidance systems that are able to tackle several operational events without operator intervention."
+- Increasing researchs for assuming dynamic and more complicated environment are written in the review papers [7] and [8].
+- Overall, show the author's opinion 
 - したがって、本論文の提案手法は、動的かつ複雑な環境にも適用可能でかつ高い効果が期待されるのか、あるいは、今後の課題としてそのような問題への拡張を考えているなど、より応用に近い問題に対する著者らの考えを新原稿に示しなさい。
 
 - [6]: "Present state and future prospect of autonomous control technology for industrial drones"
-- [7]: A literature review of UAV 3D path planning
-- [8]: A Review on Viewpoints and Path-planning for UAV-based 3D Reconstruction
+- [7]: "A literature review of UAV 3D path planning"
+- [8]: "A Review on Viewpoints and Path-planning for UAV-based 3D Reconstruction"
 
 
 ## [minor comments]
