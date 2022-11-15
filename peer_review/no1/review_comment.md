@@ -220,9 +220,11 @@ Please write it.
 
 
 ## comment3 (p5, Figure6)
+- Figure 6 shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning although the landscape of a randomness.
 - Figure6は、障害物のランドスケープがランダムに変更するにも関わらず、提案手法がPSOとGAよりも安定して良い性能を示すと解釈できる。
-これは、一般的なメタヒューリスティクスの探索性能とランダム性の関係を言及している。
-このとき、各試行の性能をそのまま記載するよりも、性能の統計分布(平均値/標準偏差/最大値/最小値)を比較可能なbox-and-whisker plotとエラーバー(横軸が手法、縦軸が性能の各統計量)で表現するほうが良い。
+- the randomness 
+- これは、一般的なメタヒューリスティクスの探索性能とランダム性の関係を言及している。
+- このとき、各試行の性能をそのまま記載するよりも、性能の統計分布(平均値/標準偏差/最大値/最小値)を比較可能なbox-and-whisker plotとエラーバー(横軸が手法、縦軸が性能の各統計量)で表現するほうが良い。
 
 
 ## comment4 (p2, 式(8))
