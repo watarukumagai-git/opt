@@ -133,6 +133,7 @@ Reviewer A
 - From this reason, the judgement is "C" (major revision).
 - It should be revised according to following major comments and improved as necessary.
 
+
 ## [major comments]
 ## comment1 (General)
 - What is the main purpose or motivation of this paper?
@@ -149,17 +150,18 @@ Reviewer A
 - If the above understanding is correct, this paper should point out the essential difference between the proposed PSO and other algorithms in existing studies.
 - Overall, please describe and clarify the originality of this paper comparing to existing studies.
 
+
 ## comment3 (General)
 - The references are very selective from the viewpoint of algorithm for path planning and not enough assuming situation/applicablity to real case.
 - To show the research widely subjects about UAV path planning citing some exhaustive review papers, experiment suitable numerical simulation, and explain applicablity for them is beneficial for the readers.
-- For example, the reviewe paper [1] says "Currently, there is growing interest in increasing vehicle autonomy by developing guidance systems that are able to tackle several operational events without operator intervention."
-- Increasing researchs for assuming dynamic and more complicated environment are written in the review papers [2] and [3].
+- For example, the review paper [21] says "Currently, there is growing interest in increasing vehicle autonomy by developing guidance systems that are able to tackle several operational events without operator intervention."
+- Increasing researchs for assuming dynamic and more complicated environment are written in the review papers [22,23].
 - Overall, show the author's opinion.
 - したがって、本論文の提案手法は、動的かつ複雑な環境にも適用可能でかつ高い効果が期待されるのか、あるいは、今後の課題としてそのような問題への拡張を考えているなど、より応用に近い問題に対する著者らの考えを新原稿に示しなさい。
 
-- [1]: "Present state and future prospect of autonomous control technology for industrial drones"
-- [2]: "A literature review of UAV 3D path planning"
-- [3]: "A Review on Viewpoints and Path-planning for UAV-based 3D Reconstruction"
+- [21]: "Present state and future prospect of autonomous control technology for industrial drones"
+- [22]: "A literature review of UAV 3D path planning"
+- [23]: "A Review on Viewpoints and Path-planning for UAV-based 3D Reconstruction"
 
 
 
@@ -177,7 +179,7 @@ and $\rho$ is the barrier coefficient. If $L_{min}<L_d$, $\rho=k$; otherwise, $\
 ~~~~~~~~~~~~
 
 - Moreover, if the start position (x_1, y_1, z_1) and goal position (x_n, y_n, z_n) are given before calculation,
-a constraint condition that variables (x_1,y_1,z_1,x_n,y_n,z_n) are fixed to the start or goal position should be added to the above problem. 
+a constraint condition that variables (x_1, y_1, z_1, x_n, y_n, z_n) are fixed to the start or goal position should be added to the above problem. 
 - Please check.
 
 
@@ -199,17 +201,18 @@ a constraint condition that variables (x_1,y_1,z_1,x_n,y_n,z_n) are fixed to the
 
 ## comment7 (p4, Chapter4)
 - The current manuscript shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning, but comparing them is questionable.
-- In metaheuristic algorithm's field, CMA-ES[4,5] / SHADE[6,7] are known as novel algorithm and far superior to the classic GA and PSO in many benchmark problems including multimodality function.
-- The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[8].
+- In metaheuristic algorithm's field, CMA-ES[24,25] / SHADE[26,27] are known as novel algorithm and far superior to the classic GA and PSO in many benchmark problems including multimodality function.
+- The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[28].
 - If the authors think a difficulty to solve the path planning is the multimodality, CMA-ES / SHADE based algorithms are also expected to show high performance in the path planning.
 - Based on the fact, this paper should  provide a reason why just comparing to the classic GA and PSO is enough, or compare the performance / feature of the proposed PSO and either CMA-ES / SHADE based algorithms.
 - Overall, please check whether compared methods are appropriate to support usability of the proposed PSO, and provide an additional simulation results / the above references as needed.
 
-- [4]: CMAES
-- [5]: multistart CMAES
-- [6]: SHADE
-- [7]: LSHADE
-- [8]: BBOB
+- [24]: N. Hansen et. al: "Impacts of Invariance in Search: When CMA-ES and PSO Face Ill-Conditioned and Non-Separable Problems", Journal of Applied Soft Computing, pp.5755-5769 (2011)
+- [25]: N. Hansen: "Benchmarking a BI-population CMA-ES on the BBOB-2009 function testbed", Workshop Proceedings of the GECCO Genetic and Evolutionary Computation Conference, pp. 2389–2396 (2009)
+- [26]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential
+Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp.71-78 (2013)
+- [27]: R. Tanabe and A. Fukunaga: “Improving the Search Performance of SHADE Using Linear Population Size Reduction,” Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp.1658-1665 (2014)
+- [28]: The Black-box Optimization Benchmarking (BBOB) Workshop, http://numbbo.github.io/workshops/index.html
 
 
 ## [minor comments]
