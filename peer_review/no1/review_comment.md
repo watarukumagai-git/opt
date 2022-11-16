@@ -123,50 +123,30 @@ LminはUAVの座標位置とピーク位置の最短距離だが、具体的な�
 ------------------------------------------
 Reviewer A
 
-- This paper proposed an improved particle swarm optimization (PSO) and applied in three-dimensional path planning of UAV. 
-- The proposed method is the PSO algorithm introduced to the following several ideas: improved operations (crossover/mutation/selection) in real-coded genetic algorithm (GA) and inertia weight parameter tuning. 
-- Moreover, the paper built a three-dimensional environment model for the problem and constructed a fitness function based on obstacles and path lengths.
-- Finally, it is verified that the obtained path of the proposed method is superior to that of conventional PSO and GA by solving the problem through numerical simulations.
-- It provides an interesting observation and data, but I think it still needs a considerable and major revision to be acceptable for publication in terms of originality or usability.
-- From this reason, the judgement is "C" (major revision).
-- It should be revised according to following major comments and improved as necessary.
+This paper proposed an improved particle swarm optimization (PSO) and applied in three-dimensional path planning of UAV. The proposed method is the PSO algorithm introduced to the following several ideas: improved operations (crossover/mutation/selection) in real-coded genetic algorithm (GA) and inertia weight parameter tuning. Moreover, the paper built a three-dimensional environment model for the problem and constructed a fitness function based on obstacles and path lengths. Finally, it is verified that the obtained path of the proposed method is superior to that of conventional PSO and GA by solving the problem through numerical simulations.
+It provides an interesting observation and data, but I think it still needs a considerable and major revision to be acceptable for publication in terms of originality or usability.
+From this reason, the judgement is "C" (major revision). It should be revised according to following major comments and improved as necessary.
 
 
 # [major comments]
 ## major comment1 (General)
-- What is the main purpose or motivation of this paper?
-- I guess the existing studies [2]-[13] or this paper only apply an improved algorithm in 3D path planning of UAV and belong to the same category. 
-- Nevertheless, there are no research subject and motivation of this category in the current manuscript.
-- If the authors think the subject is for PSO to be trapped into a local minima in the path planning, the existing studies [2]-[13] may have solved it to some extent.
-- Overall, please describe and clarify the research subject for 3D path planning of UAV or motivation of this paper comparing to the existing studies.
+What is the main purpose or motivation of this paper? I guess the existing studies [2]-[13] or this paper only apply an improved algorithm in 3D path planning of UAV and belong to the same category.  Nevertheless, there are no research subject and motivation of this category in the current manuscript. If the authors think the subject is for PSO to be trapped into a local minima in the path planning, the existing studies [2]-[13] may have solved it to some extent.
+Overall, please describe and clarify the research subject for 3D path planning of UAV or motivation of this paper comparing to the existing studies.
 
 
 ## major comment2 (General)
-- What is the originality of this paper?
-- There is no contention about the originality in the current manuscript; for example, problem formulation, applied algorithm, or gained path. 
-- To my understanding, the main originality may be the proposed PSO to overcome a multimodality of the objective function in the path planning.
-- If the above understanding is correct, this paper should point out the essential difference between the proposed PSO and other algorithms in existing studies.
-- Overall, please describe and clarify the originality of this paper comparing to existing studies.
+What is the originality of this paper? There is no contention about the originality in the current manuscript; for example, problem formulation, applied algorithm, or gained path.  To my understanding, the main originality may be the proposed PSO to overcome a multimodality of the objective function in the path planning. If the above understanding is correct, this paper should point out the essential difference between the proposed PSO and other algorithms in existing studies.
+Overall, please describe and clarify the originality of this paper comparing to existing studies.
 
 
 ## major comment3 (General)
-- The references are very selective from the viewpoint of algorithm for path planning and not enough assuming situation/applicability to real case.
-- To show the research widely subjects about UAV path planning citing some exhaustive review papers, experiment suitable numerical simulation, and explain applicability for them is beneficial for the readers.
-- For example, the review paper [21] says "Currently, there is growing interest in increasing vehicle autonomy by developing guidance systems that are able to tackle several operational events without operator intervention."
-- Increasing researches for assuming dynamic and more complicated environment are written in the review papers [22,23].
-- Overall, describe and clarify the author's opinion for real case; for example, whether or not the proposed PSO is applicable and effective to dynamic and complicated environment, or the future work is extension to such problems.
-
-- [21]: K Nonami: "Present state and future prospect of autonomous control technology for industrial drones", IEEJ Transactions on Electrical and Electronic Engineering, Vol. 15, No. 1, pp. 6-11 (2020)
-- [22]: L. Yang et al. : "A literature review of UAV 3D path planning", Proceeding of the 11th World Congress on Intelligent Control and Automation, pp. 2376-2381 (2014)
-- [23]: M. Maboudi et al. : "A Review on Viewpoints and Path-planning for UAV-based 3D Reconstruction", https://doi.org/10.48550/arXiv.2205.03716, (2022)
-
+The references are very selective from the viewpoint of algorithm for path planning and not enough assuming situation/applicability to real case. To show the research widely subjects about UAV path planning citing some exhaustive review papers, experiment suitable numerical simulation, and explain applicability for them is beneficial for the readers. For example, the review paper [21] says "Currently, there is growing interest in increasing vehicle autonomy by developing guidance systems that are able to tackle several operational events without operator intervention." Increasing researches for assuming dynamic and more complicated environment are written in the review papers [22,23].
+Overall, describe and clarify the author's opinion for real case; for example, whether or not the proposed PSO is applicable and effective to dynamic and complicated environment, or the future work is extension to such problems.
 
 
 ## major comment4 (p2, Chapter2)
-- The formulas constituting the optimization problem for path planning are written in disparate parts of the current manuscript such as equations (7) and (9), and the problem to be dealt with finally is unclear.
-- To my understanding, the objective function $f: \mathbb{R}^N \rightarrow \mathbb{R}$ is the path length of UAV, the constraint condition is the lower/upper limit of path's height, and the design variable $q \in \mathbb{R}^N$ is the each segment position at the spline curve, basically.
-- Moreover, if the start position (x_1, y_1, z_1) and goal position (x_n, y_n, z_n) are given before calculation, constraint conditions that variables (x_1, y_1, z_1, x_n, y_n, z_n) are fixed to the start or goal position should be added to the problem. 
-- Please clarify the optimization problem consisted of the objective function, the constraint condition, and the design variables such as the following example:
+The formulas constituting the optimization problem for path planning are written in disparate parts of the current manuscript such as equations (7) and (9), and the problem to be dealt with finally is unclear. To my understanding, the objective function $f: \mathbb{R}^N \rightarrow \mathbb{R}$ is the path length of UAV, the constraint condition is the lower/upper limit of path's height, and the design variable $q \in \mathbb{R}^N$ is the each segment position at the spline curve, basically. Moreover, if the start position (x_1, y_1, z_1) and goal position (x_n, y_n, z_n) are given before calculation, constraint conditions that variables (x_1, y_1, z_1, x_n, y_n, z_n) are fixed to the start or goal position should be added to the problem. 
+Please clarify the optimization problem consisted of the objective function, the constraint condition, and the design variables such as the following example:
 [the following formulations written by LaTeX style]
 ~~~~~~~~~~~~
 minimize_{q\in \mathbb{R}^N} 
@@ -179,69 +159,68 @@ and $\rho$ is the barrier coefficient. If $L_{min}<L_d$, $\rho=k$; otherwise, $\
 
 
 ## major comment5 (p3, Chapter3)
-- The proposed PSO consists on the several ideas.
-- If the authors think a difficulty to solve the path planning is the multimodality, an effectiveness of each idea should be shown.
-- However, there is no numerical simulation's result to support usability of their ideas in the manuscript.
-- Please show a necessary to combination of their ideas for the path planning comparing to algorithms with only each idea; for example, PSO with inertia weight parameter tuning and GA with improved operations (crossover/mutation/selection).
+The proposed PSO consists on the several ideas. If the authors think a difficulty to solve the path planning is the multimodality, an effectiveness of each idea should be shown. However, there is no numerical simulation's result to support usability of their ideas in the manuscript. 
+Please show a necessary to combination of their ideas for the path planning comparing to algorithms with only each idea; for example, PSO with inertia weight parameter tuning and GA with improved operations (crossover/mutation/selection).
 
 
 ## major comment6 (p3, Chapter3)
-- The upper/lower limit of height is formulated by equation (13) as the constraint condition.
-- However, there is no an explanation of constraint handling technique; for example, search points outside the limit are projected to the nearest neighbor limit at each solution update.
-- Please write the constraint handling technique used in algorithm section.
-- And, is there no an upper / lower limit of the x and y-axes?
-- If there are other constraints, show all of them.
+The upper/lower limit of height is formulated by equation (13) as the constraint condition. However, there is no an explanation of constraint handling technique; for example, search points outside the limit are projected to the nearest neighbor limit at each solution update. Please write the constraint handling technique used in algorithm section. 
+And, is there no an upper / lower limit of the x and y-axes? If there are other constraints, show all of them.
 
 
 ## major comment7 (p4, Chapter4)
-- The current manuscript shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning, but comparing them is questionable.
-- In metaheuristic algorithm's field, CMA-ES[24,25] / SHADE[26,27] are known as novel algorithm and far superior to the classic GA and PSO in many benchmark problems including multimodality function.
-- The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[28].
-- If the authors think a difficulty to solve the path planning is the multimodality, CMA-ES / SHADE based algorithms are also expected to show high performance in the path planning.
-- Based on the fact, this paper should provide a reason why just comparing to the classic GA and PSO is enough, or compare the performance / feature of the proposed PSO and either CMA-ES / SHADE based algorithms.
-- Overall, please check whether compared methods are appropriate to support usability of the proposed PSO, and provide an additional simulation results / the above references as needed.
+The current manuscript shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning, but comparing them is questionable. In metaheuristic algorithm's field, CMA-ES[24,25] / SHADE[26,27] are known as novel algorithm and far superior to the classic GA and PSO in many benchmark problems including multimodality function. The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[28]. If the authors think a difficulty to solve the path planning is the multimodality, CMA-ES / SHADE based algorithms are also expected to show high performance in the path planning. Based on the fact, this paper should provide a reason why just comparing to the classic GA and PSO is enough, or compare the performance / feature of the proposed PSO and either CMA-ES / SHADE based algorithms. 
+Overall, please check whether compared methods are appropriate to support usability of the proposed PSO, and provide an additional simulation results / the above references as needed.
 
+
+
+# [minor comments]
+## minor comment1 (General)
+The symbols are different in each equation or section, but only one meaning should be assigned to each symbol. Please unify (at least) the following symbols in order for the readers to understand and reproduce.
+- the total number of mountain peaks and index of curve segment: "n" in equation (2) and "the n-th degree B curve segment" in equations (3) and (4)
+- Iteration counter in algorithm: "Iter" in equation (10), "t" in equations (5) and (6), or "i-th generation" in equations (11) and (12)
+- UAV coordinate position in 3D environment model and design variable: "x, y, and z" in equations (1), (2), (3), and (7); "x_ij" in equations (5), (6)
+- Probability and vertex: "P_i" in equation (3), "p" in section 3.4, "P_c, P_m" in equations (11), (12), Table 1 (including lowercase or uppercase letter)
+- Constants in 3D environment model, the barrier coefficient, and fitness: "f" in equations (1) and (8); and "f_ibest and f_iave" in equations (11), (12)
+- Multiple of expansion and chromosome length in GA: "k" in equation (9) and Table 1
+
+## minor comment2 (General)
+Some English expressions are misspelled and not easily comprehensible.
+In particular, my recommends revising the following expressions.
+- p1, left column: "local optima.Xie and Kong" should have a space.
+- p1, right column: "usability of the method.Pan" should have a space.
+- p2, left column: "a, b, c, d, e, f, and g" should be italic style in "a, b, c, d, e, f, and g are constants...".
+- p2, left column: "n" should be italic style in "where n represents the total number of mountain peaks,...".
+- p4, Table 1: "M, N, c1, c2" should be italic style.
+- "improved PSO" in sentence, "Improved Algorithms" in Fig.5, "Improve Algorithms" in Fig.6, and "Improve Algorithm" in Fig. 2 and Table 2 should be unified.
+- p5, right column: "PSO algorithm andGA algorithm by MATLAB." should have a space.
+
+
+## minor comment3 (p2, equation (8))
+I understand equation (8) occurs a penalty effect to avoid for UAV and obstacle being too close. Lmin is the shortest distance between UAV coordinate position and peak position in 3D environment, but how is it calculated? To my understanding, after all distances between UAV positions on each path segment and peaks are calculated during search process, Lmin may be the shortest distance of them. If the above understanding is correct, the amount of calculation is high dependence on the number of segments and peaks. Moreover, the numerical simulation assumes the static environment (start, destination, and obstacle position) is known, but how is Lmin calculation in practical application? Please add how to calculate Lmin in numerical simulation of this paper and show the author's opinion about Lmin in practical application.
+
+
+## minor comment4 (p2, chapter3)
+Chapter 3 shows the proposed PSO's algorithm, but 3.3 and 3.6 sections show the optimization problem's formulation. Therefore, I think it is better to add a new section; for example, "2.3 optimization problem for path planning".
+
+
+## minor comment5 (p4, Chapter4)
+There is no an explanation of the following conditions in numerical simulation. Please clarify them.
+- The number of peaks (7 peaks in section 4.1 and 10 peaks in section 4.2 to my understanding)
+- The dimension of the search space
+
+
+## minor comment6 (p5, Figure6)
+Figure 6 shows the performance of the proposed PSO is more stable and superior to the classic GA and PSO in the path planning although the landscape of obstacles changes randomly. In general, the result means the relationship between the randomness and performance of metaheuristic algorithm. In this case, the box-and-whisker plot comparing statistical distribution of performance (average/standard deviation/max/min) and error bar (the x-axis label is each algorithm and the y-axis label is each statistic) are better than the current figure in Figure 6.
+
+
+- [21]: K Nonami: "Present state and future prospect of autonomous control technology for industrial drones", IEEJ Transactions on Electrical and Electronic Engineering, Vol. 15, No. 1, pp. 6-11 (2020)
+- [22]: L. Yang et al. : "A literature review of UAV 3D path planning", Proceeding of the 11th World Congress on Intelligent Control and Automation, pp. 2376-2381 (2014)
+- [23]: M. Maboudi et al. : "A Review on Viewpoints and Path-planning for UAV-based 3D Reconstruction", https://doi.org/10.48550/arXiv.2205.03716, (2022)
 - [24]: N. Hansen et. al: "Impacts of Invariance in Search: When CMA-ES and PSO Face Ill-Conditioned and Non-Separable Problems", Journal of Applied Soft Computing, pp. 5755-5769 (2011)
 - [25]: N. Hansen: "Benchmarking a BI-population CMA-ES on the BBOB-2009 function testbed", Workshop Proceedings of the GECCO Genetic and Evolutionary Computation Conference, pp. 2389–2396 (2009)
 - [26]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp. 71-78 (2013)
 - [27]: R. Tanabe and A. Fukunaga: “Improving the Search Performance of SHADE Using Linear Population Size Reduction,” Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp. 1658-1665 (2014)
 - [28]: The Black-box Optimization Benchmarking (BBOB) Workshop, http://numbbo.github.io/workshops/index.html
-
-
-# [minor comments]
-## minor comment1 (General)
-- The symbols are different in each equation or section, but only one meaning should be assigned to each symbol.
-- Please unify (at least) the following symbols in order for the readers to understand and reproduce.
-  - Iteration counter in algorithm: "Iter" in equation (10), "t" in equations (5) and (6), or "i-th generation" in equations (11) and (12)
-  - UAV coordinate position in 3D environment model and design variable: "x, y, and z" in equations (1), (2), (3), and (7); "x_ij" in equations (5), (6)
-  - Probability and vertex: "P_i" in equation (3), "p" in section 3.4, "P_c, P_m" in equations (11), (12), Table 1 (including lowercase or uppercase letter)
-  - Constants in 3D environment model, the barrier coefficient, and fitness: "f" in equations (1) and (8); and "f_ibest and f_iave" in equations (11), (12)
-  - multiple of expansion and chromosome length in GA: "k" in equation (9) and Table 1
-
-
-## minor comment2 (p2, equation (8))
-- I understand equation (8) occurs a penalty effect to avoid for UAV and obstacle being too close.
-- Lmin is the shortest distance between UAV coordinate position and peak position in 3D environment, but how is it calculated?
-- To my understanding, after all distances between UAV positions on each path segment and peaks are calculated during search process, Lmin may be the shortest distance of them.
-- If the above understanding is correct, the amount of calculation is high dependence on the number of segments and peaks.
-- Moreover, the numerical simulation assumes the static environment (start, destination, and obstacle position) is known, but how is Lmin calculation in practical application?
-- Please add how to calculate Lmin in numerical simulation of this paper and show the author's opinion about Lmin in practical application.
-
-
-## minor comment3 (p2, chapter3)
-- Chapter 3 shows the proposed PSO's algorithm, but 3.3 and 3.6 sections show the optimization problem's formulation.
-- Therefore, I think it is better to add a new section; for example, "2.3 optimization problem for path planning".
-
-
-## minor comment4 (p4, Chapter4)
-- There is no an explanation of the following conditions in numerical simulation. Please clarify them.
-  - The number of peaks (7 peaks in section 4.1 and 10 peaks in section 4.2 to my understanding)
-  - The dimension of the search space
-
-
-## minor comment5 (p5, Figure6)
-- Figure 6 shows the performance of the proposed PSO is more stable and superior to the classic GA and PSO in the path planning although the landscape of obstacles changes randomly.
-- In general, the result means the relationship between the randomness and performance of metaheuristic algorithm.
-- In this case, the box-and-whisker plot comparing statistical distribution of performance (average/standard deviation/max/min) and error bar (the x-axis label is each algorithm and the y-axis label is each statistic) are better than the current figure in Figure 6.
 
 ------------------------------------------
