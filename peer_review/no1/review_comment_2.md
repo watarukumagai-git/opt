@@ -1,4 +1,4 @@
-# 再査読コメント
+、# 再査読コメント
 [comment]
 I checked the revised manuscript and author's response to reviewer's comments.
 Although some points have improved, this paper has still very difficult problem to be acceptable for publication and is not revised enough based on the comments.
@@ -9,24 +9,16 @@ Detailed reasons and comments are as follows:
 
 # [major reasons]
 ## major reason1 (General)
-- Creativity is slightly improved according to reviewer's comment. Especially, the proposed PSO is changed to be added some SHADE's operators according to Reviewer A's comment and Reviewer B's major comment7.
-
-創造性は査読者のコメントに従い、多少改善した。
-特に査読者Aと査読者B照会事項7に従い、提案PSOはSHADEのオペレータを導入する方法に変更されている。
-また、査読者B照会事項2に従い、
-この論文のオリジナル性が明記された。
-しかしながら、この論文のオリジナル性や創造性は依然として低いと考える。
-
-理由1
-上述の変更があったとしても、査読者Aの指摘の通り、提案PSOは、既存のPSOに複数かつ既存のオペレータを導入したハイブリッドのアルゴリズムでしかない。
-この創造性は、この論文誌にアクセプトできるレベルではない。
-
-理由2
-この論文の目的は、汎用な適用環境を想定した新規アルゴリズム提案ではなく、経路計画問題に効果的なアルゴリズム提案だと推察する。
-さらに、査読者B照会事項2は、
-
-経路計画問題にGAやSHADEのオペレータを導入したという主張は、オリジナル性や創造性は依然として低いままである。
-If the above understanding is correct, this paper should point out the essential difference between the proposed PSO and other algorithms in existing studies.
+- The creativity is slightly improved according to reviewer's comment. 
+Especially, the proposed PSO is changed to be added some SHADE's operators according to Reviewer A's comment and Reviewer B's major comment7.
+- And, the sentence about the originality of this paper is added to Section1 according to Reviewer B's major comment2.
+- However, I think the originality and creativity of this paper are still low according to the following points.
+- Point1
+   - Even if the above change, the proposed PSO is just a hybrid algorithm of the conventional PSO and many conventional operators as pointed out by Reviewer A.
+   - The creativity is not acceptable for publication of this journal.
+- Point2
+   - To my understanding, the objective of this paper may be not an new algorithm assuming versatile application environments but an effective algorithm to the path planning problem.
+   - In spite of Reviewer B's major comment 2, there are no the essential difference between the proposed PSO and other algorithms .
 
 
 ## major reason2 (Section7)
