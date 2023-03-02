@@ -20,6 +20,7 @@ However, I think the originality and creativity of this paper are still low acco
 Subsection 4.1 of the revised paper in page4 says the follwing two points as the effectiveness in the proposed PSO.
 - Point1: "the CPSO algorithm adds dynamic inertia weights..."
 - Point2: "The selection operation in genetic algorithm and the crossover and variation operation of SHADE are introduced..." 
+
 However, it is still unclear whether their operators or ideas have the effectiveness for the path planning problem through numerical experiments.
 While Reviewer B's major comment5 points out a necessary to combination of some ideas including the SHADE's operator, the experimental results in Section4 of the revised manuscript cannot show the necessary without comparing the LDIWM PSO in Subsection 3.2 and the original SHADE in Subsection 3.3.
 So, the results should show the LDIWM PSO has superior to the original PSO if Point1 is correct, and the proposed PSO has superior to the original SHADE if Point2 is correct.
