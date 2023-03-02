@@ -22,7 +22,7 @@ However, I think the originality and creativity of this paper are still low acco
 
 ## major reason2 (Section4)
 However, it is still unclear whether their operators or ideas have the effectiveness for the path planning problem through numerical experiments.
-While Reviewer B's major comment5 points out a necessary to combination of some ideas including the SHADE's operator, the experimental results in Section7 of the revised manuscript cannot show the necessary without comparing the LDIWM PSO in Subsection 3.2 and the original SHADE in Subsection 3.3.
+While Reviewer B's major comment5 points out a necessary to combination of some ideas including the SHADE's operator, the experimental results in Section4 of the revised manuscript cannot show the necessary without comparing the LDIWM PSO in Subsection 3.2 and the original SHADE in Subsection 3.3.
 If the original SHADE
 This is critically 
 there are not the validation comparing to original for usability .
@@ -41,6 +41,12 @@ There are many insufficient explanations for the readers and this may cause them
 - Point2
    - What is the FPSO in Section4?
 
+
+
+# [minor comments]
+## minor comment1
+The answer or response letter is too simple.
+The author should refer all sentence from the reviewer and replay to them point by point.
 
 
 
