@@ -12,8 +12,8 @@ The creativity is slightly improved according to reviewer's comment.
 Especially, the proposed PSO is changed to be added some SHADE's operators according to Reviewer A's comment and Reviewer B's major comment7.
 And, the sentence about the originality of this paper is added to Section1 according to Reviewer B's major comment2.
 However, I think the originality and creativity of this paper are still low according to the following points.
-- Point1: Even if the above change, the proposed PSO is just a hybrid algorithm of the conventional PSO and many conventional operators as pointed out by Reviewer A. The creativity is not acceptable for publication of this journal.
-- Point2: To my understanding, the objective of this paper may be not an new algorithm assuming versatile application environments but an effective algorithm to the path planning problem. In spite of Reviewer B's major comment2, there are no the essential difference between the proposed PSO and other algorithms.
+- Point1: even if the above change, the proposed PSO is just a hybrid algorithm of the conventional PSO and many conventional operators as pointed out by Reviewer A. The creativity is not acceptable for publication of this journal.
+- Point2: to my understanding, the objective of this paper may be not an new algorithm assuming versatile application environments but an effective algorithm to the path planning problem. In spite of Reviewer B's major comment2, there are no the essential difference between the proposed PSO and other algorithms.
 
 
 ## major reason2 (Section4)
@@ -29,9 +29,9 @@ To supply no evidence supporting the usability of this paper is the mainly reaso
 
 ## major reason3 (General)
 There are many insufficient explanations for the readers and this may cause them confused or misleading. I think there are too many points to be needed to rewrite or revise according to the following points.
-- Point1: There is no explanation of the design variables in this revised paper while Reviewer B's major comment2 pointed out "Please clarify the optimization problem consisted of the objective function, the constraint condition, and the design variables". 
-- Point2: There is no explanation of the important variables "pbest_i, gbest" of the PSO update rule in this revised paper while Reviewer A pointed out "Several important variables (pbest_i, gbest_i, x_i, y_i) are not mentioned. Explain them".
-- Point3: There is no explanation of comparing algorithms in Section4, e.g., the CPSO (inferred from the context to be the proposed PSO) and FPSO in the revised paper. So, the readers cannot understand the significance or meaning of the experiment results.
+- Point1: there is no explanation of the design variables in this revised paper while Reviewer B's major comment2 pointed out "Please clarify the optimization problem consisted of the objective function, the constraint condition, and the design variables". 
+- Point2: there is no explanation of the important variables "pbest_i, gbest" of the PSO update rule in this revised paper while Reviewer A pointed out "Several important variables (pbest_i, gbest_i, x_i, y_i) are not mentioned. Explain them".
+- Point3: there is no explanation of comparing algorithms in Section4, e.g., the CPSO (inferred from the context to be the proposed PSO) and FPSO in the revised paper. So, the readers cannot understand the significance or meaning of the experiment results.
 
 
 
