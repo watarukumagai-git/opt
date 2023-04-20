@@ -1,15 +1,18 @@
 import math
+import warnings
 import optuna
 
-seed = 128
+seed = 2
 n_trials = 100
-num_variables_r = 2
+num_variables_r = 10
 num_variables_i = 0
 num_variables = num_variables_r + num_variables_i
 l_var = [num_variables_r, num_variables_i, num_variables]
 
-# RandomSampler, BoTorchSampler, TPESampler
-sampler_type = 'TPESampler'
+# RandomSampler, TPESampler is the worst 
+# CmaEsSampler is the best
+# BoTorchSampler, 
+sampler_type = 'CmaEsSampler'
 
 def hoge():
     return [key for key in locals().keys()]
@@ -26,9 +29,7 @@ def def_var1():
     return ls
   
 def f1(x, c, d):
-    num = len(x)
-    f = (1/float(num)) * sum([(j-c)**2 for j in x]) - d
-    return f
+    return (1/float(len(x))) * sum([(j-c)**2 for j in x]) - d
 
 
 class Prob:
@@ -40,6 +41,7 @@ class Prob:
         self.float_upper = 5.0
         self.d_1 = pow(10,-2)
         self.d_2 = pow(10,-2)
+        self.gamma = pow(10, 3)
         self.x_opt = 1 - math.sqrt(self.d_2)
         self.obj_opt = self.x_opt**2
 
@@ -58,17 +60,18 @@ class Prob:
 
     def def_const(self, x):
         c0 = f1(x, 1, self.d_1)
-        c1 = f1(x, 2, self.d_2)
+        c1 = f1(x, 1, self.d_2)
         #c0 = (1/float(self.num_variables)) * sum([(j-1)**2 for j in x]) - self.d_1
         #c1 = (1/float(self.num_variables)) * sum([(j-2)**2 for j in x]) - self.d_2
-        c = [c0, c1]
+        c = (c0, c1)
         return c
 
     def objective(self, trial):
         x = self.def_var(trial)
-        obj = f1(x, 0, 0)
         #obj = (1/float(self.num_variables)) * sum([j**2 for j in x])
         c = self.def_const(x)
+        # obj = f1(x, 0, 0)
+        obj = f1(x, 0, 0) + self.gamma * sum([cc for cc in c])
         trial.set_user_attr("constraint", c)
         return obj
 
@@ -76,39 +79,43 @@ def constraints(trial):
     return trial.user_attrs["constraint"]
 
 def get_sampler(sampler_type, constraints):
-    startup_trials = 500
+    startup_trials = 200
     if sampler_type == 'BoTorchSampler':
       sampler = optuna.integration.BoTorchSampler(
-          constraints_func=constraints,
-          n_startup_trials=startup_trials, 
-          seed=seed
-      )
-    elif sampler_type == 'RandomSampler':
-      sampler = optuna.samplers.RandomSampler(
-          constraints_func=constraints,
-          n_startup_trials=startup_trials, 
-          seed=seed
-      )
+        constraints_func=constraints,
+        n_startup_trials=startup_trials, 
+        seed=seed
+    )
     elif sampler_type == 'TPESampler':
       sampler = optuna.samplers.TPESampler(
           constraints_func=constraints,
           n_startup_trials=startup_trials, 
           seed=seed
       )
+    elif sampler_type == 'RandomSampler':
+      sampler = optuna.samplers.RandomSampler(
+          seed=seed
+      )
+    elif sampler_type == 'CmaEsSampler':
+      sampler = optuna.samplers.CmaEsSampler()
     return sampler
 
 
 Prob = Prob(l_var)
-sampler = get_sampler(sampler_type, constraints)
-study = optuna.create_study(directions=["minimize"], sampler=sampler)
-study.optimize(Prob.objective, n_trials=n_trials)
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore", category=optuna.exceptions.ExperimentalWarning)    
+    sampler = get_sampler(sampler_type, constraints)
+    study = optuna.create_study(directions=["minimize"], sampler=sampler)
+    study.optimize(Prob.objective, n_trials=n_trials)
 
 # but best_trials is only min_f not feasibility.
 for t in study.best_trials:
     print('Best trial: {:.0f}'.format(t.number))
-    print('Best value: {:.6f}'.format(t.values[0]))
     print('User attrs1: {:.3f}'.format(t.user_attrs["constraint"][0]))
     print('User attrs2: {:.3f}'.format(t.user_attrs["constraint"][1]))
+    print('Best value orig: {:.6f}'.format(t.values[0]))
+    c = sum([cc for cc in t.user_attrs["constraint"]])
+    print('Best value: {:.6f}'.format(t.values[0] - Prob.gamma*c))
     for key, value in t.params.items():
         t.params[key] = round(t.params[key], 4)
     print(f'Best param: {t.params}')
