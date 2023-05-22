@@ -22,3 +22,8 @@
 - 0	Out of scope	
   - Abstract exceeds character limit or otherwise constitutes major submission violation
 
+## Comments to authors
+- Very important! Please provide written comments to the authors to help them improve their work, or to explain your recommendation for rejection. 
+- Unlike many other conferences, we do forward your comments to the authors. The authors, like you, do appreciate such constructive comments. 
+- Your comments will also help to improve the technical quality and to promote the prestige of the conference. Your effort will be greatly appreciated by everyone.
+- Type or paste your comments into the box to the right in plain text format. Do not use TeX-style formatting commands except perhaps for a few unavoidable mathematical expressions
