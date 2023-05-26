@@ -11,17 +11,17 @@
 - Please write and illustrate them bigger.
 
 ### major comment2 (Section III-E)
-- Maybe I made a mistake, I cannot find when to perform the resampling in the optimization algorithm.
-- Please write clearly the resampling timing.
+- Although maybe I made a mistake, I cannot find when to perform the resampling in the optimization algorithm.
+- Please show clearly the resampling timing and condition, e.g., if-then rules.
 
 
 ## [minor comments]
 ### minor comment1 (Section II-B)
 - The existing noisy multi-objective optimization algorithm can be roughly categorized under five categories [23].
+- Why does the paper focus on resampling?
 - My understanding, they are roughly divided into two categories "candidate generation" and "evaluation and selection" according to evolutionary algorithm's search structure, and subdivided into five categories in detail.
-- The former category "candidate generation" (assuming x) includes (1) resampling and (2)implicit averaging. 
-- The latter category "evaluation and selection" (assuming f(x))  includes (3) robust selection, (4) specialized search strategies, and (5) alternative fitness estimation methods.
-- In this paper,  assuming uncertainties in design variables
+- The former category "candidate generation" (assuming x) includes (1) resampling and (2) implicit averaging while the latter category "evaluation and selection" (assuming f(x)) includes (3) robust selection, (4) specialized search strategies, and (5) alternative fitness estimation methods.
+- In this paper, the former category may be suitable for assuming uncertainties in design variables x.
 
 ### minor comment2 (Section III-E; Equation(2))
 - Equation (2) is to simply modify x to the upper or lower boundary if x is outside the boundary by adding noise.
