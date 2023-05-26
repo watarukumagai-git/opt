@@ -1,7 +1,8 @@
 # review_comment
 - This paper studied empirically resampling strategies in noisy evolutionary multi-objective optimization assuming uncertainties in design variables and proposed the concept of bad point, which is able to illustrate how noise affects the performance of different MOEAs.
 - It provides an intereting observation and data, but I think it still needs a considerable and minor revision to be improved.
-- The judgement is ""
+- The judgement of overall quality assessment is "4" (Original).
+- Please revise it according to following minor comments as necessary.
 
 ## [minor comments]
 ### minor comment1 (General)
