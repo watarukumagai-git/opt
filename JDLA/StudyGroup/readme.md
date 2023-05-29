@@ -21,7 +21,8 @@
     - 16章：学習アルゴリズムとしての最適化、行列空間上の最適化
   - https://www.amazon.co.jp/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E9%80%A3%E7%B6%9A%E6%9C%80%E9%81%A9%E5%8C%96-%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%83%97%E3%83%AD%E3%83%95%E3%82%A7%E3%83%83%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E9%87%91%E6%A3%AE-%E6%95%AC%E6%96%87/dp/406152920X/ref=asc_df_406152920X/?tag=jpgo-22&linkCode=df0&hvadid=295723231663&hvpos=&hvnetw=g&hvrand=13040238925236192092&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=20636&hvtargid=pla-525293953184&psc=1&th=1&psc=1
 
-- 機械学習スタートアップシリーズ ゼロからつくるPython機械学習プログラミング入門 (KS情報科学専門書)(2020)
+### 機械学習
+- 機械学習スタートアップシリーズ ゼロからつくるPython機械学習プログラミング入門 (KS情報科学専門書)、2020年
   - レビュー：非常に丁寧に数式と解を導出している点だとこの本がナンバーワンだが、間違いが多い
   - 章構成
     - 第1章 機械学習とは何か
@@ -35,7 +36,8 @@
     - 第9章 教師なし学習（主成分分析、因子分析、クラスター分析）
   - https://www.amazon.co.jp/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E3%82%BC%E3%83%AD%E3%81%8B%E3%82%89%E3%81%A4%E3%81%8F%E3%82%8BPython%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%85%A5%E9%96%80-KS%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6%E5%B0%82%E9%96%80%E6%9B%B8-%E5%85%AB%E8%B0%B7-%E5%A4%A7%E5%B2%B3/dp/406520612X/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=
 
-- Pythonではじめる機械学習 ―scikit-learnで学ぶ特徴量エンジニアリングと機械学習の基礎(2017)
+- Pythonではじめる機械学習 ―scikit-learnで学ぶ特徴量エンジニアリングと機械学習の基礎、2017年
+  - レビュー：難しい数式は殆ど出て来ずに、機械学習の全体像をつかめる。ただし、python文法の解説はない。
   - 章構成
     - １章　はじめに
     - ２章　教師あり学習（scikit-learnを使ったpythonコードを交えながら説明）
@@ -47,6 +49,6 @@
     - ８章　おわりに
   - https://www.amazon.co.jp/dp/4873117984?tag=maftracking264432-22&linkCode=ure&creative=6339
 
-- スッキリわかるPythonによる機械学習入門(スッキリわかる入門シリーズ) (2020)
+- スッキリわかるPythonによる機械学習入門(スッキリわかる入門シリーズ)、2020年
   - レビュー：とにかく超入門向け。数式が出てこないが、用語やコードの解説は図付きでわかりやすい。
   - https://www.amazon.co.jp/%E3%82%B9%E3%83%83%E3%82%AD%E3%83%AA%E3%82%8F%E3%81%8B%E3%82%8BPython%E3%81%AB%E3%82%88%E3%82%8B%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E5%85%A5%E9%96%80-%E3%82%B9%E3%83%83%E3%82%AD%E3%83%AA%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E9%A0%88%E8%97%A4%E7%A7%8B%E8%89%AF/dp/4295009946/ref=d_pd_sbs_sccl_3_3/356-8791380-0857063?pd_rd_w=DyXvq&content-id=amzn1.sym.5e5de9cb-2ac2-4b73-8a61-cd4c469e9211&pf_rd_p=5e5de9cb-2ac2-4b73-8a61-cd4c469e9211&pf_rd_r=32WSQBTVYV0QMCK2HHXT&pd_rd_wg=fKXZF&pd_rd_r=d7decd5c-cb16-4ee7-97a1-9cfea99f3e2c&pd_rd_i=4295009946&psc=1
