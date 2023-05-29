@@ -46,3 +46,7 @@
     - ７章　テキストデータの処理
     - ８章　おわりに
   - https://www.amazon.co.jp/dp/4873117984?tag=maftracking264432-22&linkCode=ure&creative=6339
+
+- スッキリわかるPythonによる機械学習入門(スッキリわかる入門シリーズ) (2020)
+  - レビュー：とにかく超入門向け。数式が出てこないが、用語やコードの解説は図付きでわかりやすい。
+  - https://www.amazon.co.jp/%E3%82%B9%E3%83%83%E3%82%AD%E3%83%AA%E3%82%8F%E3%81%8B%E3%82%8BPython%E3%81%AB%E3%82%88%E3%82%8B%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E5%85%A5%E9%96%80-%E3%82%B9%E3%83%83%E3%82%AD%E3%83%AA%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E9%A0%88%E8%97%A4%E7%A7%8B%E8%89%AF/dp/4295009946/ref=d_pd_sbs_sccl_3_3/356-8791380-0857063?pd_rd_w=DyXvq&content-id=amzn1.sym.5e5de9cb-2ac2-4b73-8a61-cd4c469e9211&pf_rd_p=5e5de9cb-2ac2-4b73-8a61-cd4c469e9211&pf_rd_r=32WSQBTVYV0QMCK2HHXT&pd_rd_wg=fKXZF&pd_rd_r=d7decd5c-cb16-4ee7-97a1-9cfea99f3e2c&pd_rd_i=4295009946&psc=1
