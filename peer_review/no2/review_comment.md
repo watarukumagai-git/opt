@@ -1,87 +1,80 @@
-査読
-Power load forecasting model based on CEEMDAN-VMD multiple noise 
-reduction decomposition optimization DBO-LTSM
+# review
+## title
+- Power load forecasting model based on CEEMDAN-VMD multiple noise reduction decomposition optimization DBO-LTSM
 
-[abstract]
-本論文は、組み合わせた予測モデルが構築される、電力負荷データの時間的•空間的なゆらぎやランダム性を扱うために。
-予測モデルはmultilevel noise reduction、 variational modal decomposition、Dung beetle optimizer (DBO)を組み込んだlong-term and short-term memory network (LSTM)に基づいている。
-まず、オリジナルデータのノイズ除去のために適応フィルタが使う。そのとき最初に、Complete Ensemble Empirical Mode Decomposition with Adaptive Noise (CEEMDAN)とdecomposed intrinsic mode functions (IMFs) によって、データが合成される。
-これらは、common IMFs (Co-IMFs)を形成するために、sample entropyとK-Means clusteringの手法によって統合されている。
-次に、高周波であるCo-IMF0は、variational mode decomposition (VMD)で処理される。 
-最後に、dung beetle optimization algorithmがLSTMのパラメータを最適化するために使われた後、合成されたデータは予測され、重ね合わされる。
-これは合成モデルだが、データのマルチレベルノイズ削減とLSTMの最適化によって実現され、予測精度はより改善される。
-実験データは、そのモデルのRMSE, MAPE, MAE, R-spureが1.90, 3.82, 0.90 and 0.99を示しており、短期および中期の電力負荷を予測する提案の合成モデルの有効性を示唆している。
+## japanese content
+### [abstract]
+- 本論文は、組み合わせた予測モデルが構築される、電力負荷データの時間的•空間的なゆらぎやランダム性を扱うために。
+- 予測モデルはmultilevel noise reduction、 variational modal decomposition、Dung beetle optimizer (DBO)を組み込んだlong-term and short-term memory network (LSTM)に基づいている。
+- まず、オリジナルデータのノイズ除去のために適応フィルタが使う。そのとき最初に、Complete Ensemble Empirical Mode Decomposition with Adaptive Noise (CEEMDAN)とdecomposed intrinsic mode functions (IMFs) によって、データが合成される。
+- これらは、common IMFs (Co-IMFs)を形成するために、sample entropyとK-Means clusteringの手法によって統合されている。
+- 次に、高周波であるCo-IMF0は、variational mode decomposition (VMD)で処理される。 
+- 最後に、dung beetle optimization algorithmがLSTMのパラメータを最適化するために使われた後、合成されたデータは予測され、重ね合わされる。
+- これは合成モデルだが、データのマルチレベルノイズ削減とLSTMの最適化によって実現され、予測精度はより改善される。
+- 実験データは、そのモデルのRMSE, MAPE, MAE, R-spureが1.90, 3.82, 0.90 and 0.99を示しており、短期および中期の電力負荷を予測する提案の合成モデルの有効性を示唆している。
 
 
-[1. Introduction]
-現代の電力技術では、正確な短期電力負荷予測は、電力会社における将来電力発電計画のための重要な指針としてよく提供される。
-しかし、電力負荷予測は電力需要に関する様々な要因の影響でかなり複雑である。例えば、天候条件、休日、社会経済状況などである。
-伝統的な電力負荷予測モデルは、初期には比較的簡易的な処理方法を用いて、過去の負荷データの時系列性に頼っている。
-知られているテクニックは、将来のトレンドや状態を推測するgradient ruleである。
-回帰モデルでは、負荷やその要因がそれぞれ独立変数と依存変数として考慮される。
-この2つの関係は、将来の負荷値を予測するために、回帰式を作ることで分析される。
-これらの間では、時系列手法が予測手法として最も知られている。the Autoregressive Integrated Moving Average (ARIMA)や Seasonal Autoregressive Integrated Moving Average (SARIMA) modelsのように。
-加えて、gray modelsやneural network modelsも一部で使われる。
-しかしながら、これらの伝統的な手法は、非定常かつ非線形データを扱う能力が限定された状態なので、簡易な数学的関係として過去と将来データをしばしば見る。
+### [1. Introduction]
+- 現代の電力技術では、正確な短期電力負荷予測は、電力会社における将来電力発電計画のための重要な指針としてよく提供される。
+- しかし、電力負荷予測は電力需要に関する様々な要因の影響でかなり複雑である。例えば、天候条件、休日、社会経済状況などである。
+- 伝統的な電力負荷予測モデルは、初期には比較的簡易的な処理方法を用いて、過去の負荷データの時系列性に頼っている。
+- 知られているテクニックは、将来のトレンドや状態を推測するgradient ruleである。
+- 回帰モデルでは、負荷やその要因がそれぞれ独立変数と依存変数として考慮される。
+- この2つの関係は、将来の負荷値を予測するために、回帰式を作ることで分析される。
+- これらの間では、時系列手法が予測手法として最も知られている。the Autoregressive Integrated Moving Average (ARIMA)や Seasonal Autoregressive Integrated Moving Average (SARIMA) modelsのように。
+- 加えて、gray modelsやneural network modelsも一部で使われる。
+- しかしながら、これらの伝統的な手法は、非定常かつ非線形データを扱う能力が限定された状態なので、簡易な数学的関係として過去と将来データをしばしば見る。
 
-近年、データ解析技術や深層学習の発展で、機械学習が電力負荷予測に適用されるようになった。
-特に、Support Vector Machine (SVM)、Back Propagation (BP) neural network、K-Nearest Neighbor (KNN) neural network、Recurrent Neural Network (Gated Recurrent Unit)などは、この分野における古典的なモデルで、最も既存の電力負荷予測手法として組み込まれている。
-しかし、これらの伝統的なモデルは、ハイパーパラメータが適切に調整されていなければ、局所解やトレーニングへにおけるオーバーフィッティングの課題に出くわす。
-この問題に対処するため、近年の研究では、優れた最適化アルゴリズムを予測手法に組み込んだ手法が提案されている。
-例として、
-Sparrow Search Algorithm (SSA)によって最適化された、Least Squares Support Vector Machine (LSSVM)、
-Improved Particle Swarm Optimization (IPSO)によって最適化されたSVM、
-Improved Hunter-Prey Algorithm (LHPO)によって最適化されたKernel Extreme Learning Machine (KELM)、
-Spatial Autocorrelation and Convolutional Long Short-Term Memory (SAC-ConvLSTM)に基づく最新の手法、
-特異スペクトル分解に基づくCuckoo Searchによって最適化されたSVM、
-スマートメータデータに基づく分散型電力負荷予測のための非同期型連合学習、などが挙げられる。
-これらの優れた最適化アルゴリズムは、自動的なパラメータ最適化によって、モデルの処理速度と予測精度を高める。
+- 近年、データ解析技術や深層学習の発展で、機械学習が電力負荷予測に適用されるようになった。
+- 特に、Support Vector Machine (SVM)、Back Propagation (BP) neural network、K-Nearest Neighbor (KNN) neural network、Recurrent Neural Network (Gated Recurrent Unit)などは、この分野における古典的なモデルで、最も既存の電力負荷予測手法として組み込まれている。
+- しかし、これらの伝統的なモデルは、ハイパーパラメータが適切に調整されていなければ、局所解やトレーニングへにおけるオーバーフィッティングの課題に出くわす。
+- この問題に対処するため、近年の研究では、優れた最適化アルゴリズムを予測手法に組み込んだ手法が提案されている。
+- 例として、Sparrow Search Algorithm (SSA)によって最適化された、Least Squares Support Vector Machine (LSSVM)、
+Improved Particle Swarm Optimization (IPSO)によって最適化されたSVM、Improved Hunter-Prey Algorithm (LHPO)によって最適化されたKernel Extreme Learning Machine (KELM)、Spatial Autocorrelation and Convolutional Long Short-Term Memory (SAC-ConvLSTM)に基づく最新の手法、特異スペクトル分解に基づくCuckoo Searchによって最適化されたSVM、スマートメータデータに基づく分散型電力負荷予測のための非同期型連合学習、などが挙げられる。
+- これらの優れた最適化アルゴリズムは、自動的なパラメータ最適化によって、モデルの処理速度と予測精度を高める。
 しかし、短期電力負荷データにおける一時的な変動、ノイズ、外れ値などのデータは、予測処理に干渉し、モデルが要求精度に達する上で難しくさせる。
-つまり、いくつかのデータ処理手法が負荷予測モデルで適用されてきた。
-Empirical Mode Decomposition (EMD)、Ensemble Empirical Mode Decomposition (EEMD)、 Complementary EEMD (CEEMD)、 Adaptive Noise Ensemble Empirical Mode Decomposition、the improved CNN model based on Encoder-Decoderなど。
+- つまり、いくつかのデータ処理手法が負荷予測モデルで適用されてきた。Empirical Mode Decomposition (EMD)、Ensemble Empirical Mode Decomposition (EEMD)、 Complementary EEMD (CEEMD)、 Adaptive Noise Ensemble Empirical Mode Decomposition、the improved CNN model based on Encoder-Decoderなど。
 
-上記の分析に基づき、この研究は短期予測モデルの精度を高めるために、データ前処理のために、the fully adaptive noise ensemble empirical mode decomposition  methodの改善したバージョンを適用する。
-その後、LSTM neural networkのハイパーパラメータのために、DBOによって最適化された統合した予測モデルを構築する。
-初めに、生データからノイズ除去するためにCEEMDAN-VMDが使われる。
-そして、優れたDBOの最適化戦略がLSTMのハイパーパラメータを自動的に最適化するために活用される。
-結果的なモデルは、各要素を個別に予測するために使われる。
-最後に、個別の予測結果は、最終的な予測データを得るために、集約されて組み合わせられる。
-
-
-[2. データ処理]
+- 上記の分析に基づき、この研究は短期予測モデルの精度を高めるために、データ前処理のために、the fully adaptive noise ensemble empirical mode decomposition methodの改善したバージョンを適用する。
+- その後、LSTM neural networkのハイパーパラメータのために、DBOによって最適化された統合した予測モデルを構築する。
+- 初めに、生データからノイズ除去するためにCEEMDAN-VMDが使われる。
+- そして、優れたDBOの最適化戦略がLSTMのハイパーパラメータを自動的に最適化するために活用される。
+- 結果的なモデルは、各要素を個別に予測するために使われる。
+- 最後に、個別の予測結果は、最終的な予測データを得るために、集約されて組み合わせられる。
 
 
-
-[3. DBO最適化]
-
-
-[4. 分析とシミュレーションの例]
+### [2. データ処理]
 
 
-[5. Conclusion]
-現代の電力システムにおける短期的な電力負荷予測の課題への対処について、本研究はベンチマークとして関連する気象データかつ一時的なデータに沿って、年度の電力負荷データを使った。
-この研究は、短中期の電力負荷予測のために、CEEMDAN-VMD multi-level noise reductionとDBO-LSTMに基づく結合モデルを導入した。
-さらにこのモデルは、multiple network models and optimization algorithm modelsと比べて検証された。
-主要な結論は以下の通り:
-(1) 古典的な予測モデルとは異なり、この研究は、
-風力フォームの風力発電の時系列データを逐次に、分解するために、CEEMDAN-VMDを組み込む。
 
-The main conclusions are as follows: 
-(1) Unlike classical forecasting models, this study employs the CEEMDAN-VMD method to repeatedly decompose the wind power time series of wind farms into noise-reduced components. This approach facilitates the integration of features from newly established wind farms with surrounding wind farms under the same modality. Subsequently, a forecasting model is developed for each component, significantly enhancing the prediction accuracy of the composite model. 
-(2)Based on data comparisons with other models, the superiority 
+### [3. DBO最適化]
+
+
+### [4. 分析とシミュレーションの例]
+
+
+### [5. Conclusion]
+- 現代の電力システムにおける短期的な電力負荷予測の課題への対処について、本研究はベンチマークとして関連する気象データかつ一時的なデータに沿って、年度の電力負荷データを使った。
+- この研究は、短中期の電力負荷予測のために、CEEMDAN-VMD multi-level noise reductionとDBO-LSTMに基づく結合モデルを導入した。
+- さらにこのモデルは、multiple network models and optimization algorithm modelsと比べて検証された。
+- 主要な結論は以下の通り:
+- (1) 古典的な予測モデルとは異なり、この研究は、風力フォームの風力発電の時系列データを逐次に、分解するために、CEEMDAN-VMDを組み込む。
+- The main conclusions are as follows: 
+   - (1) Unlike classical forecasting models, this study employs the CEEMDAN-VMD method to repeatedly decompose the wind power time series of wind farms into noise-reduced components. This approach facilitates the integration of features from newly established wind farms with surrounding wind farms under the same modality. Subsequently, a forecasting model is developed for each component, significantly enhancing the prediction accuracy of the composite model. 
+   - (2) Based on data comparisons with other models, the superiority 
 of the CEEMDAN-VMD-DBO-LSTM model in electricity forecasting tasks is evident. The model exhibits pronounced advantages in terms of prediction accuracy and error reduction, providing a robust foundation for our future research and model enhancements. 
-(3)This model is adaptable to various environments. In forecasting water resource management, it aids in the rational planning of watershed water demands. Simultaneously, in the power grid load forecasting, the model efficiently assists nations in addressing challenges posed by extreme weather conditions such as severe droughts, typhoons, and heavy rainfall. This allows different sectors to more swiftly forecast and regulate the power grid.
+   - (3) This model is adaptable to various environments. In forecasting water resource management, it aids in the rational planning of watershed water demands. Simultaneously, in the power grid load forecasting, the model efficiently assists nations in addressing challenges posed by extreme weather conditions such as severe droughts, typhoons, and heavy rainfall. This allows different sectors to more swiftly forecast and regulate the power grid.
 
 
-
-[major comment1]
+# [comments]
+## [major comment1]
 correspondenceの引用マークは、タイトルではなく、correspondence authorで引用されるべきだ。
 
-[major comment2]
+## [major comment2]
 各TableとFigureの周辺スペース(本文とのスペース、Table同士のスペース、captionとのスペース)がかなり狭い。
 これらは、TEEEの論文フォーマットで指定されているはずなので、確認して必要なら修正すべき。
 
-[major comment3]
+## [major comment3]
 4.5.1節から4.5.3節は一つの節に統合すべきだろう。
 現在の原稿では、各節の小さな目的に対応して、Table4からTable6、Fig.2からFig.4のそれぞれで、予測性能を比較しているが、全体的な性能の比較がしにくい。
 さらに、4.5.1節から4.5.3節の目的に対して、各Tableにおける比較対象は不適切だと思われる。
@@ -89,11 +82,11 @@ correspondenceの引用マークは、タイトルではなく、correspondence 
 
 よって、Table4からTable6は、全て一つの表に統一した上で、各検証目的に応じて、比較手法を適切に選び、結果を考察するのが良いだろう。
 
-[major comment4]
+## [major comment4]
 
 
-[major comment5]
+## [major comment5]
 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。
 
-[minor comment1]
+## [minor comment1]
 
