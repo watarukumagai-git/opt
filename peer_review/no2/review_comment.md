@@ -58,17 +58,15 @@ Improved Particle Swarm Optimization (IPSO)によって最適化されたSVM、I
 - この研究は、短中期の電力負荷予測のために、CEEMDAN-VMD multi-level noise reductionとDBO-LSTMに基づく結合モデルを導入した。
 - さらにこのモデルは、multiple network models and optimization algorithm modelsと比べて検証された。
 - 主要な結論は以下の通り:
-- (1) 古典的な予測モデルとは異なり、この研究は、風力フォームの風力発電の時系列データを逐次に、分解するために、CEEMDAN-VMDを組み込む。
-- The main conclusions are as follows: 
-   - (1) Unlike classical forecasting models, this study employs the CEEMDAN-VMD method to repeatedly decompose the wind power time series of wind farms into noise-reduced components. This approach facilitates the integration of features from newly established wind farms with surrounding wind farms under the same modality. Subsequently, a forecasting model is developed for each component, significantly enhancing the prediction accuracy of the composite model. 
-   - (2) Based on data comparisons with other models, the superiority 
-of the CEEMDAN-VMD-DBO-LSTM model in electricity forecasting tasks is evident. The model exhibits pronounced advantages in terms of prediction accuracy and error reduction, providing a robust foundation for our future research and model enhancements. 
+- (1) 古典的な予測モデルとは異なり、この研究は、風力フォームの風力発電の時系列データをノイズ削減された成分に逐次的に分解するために、CEEMDAN-VMDを組み込む。このアプローチは、同じ方式の環境下で新たに設立された風力発電基地からの特徴の統合を容易にする。その後、予測モデルは要素毎に、特に統合モデルの予測精度を改善するために開発された。
+- (2) 他のモデルのデータ比較に基づき、電力予測タスクにおけるCEEMDAN-VMD-DBO-LSTMモデルの優位性が検証された。このモデルは予測精度と誤差削減という観点で長所を示している。将来の研究やモデル強化のためのロバスト基盤を提供することで。
+- (3) このモデルは、
    - (3) This model is adaptable to various environments. In forecasting water resource management, it aids in the rational planning of watershed water demands. Simultaneously, in the power grid load forecasting, the model efficiently assists nations in addressing challenges posed by extreme weather conditions such as severe droughts, typhoons, and heavy rainfall. This allows different sectors to more swiftly forecast and regulate the power grid.
 
 
 # [comments]
 ## [major comment1]
-- 本論文の新規性•有用性•創造性は何か？In my understanding, 本論文の新規性はアルゴリズムCEEMDE-VMDを開発したこと？
+- 本論文の新規性•有用性•創造性はそれぞれ何か？In my understanding, 本論文の新規性はアルゴリズムCEEMDE-VMDを開発したこと？
 
 ## [major comment3]
 - 各TableとFigureの周辺スペース(本文とのスペース、Table同士のスペース、captionとのスペース)がかなり狭い。
