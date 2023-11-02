@@ -6,7 +6,7 @@
 ### [abstract]
 - 本論文は、組み合わせた予測モデルが構築される、電力負荷データの時間的•空間的なゆらぎやランダム性を扱うために。
 - 予測モデルはmultilevel noise reduction、 variational modal decomposition、Dung beetle optimizer (DBO)を組み込んだlong-term and short-term memory network (LSTM)に基づいている。
-- まず、オリジナルデータのノイズ除去のために適応フィルタが使う。そのとき最初に、Complete Ensemble Empirical Mode Decomposition with Adaptive Noise (CEEMDAN)とdecomposed intrinsic mode functions (IMFs) によって、データが合成される。
+- まず、オリジナルデータのノイズ除去のために適応フィルタを使う。そのとき最初に、Complete Ensemble Empirical Mode Decomposition with Adaptive Noise (CEEMDAN)とdecomposed intrinsic mode functions (IMFs) によって、データが合成される。
 - これらは、common IMFs (Co-IMFs)を形成するために、sample entropyとK-Means clusteringの手法によって統合されている。
 - 次に、高周波であるCo-IMF0は、variational mode decomposition (VMD)で処理される。 
 - 最後に、dung beetle optimization algorithmがLSTMのパラメータを最適化するために使われた後、合成されたデータは予測され、重ね合わされる。
@@ -27,12 +27,11 @@
 
 - 近年、データ解析技術や深層学習の発展で、機械学習が電力負荷予測に適用されるようになった。
 - 特に、Support Vector Machine (SVM)、Back Propagation (BP) neural network、K-Nearest Neighbor (KNN) neural network、Recurrent Neural Network (Gated Recurrent Unit)などは、この分野における古典的なモデルで、最も既存の電力負荷予測手法として組み込まれている。
-- しかし、これらの伝統的なモデルは、ハイパーパラメータが適切に調整されていなければ、局所解やトレーニングへにおけるオーバーフィッティングの課題に出くわす。
+- しかし、これらの伝統的なモデルは、ハイパーパラメータが適切に調整されていなければ、局所解やトレーニングにおけるオーバーフィッティングの課題に出くわす。
 - この問題に対処するため、近年の研究では、優れた最適化アルゴリズムを予測手法に組み込んだ手法が提案されている。
-- 例として、Sparrow Search Algorithm (SSA)によって最適化された、Least Squares Support Vector Machine (LSSVM)、
-Improved Particle Swarm Optimization (IPSO)によって最適化されたSVM、Improved Hunter-Prey Algorithm (LHPO)によって最適化されたKernel Extreme Learning Machine (KELM)、Spatial Autocorrelation and Convolutional Long Short-Term Memory (SAC-ConvLSTM)に基づく最新の手法、特異スペクトル分解に基づくCuckoo Searchによって最適化されたSVM、スマートメータデータに基づく分散型電力負荷予測のための非同期型連合学習、などが挙げられる。
+- 例として、Sparrow Search Algorithm (SSA)によって最適化された、Least Squares Support Vector Machine (LSSVM)、Improved Particle Swarm Optimization (IPSO)によって最適化されたSVM、Improved Hunter-Prey Algorithm (LHPO)によって最適化されたKernel Extreme Learning Machine (KELM)、Spatial Autocorrelation and Convolutional Long Short-Term Memory (SAC-ConvLSTM)に基づく最新の手法、特異スペクトル分解に基づくCuckoo Searchによって最適化されたSVM、スマートメータデータに基づく分散型電力負荷予測のための非同期型連合学習、などが挙げられる。
 - これらの優れた最適化アルゴリズムは、自動的なパラメータ最適化によって、モデルの処理速度と予測精度を高める。
-しかし、短期電力負荷データにおける一時的な変動、ノイズ、外れ値などのデータは、予測処理に干渉し、モデルが要求精度に達する上で難しくさせる。
+- しかし、短期電力負荷データにおける一時的な変動、ノイズ、外れ値などのデータは、予測処理に干渉し、モデルが要求精度に達する上で難しくさせる。
 - つまり、いくつかのデータ処理手法が負荷予測モデルで適用されてきた。Empirical Mode Decomposition (EMD)、Ensemble Empirical Mode Decomposition (EEMD)、 Complementary EEMD (CEEMD)、 Adaptive Noise Ensemble Empirical Mode Decomposition、the improved CNN model based on Encoder-Decoderなど。
 
 - 上記の分析に基づき、この研究は短期予測モデルの精度を高めるために、データ前処理のために、the fully adaptive noise ensemble empirical mode decomposition methodの改善したバージョンを適用する。
@@ -66,6 +65,10 @@ Improved Particle Swarm Optimization (IPSO)によって最適化されたSVM、I
 
 # [comments]
 ## [major comment1]
+- 本論文の大きな目的は短期電力負荷予測の精度を改善だが、サブの目的は何か？いくつかのアルゴリズムを組み合わせて提案手法を構築した理由は、電力負荷データの時間的•空間的なゆらぎやランダム性を扱うためだと推察する。このため、Chapter1では、上記を扱うことで精度改善を図ることを目的とする、と明記すべきだ。
+- 機械学習のハイパーパラメータを上位の最適化機能によって自動調整するアイディアは新しくない。
+
+## [major comment2]
 - 本論文の新規性•創造性はそれぞれ何か？In my understanding, 本論文の新規性はアルゴリズムCEEMDE-VMDを開発したこと？
 
 ## [major comment3]
