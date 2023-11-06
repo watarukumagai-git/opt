@@ -122,8 +122,10 @@
 
 ## [minor comment3]
 - 多くの誤記が残されている。よく確認して修正せよ。
+- Eq.(31)からEq.(34)で使われているpの説明として、"measured/predicted value"としか書かれていない。pはLSTMの目的変数であることを明記せよ。(Page6)
 - MAPEの定義式Eq.(32)で、nがデータ数だと推察されるが、nとNが同時に使用されている。文字を統一せよ。(Page6)
 - 実験結果では、RMSE, MAPE, MSE, R-squaredのfour metricsを用いているが、評価指標を説明する文章では"Three main metrics"と書いてある。(Page6)
 - Rの定義式Eq.(34)で、分母の右側のΣが、左側の指数部分に含まれている。(Page6)
 - 実験結果では、R-squaredを用いているが、Eq.(34)は、実績値と推定値のSample correlation coefficient or Pearson’s correlation coefficientの定義式である。R-squaredの定義式を明記せよ。(Page6)
-- What is BWO? (Under Table2, Page6)
+- What is "BWO"? (Under Table2, Page6)
+- 
