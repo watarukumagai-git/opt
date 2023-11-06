@@ -128,4 +128,4 @@
 - Rの定義式Eq.(34)で、分母の右側のΣが、左側の指数部分に含まれている。(Page6)
 - 実験結果では、R-squaredを用いているが、Eq.(34)は、実績値と推定値のSample correlation coefficient or Pearson’s correlation coefficientの定義式である。R-squaredの定義式を明記せよ。(Page6)
 - What is "BWO"? (Under Table2, Page6)
-- 
+- Eq.(31)からEq.(34)のpのmeasured/predicted valueの変数は、下付けが長すぎる。一般的には、measured valueの変数としてp、predicted valueの変数としてp^\hatを用いることが多い。また、これらを使うことで数式がきれいに見えるだろう。
