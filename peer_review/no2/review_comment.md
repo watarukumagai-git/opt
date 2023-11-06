@@ -129,3 +129,6 @@
 - 実験結果では、R-squaredを用いているが、Eq.(34)は、実績値と推定値のSample correlation coefficient or Pearson’s correlation coefficientの定義式である。R-squaredの定義式を明記せよ。(Page6)
 - What is "BWO"? (Under Table2, Page6)
 - Eq.(31)からEq.(34)のpのmeasured/predicted valueの変数は、下付けが長すぎる。一般的には、measured valueの変数としてp、predicted valueの変数としてp^\hatを用いることが多い。また、これらを使うことで数式がきれいに見えるだろう。
+
+## [major comment4]
+- referenced paperが中国語で執筆された文献に集中している恐れがある。このジャーナルは国際的なもので英文で執筆されるため、英文で執筆された文献を引用することが望ましい。同等の根拠を示す上で、適切な英文文献が無ければ、中国語文献の末尾に"(in Chinese)"と追記せよ。
