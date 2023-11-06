@@ -121,8 +121,8 @@
 - 本論文では、これらのアルゴリズムに変更して検証し直す必要はないが、DBOがベストな選択肢ではなく、この問題でたまたま最善であったことを言及する必要があるだろう。
 
 ## [minor comment3]
-- いくつかの誤記を修正せよ。
-- MAPEの数式で、nがデータ数だと推察されるが、nとNが同時に使用されている。(page6)
-- RMSE, MAPE, MSE, R-squaredのfour metricsを用いているが、前の文章ではThree main metricsと書いてある。(page6)
+- 多くの誤記が残されている。よく確認して修正せよ。
+- MAPEの数式で、nがデータ数だと推察されるが、nとNが同時に使用されている。(Page6)
+- RMSE, MAPE, MSE, R-squaredのfour metricsを用いているが、前の文章ではThree main metricsと書いてある。(Page6)
 - Rの数式で、分母の右側のΣが、左側の指数部分に含まれている。(page6)
-- R-squaredは、数式では一般的にR^2と表記するのが一般的である。(page6)
+- 実績値と推定値の標本相関係数 (sample correlation coefficient) あるいはピアソンの積率相関係数 (Pearson’s correlation coefficient)
