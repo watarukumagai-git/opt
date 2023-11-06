@@ -122,7 +122,8 @@
 
 ## [minor comment3]
 - 多くの誤記が残されている。よく確認して修正せよ。
-- MAPEの数式で、nがデータ数だと推察されるが、nとNが同時に使用されている。(Page6)
-- RMSE, MAPE, MSE, R-squaredのfour metricsを用いているが、前の文章ではThree main metricsと書いてある。(Page6)
-- Rの数式で、分母の右側のΣが、左側の指数部分に含まれている。(page6)
-- 実績値と推定値の標本相関係数 (sample correlation coefficient) あるいはピアソンの積率相関係数 (Pearson’s correlation coefficient)
+- MAPEの定義式Eq.(32)で、nがデータ数だと推察されるが、nとNが同時に使用されている。文字を統一せよ。(Page6)
+- 実験結果では、RMSE, MAPE, MSE, R-squaredのfour metricsを用いているが、評価指標を説明する文章では"Three main metrics"と書いてある。(Page6)
+- Rの定義式Eq.(34)で、分母の右側のΣが、左側の指数部分に含まれている。(Page6)
+- 実験結果では、R-squaredを用いているが、Eq.(34)は、実績値と推定値のSample correlation coefficient or Pearson’s correlation coefficientの定義式である。R-squaredの定義式を明記せよ。(Page6)
+- What is BWO? (Under Table2, Page6)
