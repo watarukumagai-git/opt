@@ -78,7 +78,7 @@
 ## [major comment2]
 - 最適化アルゴリズムとしてDBOを採用した理由は何か？
 - 恐らくその答えは「4.5節の実験を通して最も優れていたため」だと推察するが、in my understanding, それは他のタスクでは成立しないと考える。
-- もしこの理由が正しいならば、DBOを使用することは本論文のアイディアとは言えないため、3.1節から3.4節の内容を、Additional Materials, i.e.,Appendixに移すのが適切だろう。
+- もしこの理由が正しいならば、DBOを使用することは本論文のアイディアとは言えないため、3.1節から3.3節の内容を、Additional Materials, i.e.,Appendixに移すべきで、また、「機械学習のハイパーパラメータチューニングの問題はブラックボックス最適化のクラスに分類される。ブラックボックス最適化のためのメタヒューリスティクスは多く知られているが、今回はSection 4.5での性能が最も良かったDBOを採用した。」と明記せよ。
 - そうでなければ、様々なタスクにおいてLSTMの性能を引き出すために、DBOがベストである理由を明記せよ。
 
 ## [major comment3]
@@ -155,10 +155,13 @@
 - Chapter1に、本論文の新規性•創造性について、他の文献との差異に言及しながら、明記せよ。
 
 ## [major comment2]
-- 最適化アルゴリズムとしてDBOを採用した理由は何か？
-- 恐らくその答えは「4.5節の実験を通して最も優れていたため」だと推察するが、in my understanding, それは他のタスクでは成立しないと考える。
-- もしこの理由が正しいならば、DBOを使用することは本論文のアイディアとは言えないため、3.1節から3.4節の内容を、Additional Materials, i.e.,Appendixに移すのが適切だろう。
-- そうでなければ、様々なタスクにおいてLSTMの性能を引き出すために、DBOがベストである理由を明記せよ。
+- What is the reason for using DBO as optimization algorithm?
+- I would guess that the answer is "because DBO showed the best performance through numerical experiments in Section 4.5", I believe that this is not valid for any other task.
+- If this reason is correct, using DBO is not an original idea for this paper.
+- Overall, please modify the following items:
+   - To transfer the DBO algorithm part (from Sections 3.1 to 3.3) to Additional Materials, i.e., Appendix.
+   - To specify "A machine learning's hyperparameter tuning problem is categorized as the class of black-box optimization. Although there are many known metaheristic algorithms for black-box optimization, this study used DBO which had the best performance in Section 4.5" in Chapter 3.
+- Otherwise, please specify why DBO is best choice for the LSTM performance in various tasks. 
 
 ## [major comment3]
 - The main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task.
@@ -203,14 +206,19 @@
 - 本論文では、これらのアルゴリズムに変更して検証し直す必要はないが、DBOがベストな選択肢ではなく、この問題でたまたま最善であったことを言及する必要があるだろう。
 
 ## [minor comment3]
-- 多くの誤記が残されている。よく確認して修正せよ。
-- Eq.(31)からEq.(34)で使われているpの説明として、"measured/predicted value"としか書かれていない。pはLSTMの目的変数であることを明記せよ。(Page6)
-- MAPEの定義式Eq.(32)で、nがデータ数だと推察されるが、nとNが同時に使用されている。文字を統一せよ。(Page6)
-- 実験結果では、RMSE, MAPE, MSE, R-squaredのfour metricsを用いているが、評価指標を説明する文章では"Three main metrics"と書いてある。(Page6)
-- Rの定義式Eq.(34)で、分母の右側のΣが、左側の指数部分に含まれている。(Page6)
-- 実験結果では、R-squaredを用いているが、Eq.(34)は、実績値と推定値のSample correlation coefficient or Pearson’s correlation coefficientの定義式である。R-squaredの定義式を明記せよ。(Page6)
-- What is "BWO"? (Under Table2, Page6)
-- Eq.(31)からEq.(34)のpのmeasured/predicted valueの変数は、下付けが長すぎる。一般的には、measured valueの変数としてp、predicted valueの変数としてp^\hatを用いることが多い。また、これらを使うことで数式がきれいに見えるだろう。
+- There are many misstatements in the current manuscript. While paying attention to the uniformity nd correspondences of variables or words, please modify the following items:
+   - Eq.(Page3)
+   - What is b in Eq.(17)? (Eq.(17), Page3)
+   - In the sentence "Here, t represents the number of iterations now, ...", where is t in Eq.(17)? In my understanding, $x_i(t+1)=x_i(t)+\alpha k x_i(t-1) + \beta \Delta x$ is the correct formula. (Eq.(17), Page3)
+   - In the sentence "..., p is a constant belonging to (0,1).", where is p in Eq.(17)? (Under Eq.(17), Page3)
+   - Eq.(18) is exactly the same as Eq.(17). (Eq.(18), Page3)
+   - Eq.(31)からEq.(34)で使われているpの説明として、"measured/predicted value"としか書かれていない。pはLSTMの目的変数であることを明記せよ。(Page6)
+   - In the MAPE definition (Eq.(32)), n and N are used in the same meaning although it is inferred that n is the number of data. Unify the letters. (Eq.(32), Page6)
+   - In the experimental results, four metrics (RMSE, MAPE, MSE, and R-squared) are used, but the words "three main metrics" is used in the text describing the evaluation indicators. (Top of Eq.(31), Page6)
+   - In the R definition (Eq.(34)), the sum term on the right side in the denominator is included in the exponential part on the left side. (Eq.(34), Page6)
+   - The experimental results use R-squared, but Eq.(34) is the definition equation of Sample correlation coefficient or Pearson's correlation coefficient between actual and estimated values. Specify the definition formula for R-squared. (Eq.(34), Page6)
+   - What is "BWO"? (Under Table2, Page6)
+   - Eq.(31)からEq.(34)のpのmeasured/predicted valueの変数は、下付けが長すぎる。一般的には、measured valueの変数としてp、predicted valueの変数としてp^\hatを用いることが多い。また、これらを使うことで数式がきれいに見えるだろう。
 
 ## [minor comment4]
 - referenced paperが中国語で執筆された文献に集中している恐れがある。このジャーナルは国際的なもので英文で執筆されるため、英文で執筆された文献を引用することが望ましい。同等の根拠を示す上で、適切な英文文献が無ければ、中国語文献の末尾に"(in Chinese)"と追記せよ。
