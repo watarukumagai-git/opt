@@ -63,7 +63,7 @@
 
 
 
-# [comments]
+# [japanese comments]
 - C判定
 
 ## [major comment1]
@@ -72,7 +72,7 @@
    - 予測手法の要素であるCEEMDAN-VMD、LSTM、DBOなどのアルゴリズムは、他の文献で開発されたものである。
    - さらに、In my understanding, 対象の電力負荷予測も一般的によく知られている問題で、特に本論文において、特別なまたは困難なシチュエーションが追加されていないと推察する。よって、問題定義は既存のものである。
    - 機械学習や深層学習のハイパーパラメータを上位の最適化機能によって自動調整するアイディアは新しくない。これは近年、様々なタスクにおいて深層学習の性能を実用的なレベルまで引き出す上で必要な作業とも言い換えられる。例えば、文献[28]では、最適化機能との併用によって、電力負荷予測ではないが、様々なタスクにおいて予測性能を改善させている。よって、最適化機能の導入も、既存のものである。
-   - 特に、文献[26]は、CEEMDAN-VMDとLSTMを組み合わせて、電力負荷予測の問題に適用している。本論文との本質的な違いが明確に記述されていない。よって、予測手法は既存のものである。
+   - 電力負荷データの時間的•空間的なゆらぎやランダム性を扱うために、CEEMDAN-VMDとLSTMを使用していると推察する。しかしながら、文献[26]は、CEEMDAN-VMDとLSTMを組み合わせて、電力負荷予測の問題に適用している。本論文との本質的な違いが明確に記述されていない。よって、予測手法は既存のものである。
 - Chapter1に、本論文の新規性•創造性について、他の文献との差異に言及しながら、明記せよ。
 
 ## [major comment2]
@@ -82,7 +82,10 @@
 - そうでなければ、様々なタスクにおいてLSTMの性能を引き出すために、DBOがベストである理由を明記せよ。
 
 ## [major comment3]
-- 本論文の大きな目的は、短期電力負荷予測の精度を改善することだが、サブの目的は何か？いくつかのアルゴリズムを組み合わせて予測手法を構築した理由は、電力負荷データの時間的•空間的なゆらぎやランダム性を扱うためだと推察する。このため、Chapter1で、「本論文の目的は、電力負荷データの時間的•空間的なゆらぎやランダム性を扱うことで、短期的な電力負荷予測精度の改善を図ることである」と明記すべきだ。
+- 本論文の大きな目的は、短期電力負荷予測の精度を改善することだが、サブの目的は何か？
+- いくつかのアルゴリズムを組み合わせて予測手法を構築した理由は、電力負荷データの時間的•空間的なゆらぎやランダム性を扱うためだと推察する。
+- しかし、文献[26]も、CEEMDAN-VMDとLSTMを組み合わせて、電力負荷予測の問題に適用しているため、上記のサブの目的と同様である。
+- このため、Chapter1で、「本論文の目的は、電力負荷データの時間的•空間的なゆらぎやランダム性を扱うことで、短期的な電力負荷予測精度の改善を図ることである」と明記すべきだ。
 
 ## [major comment4]
 - DBOによってLSTMのハイパーパラメータを最適化する問題について下記の点が不明瞭である。
@@ -130,5 +133,84 @@
 - What is "BWO"? (Under Table2, Page6)
 - Eq.(31)からEq.(34)のpのmeasured/predicted valueの変数は、下付けが長すぎる。一般的には、measured valueの変数としてp、predicted valueの変数としてp^\hatを用いることが多い。また、これらを使うことで数式がきれいに見えるだろう。
 
+## [minor comment4]
+- referenced paperが中国語で執筆された文献に集中している恐れがある。このジャーナルは国際的なもので英文で執筆されるため、英文で執筆された文献を引用することが望ましい。同等の根拠を示す上で、適切な英文文献が無ければ、中国語文献の末尾に"(in Chinese)"と追記せよ。
+
+
+# [english comments]
+- This paper validates a forcasting/prediction method by being applied in electrical power load data.
+- The prediction method is combined with the CEEMDAN-VMD and DBO-LSTM algorithms.
+- Moreover, it is verified that the prediction performance of the method is superior to several machine learning algorithms through numerical simulation using wind power data.
+- It provides an interesting observation and data, but I think it still needs a considerable and major revision to be acceptable for publication in terms of originality.
+- From this reason, the judgement is "C" (major revision).
+- It should be revised according to following major comments and improved as necessary.
+
+## [major comment1]
+- 本論文の新規性•創造性はそれぞれ何か？
+- 下記の理由から、本論文の新規性•創造性が本ジャーナルに掲載するレベルに到達していない恐れがある。
+   - 予測手法の要素であるCEEMDAN-VMD、LSTM、DBOなどのアルゴリズムは、他の文献で開発されたものである。
+   - さらに、In my understanding, 対象の電力負荷予測も一般的によく知られている問題で、特に本論文において、特別なまたは困難なシチュエーションが追加されていないと推察する。よって、問題定義は既存のものである。
+   - 機械学習や深層学習のハイパーパラメータを上位の最適化機能によって自動調整するアイディアは新しくない。これは近年、様々なタスクにおいて深層学習の性能を実用的なレベルまで引き出す上で必要な作業とも言い換えられる。例えば、文献[28]では、最適化機能との併用によって、電力負荷予測ではないが、様々なタスクにおいて予測性能を改善させている。よって、最適化機能の導入も、既存のものである。
+   - 特に、文献[26]は、CEEMDAN-VMDとLSTMを組み合わせて、電力負荷予測の問題に適用している。本論文との本質的な違いが明確に記述されていない。よって、予測手法は既存のものである。
+- Chapter1に、本論文の新規性•創造性について、他の文献との差異に言及しながら、明記せよ。
+
+## [major comment2]
+- 最適化アルゴリズムとしてDBOを採用した理由は何か？
+- 恐らくその答えは「4.5節の実験を通して最も優れていたため」だと推察するが、in my understanding, それは他のタスクでは成立しないと考える。
+- もしこの理由が正しいならば、DBOを使用することは本論文のアイディアとは言えないため、3.1節から3.4節の内容を、Additional Materials, i.e.,Appendixに移すのが適切だろう。
+- そうでなければ、様々なタスクにおいてLSTMの性能を引き出すために、DBOがベストである理由を明記せよ。
+
+## [major comment3]
+- The main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task.
+- But what is the secondary purpose or motivation?
+- I guess the reason why this paper uses the prediction method combined with some algorithms is to deal with and randomness of power load data.
+- Overall, please describe "the main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task by dealing with and randomness of power load data" in Chapter 1.
+
 ## [major comment4]
+- LSTM DBOによってLSTMのハイパーパラメータを最適化する問題について下記の点が不明瞭である。
+- 最適化変数:
+   - LSTMのハイパーパラメータ(最適化変数)はどれ？
+- 目的関数: 
+   - 目的関数が「予測精度」としか記述されていない。具体的に目的関数として使用した評価指標(RMSE,MSEなど)や、目的関数値を計算するために使用したデータの範囲はどこか？
+   - 一般的には、汎化性能を高めるために、学習データとCross Validationを組み合わせた評価指標を目的関数として使用するが、本論文ではどうしているのか？もしそうしていないなら、学習データに過学習する恐れがある。
+
+## [major comment5]
+- 各TableとFigureの周辺スペースがかなり狭い。
+- 具体的には、Figureと本文のスペース、Figureとcaptionとのスペース、Table同士のスペース。
+- これらは、TEEEの論文フォーマットで指定されているはずなので、確認して必要なら修正すべきだ。
+
+## [major comment6]
+- 4.5.1節から4.5.3節は一つの節に統合すべきだろう。
+現在の原稿では、各節の小さな目的に対応して、Table4からTable6、Fig.2からFig.4のそれぞれで、予測性能を比較しているが、全体的な性能の比較がしにくい。
+- さらに、4.5.1節から4.5.3節の目的に対して、各Tableにおける比較対象は不適切だと思われる。
+- 例えば、4.5.3節は、LSTMのハイパーパラメータチューニングのために用いた最適化アルゴリズムの影響を調べるパートである。このため、SSA,MVO,PSO,DBOの4種をLSTMに適用した手法同士を調べるのが平等である。しかし、Table6では、SSA,MVO,PSO-LSTMと他の技術が含まれる提案手法を比較されている。
+- よって、Table4からTable6は、全て一つの表に統一した上で、各検証目的に応じて、比較手法を適切に選び、結果を考察するのが良いだろう。
+
+## [major comment6]
+- 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。
+
+
+## [minor comment1]
+- correspondenceの引用マークは、タイトルではなく、correspondence authorで引用されるべきだ。
+
+## [minor comment2]
+- DBOによって、LSTMのハイパーパラメータを調整しているが、DBOアルゴリズムにもハイパーパラメータが存在する。
+- つまり、上位の最適化機能におけるハイパーパラメータの設定は、LSTMの予測性能に影響を与える。
+- メタヒューリスティクスのハイパーパラメータはユーザが対象問題に応じて柔軟に設定できるが、ブラックボックスの問題において適切な設定•調整方法が困難であることは、この分野で一般的に知られている課題である。
+- 一方、文献[29]のブラックボックス最適化のコンペティションが開催されている。
+- このランキング上位のアルゴリズムとして、CMA-ES[30]やSHADE[31]が知られており、これらのアルゴリズムは、自身のハイパーパラメータを適応的かつ自動的に調整する機能を有しており、様々なブラックボックスの問題において高い性能を示す。
+- このため、本論文のLSTMのハイパーパラメータ自動調整問題において、私はDBOよりもCMA-ESやSHADEが適切だと考えられる。
+- 本論文では、これらのアルゴリズムに変更して検証し直す必要はないが、DBOがベストな選択肢ではなく、この問題でたまたま最善であったことを言及する必要があるだろう。
+
+## [minor comment3]
+- 多くの誤記が残されている。よく確認して修正せよ。
+- Eq.(31)からEq.(34)で使われているpの説明として、"measured/predicted value"としか書かれていない。pはLSTMの目的変数であることを明記せよ。(Page6)
+- MAPEの定義式Eq.(32)で、nがデータ数だと推察されるが、nとNが同時に使用されている。文字を統一せよ。(Page6)
+- 実験結果では、RMSE, MAPE, MSE, R-squaredのfour metricsを用いているが、評価指標を説明する文章では"Three main metrics"と書いてある。(Page6)
+- Rの定義式Eq.(34)で、分母の右側のΣが、左側の指数部分に含まれている。(Page6)
+- 実験結果では、R-squaredを用いているが、Eq.(34)は、実績値と推定値のSample correlation coefficient or Pearson’s correlation coefficientの定義式である。R-squaredの定義式を明記せよ。(Page6)
+- What is "BWO"? (Under Table2, Page6)
+- Eq.(31)からEq.(34)のpのmeasured/predicted valueの変数は、下付けが長すぎる。一般的には、measured valueの変数としてp、predicted valueの変数としてp^\hatを用いることが多い。また、これらを使うことで数式がきれいに見えるだろう。
+
+## [minor comment4]
 - referenced paperが中国語で執筆された文献に集中している恐れがある。このジャーナルは国際的なもので英文で執筆されるため、英文で執筆された文献を引用することが望ましい。同等の根拠を示す上で、適切な英文文献が無ければ、中国語文献の末尾に"(in Chinese)"と追記せよ。
