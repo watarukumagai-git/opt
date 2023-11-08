@@ -116,7 +116,7 @@
 
 ## [minor comment2]
 - DBOによって、LSTMのハイパーパラメータを調整しているが、DBOアルゴリズムにもハイパーパラメータが存在する。
-- つまり、上位の最適化機能におけるハイパーパラメータの設定は、LSTMの予測性能に影響を与える。
+- つまり、上位の最適化機能におけるハイパーパラメータの設定も、LSTMの予測性能に影響を与える。
 - メタヒューリスティクスのハイパーパラメータはユーザが対象問題に応じて柔軟に設定できるが、ブラックボックスの問題において適切な設定•調整方法が困難であることは、この分野で一般的に知られている課題である。
 - 一方、文献[29]のブラックボックス最適化のコンペティションが開催されている。
 - このランキング上位のアルゴリズムとして、CMA-ES[30]やSHADE[31]が知られており、これらのアルゴリズムは、自身のハイパーパラメータを適応的かつ自動的に調整する機能を有しており、様々なブラックボックスの問題において高い性能を示す。
@@ -158,10 +158,13 @@
 - What is the reason for using DBO as optimization algorithm?
 - I would guess that the answer is "because DBO showed the best performance through numerical experiments in Section 4.5", I believe that this is not valid for any other task.
 - If this reason is correct, using DBO is not an original idea for this paper.
+- また、DBOの原著論文を読んだが、多くのミスが見受けられる。詳細はminor commentに記す。
 - Overall, please modify the following items:
-   - To transfer the DBO algorithm part (from Sections 3.1 to 3.3) to Additional Materials, i.e., Appendix.
-   - To specify "A machine learning's hyperparameter tuning problem is categorized as the class of black-box optimization. Although there are many known metaheristic algorithms for black-box optimization, this study used DBO which had the best performance in Section 4.5" in Chapter 3.
-- Otherwise, please specify why DBO is best choice for the LSTM performance in various tasks. 
+   - To transfer the DBO algorithm part (from Sections 3.1 to 3.3) to Additional Materials, i.e., Appendix or remove them.
+   - To specify "To determine LSTM’s hyperparameters by an outside optimization function is categorized as a machine learning's hyperparameter tuning problem, i.e, black-box optimization. Although there are many known metaheristic algorithms for black-box optimization, this study used DBO which had the best performance in Section 4.5" in Chapter 3.
+- Otherwise, please specify why DBO is best choice for the LSTM performance in various tasks.
+   - [] Dung beetle optimizer: a new meta-heuristic algorithm for global
+optimization
 
 ## [major comment3]
 - The main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task.
@@ -198,7 +201,7 @@
 
 ## [minor comment2]
 - DBOによって、LSTMのハイパーパラメータを調整しているが、DBOアルゴリズムにもハイパーパラメータが存在する。
-- つまり、上位の最適化機能におけるハイパーパラメータの設定は、LSTMの予測性能に影響を与える。
+- つまり、上位の最適化機能におけるハイパーパラメータの設定も、LSTMの予測性能に影響を与える。
 - メタヒューリスティクスのハイパーパラメータはユーザが対象問題に応じて柔軟に設定できるが、ブラックボックスの問題において適切な設定•調整方法が困難であることは、この分野で一般的に知られている課題である。
 - 一方、文献[29]のブラックボックス最適化のコンペティションが開催されている。
 - このランキング上位のアルゴリズムとして、CMA-ES[30]やSHADE[31]が知られており、これらのアルゴリズムは、自身のハイパーパラメータを適応的かつ自動的に調整する機能を有しており、様々なブラックボックスの問題において高い性能を示す。
@@ -219,6 +222,7 @@
    - The experimental results use R-squared, but Eq.(34) is the definition equation of Sample correlation coefficient or Pearson's correlation coefficient between actual and estimated values. Specify the definition formula for R-squared. (Eq.(34), Page6)
    - What is "BWO"? (Under Table2, Page6)
    - Eq.(31)からEq.(34)のpのmeasured/predicted valueの変数は、下付けが長すぎる。一般的には、measured valueの変数としてp、predicted valueの変数としてp^\hatを用いることが多い。また、これらを使うことで数式がきれいに見えるだろう。
+
 
 ## [minor comment4]
 - referenced paperが中国語で執筆された文献に集中している恐れがある。このジャーナルは国際的なもので英文で執筆されるため、英文で執筆された文献を引用することが望ましい。同等の根拠を示す上で、適切な英文文献が無ければ、中国語文献の末尾に"(in Chinese)"と追記せよ。
