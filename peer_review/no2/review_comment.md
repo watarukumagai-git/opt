@@ -43,7 +43,14 @@
 
 
 ### [2. データ処理]
+#### [2.1 CEEMDAN] 
+- 空間的な分解
 
+#### [2.2 Sample Entropy] 
+- 空間的な分解
+
+#### [2.3 Variational Mode Decomposition] 
+- 空間的な分解
 
 
 ### [3. DBO最適化]
@@ -107,7 +114,7 @@
 - 例えば、4.5.3節は、LSTMのハイパーパラメータチューニングのために用いた最適化アルゴリズムの影響を調べるパートである。このため、SSA,MVO,PSO,DBOの4種をLSTMに適用した手法同士を調べるのが平等である。しかし、Table6では、SSA,MVO,PSO-LSTMと他の技術が含まれる提案手法を比較されている。
 - よって、Table4からTable6は、全て一つの表に統一した上で、各検証目的に応じて、比較手法を適切に選び、結果を考察するのが良いだろう。
 
-## [major comment6]
+## [major comment7]
 - 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。
 
 
@@ -151,15 +158,25 @@
    - 予測手法の要素であるCEEMDAN-VMD、LSTM、DBOなどのアルゴリズムは、他の文献で開発されたものである。
    - さらに、In my understanding, 対象の電力負荷予測も一般的によく知られている問題で、特に本論文において、特別なまたは困難なシチュエーションが追加されていないと推察する。よって、問題定義は既存のものである。
    - 機械学習や深層学習のハイパーパラメータを上位の最適化機能によって自動調整するアイディアは新しくない。これは近年、様々なタスクにおいて深層学習の性能を実用的なレベルまで引き出す上で必要な作業とも言い換えられる。例えば、文献[28]では、最適化機能との併用によって、電力負荷予測ではないが、様々なタスクにおいて予測性能を改善させている。よって、最適化機能の導入も、既存のものである。
-   - 特に、文献[26]は、CEEMDAN-VMDとLSTMを組み合わせて、電力負荷予測の問題に適用している。本論文との本質的な違いが明確に記述されていない。よって、予測手法は既存のものである。
-- Chapter1に、本論文の新規性•創造性について、他の文献との差異に言及しながら、明記せよ。
+   - 特に、文献[26]は、CEEMDANとLSTMを組み合わせた予測手法を構築し、電力負荷予測の問題に適用している。さらに、文献[29],[30],[31]は、CEEMDANとVMDを組み合わせたデータ処理法を適用した後、LSTMベースの予測手法を適用する方法論を提案している。これらの手法は、本論文の予測手法と非常に似ている。
+- 一方、In my understanding, Fig.1に示すように、CEEMDAN-VMDによるデータ処理の構成方法や、このデータ処理法とLSTMによる予測手法の組み合わせ方に、本論文の新規性・創造性があると推察する。
+- Overall, Chapter1で、他の文献との差異に言及しながら、本論文の新規性•創造性について、明記せよ。
+- [29]: "TCN Short-Term Water Level Prediction Based on CEEMDAN-VMD Time-Frequency Double Layer Feature Extraction",
+- [30]: "Precipitation prediction based on CEEMDAN–VMD–BILSTM combined quadratic decomposition model",
+- [31]: "Ultra-Short-Term Power Prediction of a Photovoltaic Power Station Based on the VMD-CEEMDAN-LSTM Model", 
 
 ## [major comment2]
+- The main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task.
+- But what is the secondary purpose or motivation?
+- I guess the reason why this paper uses the prediction method combined with some algorithms is to deal with and randomness of power load data.
+- Overall, please describe "the main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task by dealing with and randomness of power load data" in Chapter 1.
+
+## [major comment3]
 - Review the current manuscript structure.
 - Following the general format, this paper should consist of introduction (Chapter 1), prediction method (Chapters 2 and 3), results and discussion (Chapter 4).
 - To revise the title of Chapter 3 from "DBO Optimization Algorithm" to "LSTM-Based Prediction Model".
 
-## [major comment2]
+## [major comment4]
 - What is the reason for using DBO as optimization algorithm?
 - I would guess that the answer is "because DBO showed the best performance through numerical experiments in Section 4.5", I believe that this is not valid for any other task.
 - If this reason is correct, using DBO is not an original idea for this paper.
@@ -170,13 +187,12 @@
 - Otherwise, please specify why DBO is best choice for the LSTM performance in various tasks.
    - [29]: : "Dung beetle optimizer: a new meta-heuristic algorithm for global optimization", (2023).
 
-## [major comment3]
-- The main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task.
-- But what is the secondary purpose or motivation?
-- I guess the reason why this paper uses the prediction method combined with some algorithms is to deal with and randomness of power load data.
-- Overall, please describe "the main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task by dealing with and randomness of power load data" in Chapter 1.
+## [major comment5]
+- There is no explanation about Fig.1.
+- please add an explanation of configuration in Fig.1 and the expected effects.
+- Moreover, please modify the text and subfigures to make it larger in Fig.1. 
 
-## [major comment4]
+## [major comment6]
 - LSTM DBOによってLSTMのハイパーパラメータを最適化する問題について下記の点が不明瞭である。
 - 最適化変数:
    - LSTMのハイパーパラメータ(最適化変数)はどれ？
@@ -184,19 +200,19 @@
    - 目的関数が「予測精度」としか記述されていない。具体的に目的関数として使用した評価指標(RMSE,MSEなど)や、目的関数値を計算するために使用したデータの範囲はどこか？
    - 一般的には、汎化性能を高めるために、学習データとCross Validationを組み合わせた評価指標を目的関数として使用するが、本論文ではどうしているのか？もしそうしていないなら、学習データに過学習する恐れがある。
 
-## [major comment5]
+## [major comment7]
 - 各TableとFigureの周辺スペースがかなり狭い。
 - 具体的には、Figureと本文のスペース、Figureとcaptionとのスペース、Table同士のスペース。
 - これらは、TEEEの論文フォーマットで指定されているはずなので、確認して必要なら修正すべきだ。
 
-## [major comment6]
+## [major comment8]
 - 4.5.1節から4.5.3節は一つの節に統合すべきだろう。
 現在の原稿では、各節の小さな目的に対応して、Table4からTable6、Fig.2からFig.4のそれぞれで、予測性能を比較しているが、全体的な性能の比較がしにくい。
 - さらに、4.5.1節から4.5.3節の目的に対して、各Tableにおける比較対象は不適切だと思われる。
 - 例えば、4.5.3節は、LSTMのハイパーパラメータチューニングのために用いた最適化アルゴリズムの影響を調べるパートである。このため、SSA,MVO,PSO,DBOの4種をLSTMに適用した手法同士を調べるのが平等である。しかし、Table6では、SSA,MVO,PSO-LSTMと他の技術が含まれる提案手法を比較されている。
 - よって、Table4からTable6は、全て一つの表に統一した上で、各検証目的に応じて、比較手法を適切に選び、結果を考察するのが良いだろう。
 
-## [major comment6]
+## [major comment9]
 - 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。
 
 
