@@ -210,11 +210,12 @@ optimization
 
 ## [minor comment3]
 - There are many misstatements in the current manuscript. While paying attention to the uniformity nd correspondences of variables or words, please modify the following items:
-   - Eq.(Page3)
+- DBO algorithm part (from Sections 3.1 to 3.3)
    - What is b in Eq.(17)? (Eq.(17), Page3)
    - In the sentence "Here, t represents the number of iterations now, ...", where is t in Eq.(17)? In my understanding, population’s position at t-th iteration should be x_i(t). (Eq.(17), Page3)
    - In the sentence "..., p is a constant belonging to (0,1).", where is p in Eq.(17)? (Under Eq.(17), Page3)
    - Eq.(18) is exactly the same as Eq.(17). (Eq.(18), Page3)
+   - There is no equation for updating brood ball, but only an explanatory note about variable .(Page4) 
    - Eq.(31)からEq.(34)で使われているpの説明として、"measured/predicted value"としか書かれていない。pはLSTMの目的変数であることを明記せよ。(Page6)
    - In the MAPE definition (Eq.(32)), n and N are used in the same meaning although it is inferred that n is the number of data. Unify the letters. (Eq.(32), Page6)
    - In the experimental results, four metrics (RMSE, MAPE, MSE, and R-squared) are used, but the words "three main metrics" is used in the text describing the evaluation indicators. (Top of Eq.(31), Page6)
