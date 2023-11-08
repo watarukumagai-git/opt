@@ -155,16 +155,20 @@
 - Chapter1に、本論文の新規性•創造性について、他の文献との差異に言及しながら、明記せよ。
 
 ## [major comment2]
+- Review the current manuscript structure.
+- Following the general format, this paper should consist of introduction (Chapter 1), prediction method (Chapters 2 and 3), results and discussion (Chapter 4).
+- To revise the title of Chapter 3 from "DBO Optimization Algorithm" to "LSTM-Based Prediction Model".
+
+## [major comment2]
 - What is the reason for using DBO as optimization algorithm?
 - I would guess that the answer is "because DBO showed the best performance through numerical experiments in Section 4.5", I believe that this is not valid for any other task.
 - If this reason is correct, using DBO is not an original idea for this paper.
-- また、DBOの原著論文を読んだが、多くのミスが見受けられる。詳細はminor commentに記す。
+- Moreover, there are many misstatements in the DBO algorithm's part of the current manuscript Compare with the DBO's original paper [29]. Details are described in minor comments.
 - Overall, please modify the following items:
-   - To transfer the DBO algorithm part (from Sections 3.1 to 3.3) to Additional Materials, i.e., Appendix or remove them.
-   - To specify "To determine LSTM’s hyperparameters by an outside optimization function is categorized as a machine learning's hyperparameter tuning problem, i.e, black-box optimization. Although there are many known metaheristic algorithms for black-box optimization, this study used DBO which had the best performance in Section 4.5" in Chapter 3.
+   - To remove the DBO algorithm part (from Sections 3.1 to 3.3) or transfer them to Additional Materials, i.e., Appendix after rewriting them correctly.
+   - To specify "To determine LSTM’s hyperparameters by an outside optimization function is categorized as a machine learning's hyperparameter tuning problem, i.e, black-box optimization. Although there are many known metaheristic algorithms for black-box optimization, this study used DBO which had the best performance in Section 4.5." in Chapter 3.
 - Otherwise, please specify why DBO is best choice for the LSTM performance in various tasks.
-   - [] Dung beetle optimizer: a new meta-heuristic algorithm for global
-optimization
+   - [29]: : "Dung beetle optimizer: a new meta-heuristic algorithm for global optimization", (2023).
 
 ## [major comment3]
 - The main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task.
@@ -210,12 +214,13 @@ optimization
 
 ## [minor comment3]
 - There are many misstatements in the current manuscript. While paying attention to the uniformity nd correspondences of variables or words, please modify the following items:
-- DBO algorithm part (from Sections 3.1 to 3.3)
+- DBO algorithm part (from Sections 3.1 to 3.3, Page 3)
    - What is b in Eq.(17)? (Eq.(17), Page3)
    - In the sentence "Here, t represents the number of iterations now, ...", where is t in Eq.(17)? In my understanding, population’s position at t-th iteration should be x_i(t). (Eq.(17), Page3)
    - In the sentence "..., p is a constant belonging to (0,1).", where is p in Eq.(17)? (Under Eq.(17), Page3)
-   - Eq.(18) is exactly the same as Eq.(17). (Eq.(18), Page3)
-   - There is no equation for updating brood ball, but only an explanatory note about variable .(Page4) 
+   - Eq.(18) is exactly the same as Eq.(17) and shoulud be modified to the updating equation for dung ball rolling beetle's position if \delta>0.9. (Eq.(18), Page3)
+   - There is no equation for updating brood ball, but only an explanatory note about variable. (Page4) 
+- Evaluation indicators part (Section 4.3, Page 6)
    - Eq.(31)からEq.(34)で使われているpの説明として、"measured/predicted value"としか書かれていない。pはLSTMの目的変数であることを明記せよ。(Page6)
    - In the MAPE definition (Eq.(32)), n and N are used in the same meaning although it is inferred that n is the number of data. Unify the letters. (Eq.(32), Page6)
    - In the experimental results, four metrics (RMSE, MAPE, MSE, and R-squared) are used, but the words "three main metrics" is used in the text describing the evaluation indicators. (Top of Eq.(31), Page6)
