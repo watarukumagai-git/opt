@@ -212,7 +212,7 @@ optimization
 - There are many misstatements in the current manuscript. While paying attention to the uniformity nd correspondences of variables or words, please modify the following items:
    - Eq.(Page3)
    - What is b in Eq.(17)? (Eq.(17), Page3)
-   - In the sentence "Here, t represents the number of iterations now, ...", where is t in Eq.(17)? In my understanding, $x_i(t+1)=x_i(t)+\alpha k x_i(t-1) + \beta \Delta x$ is the correct formula. (Eq.(17), Page3)
+   - In the sentence "Here, t represents the number of iterations now, ...", where is t in Eq.(17)? In my understanding, population’s position at t-th iteration should be x_i(t). (Eq.(17), Page3)
    - In the sentence "..., p is a constant belonging to (0,1).", where is p in Eq.(17)? (Under Eq.(17), Page3)
    - Eq.(18) is exactly the same as Eq.(17). (Eq.(18), Page3)
    - Eq.(31)からEq.(34)で使われているpの説明として、"measured/predicted value"としか書かれていない。pはLSTMの目的変数であることを明記せよ。(Page6)
