@@ -148,19 +148,22 @@
 - This paper validates a forcasting/prediction method by being applied in electrical power load data.
 - The prediction method is combined with the CEEMDAN-VMD and DBO-LSTM algorithms.
 - Moreover, it is verified that the prediction performance of this method is superior to several machine learning algorithms through numerical simulation using wind power data.
-- It provides an interesting data through many comparisons, but I think it still needs a considerable and major revision to be acceptable for publication in terms of originality.
+- It provides an interesting data through many comparisons, but I think it still needs many considerable and major revisions to be acceptable for publication in terms of originality and creativity.
 - From this reason, the judgement is "C" (major revision).
 - It should be revised according to following major comments and improved as necessary.
 
 ## [major comment1]
-- What is originality and creativity of this paper?
-- 下記の理由から、本論文の新規性•創造性が本ジャーナルに掲載するレベルに到達していない恐れがある。
-   - 予測手法の要素であるCEEMDAN-VMD、LSTM、DBOなどのアルゴリズムは、他の文献で開発されたものである。
-   - さらに、In my understanding, 対象の電力負荷予測も一般的によく知られている問題で、特に本論文において、特別なまたは困難なシチュエーションが追加されていないと推察する。よって、問題定義は既存のものである。
-   - 機械学習や深層学習のハイパーパラメータを上位の最適化機能によって自動調整するアイディアは新しくない。これは近年、様々なタスクにおいて深層学習の性能を実用的なレベルまで引き出す上で必要な作業とも言い換えられる。例えば、文献[28]では、最適化機能との併用によって、電力負荷予測ではないが、様々なタスクにおいて予測性能を改善させている。よって、最適化機能の導入も、既存のものである。
+- What is the originality and creativity of this paper?
+- The originality and creativity written in the current manuscript may not reach the level required for publication in this journal for the following reasons:
+   - CEEMDAN-VMD, LSTM, and DBO algorithm as elements of the prediction method have been developed in other literature.
+   - Morever, I guess the electrical power load prediction problem is generally well known and this paper do not add special or difficult situaion. Therefore, the problem definition is existing.
+   - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks. For example, Paper []例えば、文献[28]では、最適化機能との併用によって、電力負荷予測ではないが、様々なタスクにおいて予測性能を改善させている。よって、最適化機能の導入も、既存のものである。
    - 特に、文献[26]は、CEEMDANとLSTMを組み合わせた予測手法を構築し、電力負荷予測の問題に適用している。さらに、文献[29],[30],[31]は、CEEMDANとVMDを組み合わせたデータ処理法を適用した後、LSTMベースの予測手法を適用する方法論を提案している。これらの手法は、本論文の予測手法と非常に似ている。
 - 一方、In my understanding, Fig.1に示すように、CEEMDAN-VMDによるデータ処理の構成方法や、このデータ処理法とLSTMによる予測手法の組み合わせ方に、本論文の新規性・創造性があると推察する。
-- Overall, Chapter1で、他の文献との差異に言及しながら、本論文の新規性•創造性について、明記せよ。
+- 
+- Overall, please specify the originality and creativity of this paper in Chapter 1 with attention to differences from other literature.
+- [28]: R. Luo et al.: "Neural Architecture Optimization", Advances in Neural Information Processing Systems, Vol. 31, pp. 1–12 (2018)
+- [29]: P. Ren et al.: "A comprehensive survey of neural architecture search: Challenges and solutions", ACM Computing Surveys, Vol. 54, No. 4, Article No.76, pp. 1–34 (2021)
 - [29]: "TCN Short-Term Water Level Prediction Based on CEEMDAN-VMD Time-Frequency Double Layer Feature Extraction",
 - [30]: "Precipitation prediction based on CEEMDAN–VMD–BILSTM combined quadratic decomposition model",
 - [31]: "Ultra-Short-Term Power Prediction of a Photovoltaic Power Station Based on the VMD-CEEMDAN-LSTM Model", 
