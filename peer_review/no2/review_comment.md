@@ -3,7 +3,7 @@
 - This paper validates a forcasting/prediction method by being applied in electrical power load data.
 - The prediction method is combined with the CEEMDAN-VMD and DBO-LSTM algorithms.
 - Moreover, it is verified that the prediction performance of this method is superior to several machine learning algorithms through numerical simulation using wind power data.
-- It provides an interesting data through many comparisons, but I think it still needs many considerable and major revisions to be acceptable for publication in terms of originality and creativity.
+- It provides an interesting data through many comparisons, but I think it still needs extensive revisions to be acceptable for publication in terms of originality, creativity, and readability.
 - From this reason, the judgement is "C" (major revision).
 - It should be revised according to following major comments and improved as necessary.
 
