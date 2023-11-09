@@ -14,25 +14,25 @@
    - CEEMDAN-VMD, LSTM, and DBO algorithm as elements of the prediction method have been developed in other literature.
    - Morever, I guess the electrical power load prediction problem is generally well known and this paper do not add special or difficult situaions. Therefore, the problem formulation is existing.
    - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks and be well-known as automated machine learning (AutoML) / Neural Architecture Search (NAS). For example, the exsiting studies [28]-[30] get neural network's hyperparameters by them and improve the prediction performance in various tasks. Therfore, introducing optimization function is existing. 
-   - Expecially, the referenced paper [26] costructs a prediction method by combining with CEEMDAN and LSTM; and applies this to power load data. the exsiting studies [31]-[33] propose a methodology that LSTM-based prediction model is applied after data prepocessing combined with CEEMDAN and VMD is applied. They are very similar to the prediction methods in this paper.
+   - Especially, the referenced paper [26] costructs a prediction method by combining with CEEMDAN and LSTM; and applies this to power load data. the exsiting studies [31]-[33] propose a methodology that LSTM-based prediction model is applied after data prepocessing combined with CEEMDAN and VMD is applied. They are very similar to the prediction methods in this paper.
 - 一方、In my understanding, Fig.1に示すように、CEEMDAN-VMDによるデータ処理の構成方法や、このデータ処理法とLSTMによる予測手法の組み合わせ方に、本論文の新規性・創造性があると推察する。
 - Overall, please specify the originality and creativity of this paper in Chapter 1 with attention to differences from other literature.
 
 ## major comment2 (General)
-- The main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task.
+- The main purpose of this paper is to improve the prediction accuracy for short-term power load forcasting task.
 - But what is the secondary purpose or motivation?
-- I guess the reason why this paper uses the prediction method combined with some algorithms is to deal with and randomness of power load data.
-- Overall, please describe "the main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task by dealing with and randomness of power load data" in Chapter 1.
+- I guess the reason why this paper uses the prediction method combined with some algorithms is to deal with the time and space fluctuation and randomness of power load data.
+- Overall, please describe "The main purpose of this study is to improve the prediction accuracy for short-term power load forcasting task by dealing with the time and space fluctuation and randomness of power load data." in Chapter 1.
 
 ## major comment3 (General)
 - Please review the current manuscript structure.
-- Following the general format, this paper should consist of introduction (Chapter 1), denosing time-series data / prediction method (Chapters 2 and 3), results and discussion (Chapter 4).
+- According to the general format, this paper should consist of introduction (Chapter 1), denosing time-series data / prediction method (Chapters 2 and 3), results and discussion (Chapter 4).
 - Overall, please revise the manuscript's structure according to the following my ideas:
    - Chapter 2's title should be revised to "Denoising Time-Series Data" because this part explains the denoising method not simply data processing.
    - Chapter 3's title should be revised to "LSTM-Based Prediction Method" because this part explains the prediction method.
-   - Mathematical equations and algorithms of each methods, which are not directly related to the ideas of this paper or used as is as tools, should be removed or transfered to Additional Materials, i.e., Appendix after rewriting them correctly, e.g., CEEMDAN algorithm (from Eqs.(1) to (6)), Sample Entropy algorithm (from Eqs.(7) to (10)), Variational Mode Decomposition algorithm (from Eqs.(11) to (16)), and DBO algorithm parts (from Sections 3.1 to 3.3).
+   - Mathematical equations and algorithms of each methods, which are not directly related to the ideas of this paper or used as tool, should be removed or transfered to Additional Materials, i.e., Appendix after rewriting them correctly, e.g., CEEMDAN algorithm (from Eqs.(1) to (6)), Sample Entropy algorithm (from Eqs.(7) to (10)), Variational Mode Decomposition algorithm (from Eqs.(11) to (16)), and DBO algorithm parts (from Sections 3.1 to 3.3).
    - Explanation of denoising methods for time-series data by combined CEEMDAN-VMD, which is the part shown at the top of Fig.1, should be added to new Section 2.4.
-   - Some sentences for data-processing in Section 4.2 be transfered to Section 2.4. 
+   - Some sentences for the combined data-processing steps in Section 4.2 be transfered to Section 2.4. 
 
 ## major comment4 (Chapter 3, Page 3)
 - What is the reason for using DBO as optimization algorithm?
@@ -44,13 +44,13 @@
 - Otherwise, please specify why DBO is best choice for the LSTM performance in various tasks.
 
 ## major comment5 (Section 3.5, Page 4)
-- What is the LSTM's hyperparameters optimized by DBO?
-- Section 3.5 explains "the number of iterations, the learning rate, and the number of neurons in the hidden layer of LSTM", but Table 3 showed "Learning rate, the number of neurons in the hidden layer 1, the number of neurons in the hidden layer 2".
+- What are the LSTM's hyperparameters optimized by DBO?
+- Section 3.5 explains "the number of iterations, the learning rate, and the number of neurons in the hidden layer of LSTM", but Table 3 shows "Learning rate, the number of neurons in the hidden layer 1, and the number of neurons in the hidden layer 2". They are different.
+- Please specify the optimization variables correctly.
 
 ## major comment6 (Fig.1, Page 5)
 - There is no explanation about Fig.1.
-- please add an explanation of configuration in Fig.1 and the expected effects.
-- Moreover, please modify the text and subfigures to make it larger in Fig.1. 
+- Please add an explanation of configuration of Fig.1 and the expected effects after making the text and subfigures in Fig.1 larger for visible. 
 
 ## major comment7 (All Figures and Tables, Pages 6 to 8)
 - 各TableとFigureの周辺スペースがかなり狭い。
