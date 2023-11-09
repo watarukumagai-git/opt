@@ -147,13 +147,13 @@
 # [english comments]
 - This paper validates a forcasting/prediction method by being applied in electrical power load data.
 - The prediction method is combined with the CEEMDAN-VMD and DBO-LSTM algorithms.
-- Moreover, it is verified that the prediction performance of the method is superior to several machine learning algorithms through numerical simulation using wind power data.
-- It provides an interesting observation and data, but I think it still needs a considerable and major revision to be acceptable for publication in terms of originality.
+- Moreover, it is verified that the prediction performance of this method is superior to several machine learning algorithms through numerical simulation using wind power data.
+- It provides an interesting data through many comparisons, but I think it still needs a considerable and major revision to be acceptable for publication in terms of originality.
 - From this reason, the judgement is "C" (major revision).
 - It should be revised according to following major comments and improved as necessary.
 
 ## [major comment1]
-- 本論文の新規性•創造性はそれぞれ何か？
+- What is originality and creativity of this paper?
 - 下記の理由から、本論文の新規性•創造性が本ジャーナルに掲載するレベルに到達していない恐れがある。
    - 予測手法の要素であるCEEMDAN-VMD、LSTM、DBOなどのアルゴリズムは、他の文献で開発されたものである。
    - さらに、In my understanding, 対象の電力負荷予測も一般的によく知られている問題で、特に本論文において、特別なまたは困難なシチュエーションが追加されていないと推察する。よって、問題定義は既存のものである。
@@ -172,9 +172,10 @@
 - Overall, please describe "the main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task by dealing with and randomness of power load data" in Chapter 1.
 
 ## [major comment3]
-- Review the current manuscript structure.
+- Please review the current manuscript structure.
 - Following the general format, this paper should consist of introduction (Chapter 1), prediction method (Chapters 2 and 3), results and discussion (Chapter 4).
-- To revise the title of Chapter 3 from "DBO Optimization Algorithm" to "LSTM-Based Prediction Model".
+- Overall, the title of Chapter 3 should be revised from "DBO Optimization Algorithm" to "LSTM-Based Prediction Model".
+- 適応フィルタによるデータ処理
 
 ## [major comment4]
 - What is the reason for using DBO as optimization algorithm?
