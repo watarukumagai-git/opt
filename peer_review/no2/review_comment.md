@@ -231,19 +231,22 @@
 
 ## [minor comment3]
 - There are many misstatements in the current manuscript. While paying attention to the uniformity nd correspondences of variables or words, please modify the following items:
-- DBO algorithm part (from Sections 3.1 to 3.3, Page 3)
-   - What is b in Eq.(17)? (Eq.(17), Page3)
-   - In the sentence "Here, t represents the number of iterations now, ...", where is t in Eq.(17)? In my understanding, population’s position at t-th iteration should be x_i(t). (Eq.(17), Page3)
-   - In the sentence "..., p is a constant belonging to (0,1).", where is p in Eq.(17)? (Under Eq.(17), Page3)
-   - Eq.(18) is exactly the same as Eq.(17) and shoulud be modified to the updating equation for dung ball rolling beetle's position if \delta>0.9. (Eq.(18), Page3)
-   - There is no equation for updating brood ball, but only an explanatory note about variable. (Page4) 
-- Evaluation indicators part (Section 4.3, Page 6)
-   - Eq.(31)からEq.(34)で使われているpの説明として、"measured/predicted value"としか書かれていない。pはLSTMの目的変数であることを明記せよ。(Page6)
-   - In the MAPE definition (Eq.(32)), n and N are used in the same meaning although it is inferred that n is the number of data. Unify the letters. (Eq.(32), Page6)
-   - In the experimental results, four metrics (RMSE, MAPE, MSE, and R-squared) are used, but the words "three main metrics" is used in the text describing the evaluation indicators. (Top of Eq.(31), Page6)
-   - In the R definition (Eq.(34)), the sum term on the right side in the denominator is included in the exponential part on the left side. (Eq.(34), Page6)
-   - The experimental results use R-squared, but Eq.(34) is the definition equation of Sample correlation coefficient or Pearson's correlation coefficient between actual and estimated values. Specify the definition formula for R-squared. (Eq.(34), Page6)
-   - What is "BWO"? (Under Table2, Page6)
+- DBO algorithm part (from Sections 3.1 to 3.3)
+   - What is b in Eq.(17)? (Eq.(17), Page 3)
+   - In the sentence "Here, t represents the number of iterations now, ...", where is t in Eq.(17)? In my understanding, population’s position at t-th iteration should be x_i(t). (Eq.(17), Page 3)
+   - In the sentence "..., p is a constant belonging to (0,1).", where is p in Eq.(17)? (Under Eq.(17), Page 3)
+   - Eq.(18) is exactly the same as Eq.(17) and shoulud be modified to the updating equation for dung ball rolling beetle's position if \delta>0.9. (Eq.(18), Page 3)
+   - There is no equation for updating brood ball, but only an explanatory note about variable. (Page 4)
+- LSTM part (Section 3.4)
+   - "h_{t-1}" should be mathematical style. (top of Eq.(28), Page 4)
+   - What is the second equation? I guess 1つ目の式だけで十分である。(Eq.(29), Page 4)
+- Evaluation indicators part (Section 4.3)
+   - Eq.(31)からEq.(34)で使われているpの説明として、"measured/predicted value"としか書かれていない。pはLSTMの目的変数であることを明記せよ。(Page 6)
+   - In the MAPE definition (Eq.(32)), n and N are used in the same meaning although it is inferred that n is the number of data. Unify the letters. (Eq.(32), Page 6)
+   - In the experimental results, four metrics (RMSE, MAPE, MSE, and R-squared) are used, but the words "three main metrics" is used in the text describing the evaluation indicators. (Top of Eq.(31), Page 6)
+   - In the R definition (Eq.(34)), the sum term on the right side in the denominator is included in the exponential part on the left side. (Eq.(34), Page 6)
+   - The experimental results use R-squared, but Eq.(34) is the definition equation of Sample correlation coefficient or Pearson's correlation coefficient between actual and estimated values. Specify the definition formula for R-squared. (Eq.(34), Page 6)
+   - What is "BWO"? (Under Table2, Page 6)
    - Eq.(31)からEq.(34)のpのmeasured/predicted valueの変数は、下付けが長すぎる。一般的には、measured valueの変数としてp、predicted valueの変数としてp^\hatを用いることが多い。また、これらを使うことで数式がきれいに見えるだろう。
 
 
