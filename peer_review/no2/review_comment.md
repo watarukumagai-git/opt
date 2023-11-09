@@ -11,17 +11,11 @@
 - What is the originality and creativity of this paper?
 - The originality and creativity written in the current manuscript may not reach the level required for publication in this journal for the following reasons:
    - CEEMDAN-VMD, LSTM, and DBO algorithm as elements of the prediction method have been developed in other literature.
-   - Morever, I guess the electrical power load prediction problem is generally well known and this paper do not add special or difficult situaion. Therefore, the problem definition is existing.
-   - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks. For example, Paper []例えば、文献[28]では、最適化機能との併用によって、電力負荷予測ではないが、様々なタスクにおいて予測性能を改善させている。よって、最適化機能の導入も、既存のものである。
-   - 特に、文献[26]は、CEEMDANとLSTMを組み合わせた予測手法を構築し、電力負荷予測の問題に適用している。さらに、文献[29],[30],[31]は、CEEMDANとVMDを組み合わせたデータ処理法を適用した後、LSTMベースの予測手法を適用する方法論を提案している。これらの手法は、本論文の予測手法と非常に似ている。
+   - Morever, I guess the electrical power load prediction problem is generally well known and this paper do not add special or difficult situaions. Therefore, the problem definition is existing.
+   - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks and be well-known as automated machine learning (AutoML) / Neural Architecture Search (NAS). For example, the exsiting studies [28]-[30] get neural network's hyperparameters by them and improve the prediction performance in various tasks. Therfore, introducing optimization function is existing. 
+   - Expecially, the referenced paper [26] costructs a prediction method by combining with CEEMDAN and LSTM; and applies this to power load data. the exsiting studies [31]-[33] propose a methodology that LSTM-based prediction model is applied after data prepocessing combined with CEEMDAN and VMD is applied. They are very similar to the prediction methods in this paper.
 - 一方、In my understanding, Fig.1に示すように、CEEMDAN-VMDによるデータ処理の構成方法や、このデータ処理法とLSTMによる予測手法の組み合わせ方に、本論文の新規性・創造性があると推察する。
-- 
 - Overall, please specify the originality and creativity of this paper in Chapter 1 with attention to differences from other literature.
-- [28]: R. Luo et al.: "Neural Architecture Optimization", Advances in Neural Information Processing Systems, Vol. 31, pp. 1–12 (2018)
-- [29]: P. Ren et al.: "A comprehensive survey of neural architecture search: Challenges and solutions", ACM Computing Surveys, Vol. 54, No. 4, Article No.76, pp. 1–34 (2021)
-- [29]: "TCN Short-Term Water Level Prediction Based on CEEMDAN-VMD Time-Frequency Double Layer Feature Extraction",
-- [30]: "Precipitation prediction based on CEEMDAN–VMD–BILSTM combined quadratic decomposition model",
-- [31]: "Ultra-Short-Term Power Prediction of a Photovoltaic Power Station Based on the VMD-CEEMDAN-LSTM Model", 
 
 ## [major comment2]
 - The main purpose of this paper is to improve the prediction accuracy for short-mid term power load forcasting task.
@@ -110,3 +104,17 @@
 
 ## [minor comment4]
 - referenced paperが中国語で執筆された文献に集中している恐れがある。このジャーナルは国際的なもので英文で執筆されるため、英文で執筆された文献を引用することが望ましい。同等の根拠を示す上で、適切な英文文献が無ければ、中国語文献の末尾に"(in Chinese)"と追記せよ。
+
+- [28]: J. Waring et al.: "Automated machine learning: Review of the state-of-the-art and opportunities for healthcare,
+   Artificial Intelligence in Medicine, Vol. 104, page 101822 (2020)
+- [29]: R. Luo et al.: "Neural Architecture Optimization", Advances in Neural Information Processing Systems, Vol. 31, pp. 1–12 (2018)
+- [30]: P. Ren et al.: "A comprehensive survey of neural architecture search: Challenges and solutions", ACM Computing Surveys, Vol. 54, No. 4, Article No.76, pp. 1–34 (2021)
+- [31]: "TCN Short-Term Water Level Prediction Based on CEEMDAN-VMD Time-Frequency Double Layer Feature Extraction",
+- [32]: "Precipitation prediction based on CEEMDAN–VMD–BILSTM combined quadratic decomposition model",
+- [33]: "Ultra-Short-Term Power Prediction of a Photovoltaic Power Station Based on the VMD-CEEMDAN-LSTM Model", 
+
+[34]: N. Hansen et. al: "Impacts of Invariance in Search: When CMA-ES and PSO Face Ill-Conditioned and Non-Separable Problems", Journal of Applied Soft Computing, pp. 5755-5769 (2011)
+[35]: N. Hansen: "Benchmarking a BI-population CMA-ES on the BBOB-2009 function testbed", Workshop Proceedings of the GECCO Genetic and Evolutionary Computation Conference, pp. 2389–2396 (2009)
+[36]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp. 71-78 (2013)
+[37]: R. Tanabe and A. Fukunaga: “Improving the Search Performance of SHADE Using Linear Population Size Reduction,” Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp. 1658-1665 (2014)
+[38]: The Black-box Optimization Benchmarking (BBOB) Workshop, http://numbbo.github.io/workshops/index.html
