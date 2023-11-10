@@ -43,29 +43,26 @@
 - Section 3.5 explains "the number of iterations, the learning rate, and the number of neurons in the hidden layer of LSTM", but Table 3 shows "Learning rate, the number of neurons in the hidden layer 1, and the number of neurons in the hidden layer 2". They are different.
 - Please specify the optimization variables correctly.
 
-## major comment6 (Fig.1, Page 5)
-- There is no explanation or legend about Fig.1. The explanation of configuration of Fig.1. and the expected effects should be added in the current manuscript.
-- Moreover, the font and subfigures in Fig.1 should be larger for visiblity. The jounal format "Appendix 2: Guidelines for Figures, Photographs and Tables Preparation" says "Font size in figures, photographs and tables of 7 point should be used." and "As all figures and photographs should have captions, it is unacceptable without legend only Fig. ○. or (a)."  (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap02.pdf)
+## major comment6 (All Figures and Tables)
+- The format of some figures and tables does not follow the author’s guidelines. The following items should be modified according to them for publication:
+   - There is no explanation or legend about Fig.1. The explanation of configuration of Fig.1. and the expected effects should be added in the current manuscript. The "Appendix 2: Guidelines for Figures, Photographs and Tables Preparation" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap02.pdf) says "As all figures and photographs should have captions, it is unacceptable without legend only Fig. ○. or (a)."
+   - The font and subfigures in Fig.1 should be larger for visiblity. The "Appendix 2: Guidelines for Figures, Photographs and Tables Preparation" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap02.pdf) says "Font size in figures, photographs and tables of 7 point should be used."
+   - Although there should be plenty of space around tables and figures for visiblity, it is too small in the current manuscript, i.e., between figure and sentense, figure and it's caption, and tables. The "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf) says "Double Space" around figures and tables.
 
-## major comment7 (All Figures and Tables, Pages 6 to 8)
-- The space around each table and figure is quite small, i.e., between figure and sentense, figure and its caption, and tables.  for visiblity
-- The jounal format "Appendix 1: Sample of Paper and Technical Note" says .(https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf)
-- これらは、TEEEの論文フォーマットで指定されているはずなので、確認して必要なら修正すべきだ。
-
-## major comment8 (From Sub-Sections 4.5.1 to 4.5.3, Page 7)
+## major comment7 (From Sub-Sections 4.5.1 to 4.5.3, Page 7)
 - 4.5.1節から4.5.3節は一つの節に統合すべきだろう。
 現在の原稿では、各節の小さな目的に対応して、Table4からTable6、Fig.2からFig.4のそれぞれで、予測性能を比較しているが、全体的な性能の比較がしにくい。
 - さらに、4.5.1節から4.5.3節の目的に対して、各Tableにおける比較対象は不適切だと思われる。
 - 例えば、4.5.3節は、LSTMのハイパーパラメータチューニングのために用いた最適化アルゴリズムの影響を調べるパートである。このため、SSA,MVO,PSO,DBOの4種をLSTMに適用した手法同士を調べるのが平等である。しかし、Table6では、SSA,MVO,PSO-LSTMと他の技術が含まれる提案手法を比較されている。
 - よって、Table4からTable6は、全て一つの表に統一した上で、各検証目的に応じて、比較手法を適切に選び、結果を考察するのが良いだろう。
 
-## major comment9 (From Sub-Sections 4.5.1 to 4.5.3, Page 7)
+## major comment8 (From Sub-Sections 4.5.1 to 4.5.3, Page 7)
 - 結果の考察がほぼ無い。比較を通して、なぜその有意差が出た理由は？
 
-## major comment10 (Sub-Section 4.5.4, Page 8)
-- 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。
+## major comment9 (Sub-Section 4.5.4, Page 8)
+- 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。The current manuscript shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning, but comparing them is questionable. 
 
-## major comment11 (Sub-Section 4.5.4, Page 8)
+## major comment10 (Sub-Section 4.5.4, Page 8)
 - 学習データ全体の平均誤差（RMSE）を目的関数と設定することは、学習データに過学習する恐れがある。一般的には、汎化性能を高めるために、Cross Validation（例えばK-Fold Cross Validationは，hold-outとLOOCVなど）を用いた評価指標を目的関数として使用する。しかしながら、Fig.6に示すように、CEEMDAN-VMD-DBO-LSTMのlong-term forcastingの予測精度は良い。本論文ではどうしているのか？もし
 
 
@@ -97,16 +94,12 @@ Although the author does not have to revise everything, please refer to the foll
 - Please remove the "1" at the end of the title if there is no particular reason.
 
 ## minor comment3 (Chapter 3)
-- DBOによって、LSTMのハイパーパラメータを調整しているが、DBOアルゴリズムにもハイパーパラメータが存在する。
-- つまり、上位の最適化機能におけるハイパーパラメータの設定も、LSTMの予測性能に影響を与える。
-- メタヒューリスティクスのハイパーパラメータはユーザが対象問題に応じて柔軟に設定できるが、ブラックボックスの問題において適切な設定•調整方法が困難であることは、この分野で一般的に知られている課題である。
-- 一方、文献[29]のブラックボックス最適化のコンペティションが開催されている。
-- このランキング上位のアルゴリズムとして、CMA-ES[30]やSHADE[31]が知られており、これらのアルゴリズムは、自身のハイパーパラメータを適応的かつ自動的に調整する機能を有しており、様々なブラックボックスの問題において高い性能を示す。
-- このため、本論文のLSTMのハイパーパラメータ自動調整問題において、私はDBOよりもCMA-ESやSHADEが適切だと考えられる。
-- 本論文では、これらのアルゴリズムに変更して検証し直す必要はないが、DBOがベストな選択肢ではなく、この問題でたまたま最善であったことを言及する必要があるだろう。
+- Although LSTM's hyperparameters is determined by DBO, DBO also has its own hyperparameters. In other words, the hyperparamters of high-level optimization function also affect the LSTM's prediction performance. Although the hyperparameters of metaheuristic algorithms can be flexibly set by the user according to the problem, it is difficult to find an appropriate setting-tuning method in black box problems and it is a common issue in this field.
+- But, CMA-ES[35,36] and SHADE[37,38] have the ability to adaptively and automatically adjust its own hyperparameters. They known as novel algorithm and far superior to many algorithms in many benchmark problems or Black-Box functions. The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[39]. If the authors think a difficulty to solve the machine learning or deep learning's hyperparamter tuning problem, CMA-ES / SHADE based algorithms are also expected to show higher performance than DBO in this case.
+- While there is no need to change to these algorithms and revalidate them in this paper, please mention "DBO had the best performance in Section 4.5." as shown in the major comment 4.
 
 ## minor comment4 (Reference)
-- referenced paperが中国語で執筆された文献に集中している恐れがある。このジャーナルは国際的なもので英文で執筆されるため、英文で執筆された文献を引用することが望ましい。同等の根拠を示す上で、適切な英文文献が無ければ、中国語文献の末尾に"(in Chinese)"と追記せよ。
+- The references written in Chinese may be selective, but it is preferable to cite references written in English in this journal. Please cite any references written in English that provides an equivalent basis if possible. Otherwise, please add "(in Chinese)" at the end of Chinese references. For example, "The authors: "title", journal, pages (year) (in Chinese)".
 
 # [Additional References]
 - [28]: J. Waring et al.: "Automated machine learning: Review of the state-of-the-art and opportunities for healthcare,
