@@ -1,13 +1,9 @@
 # english review comments
-## [main comments]
-- This paper validates a forcasting/prediction method by being applied in electrical power load data.
-- The prediction method is combined with the CEEMDAN-VMD and DBO-LSTM algorithms.
-- Moreover, it is verified that the prediction performance of this method is superior to several machine learning algorithms through numerical simulation using wind power data.
-- It provides an interesting data through many comparisons, but I think it still needs extensive revisions to be acceptable for publication in terms of originality, creativity, and readability.
-- From this reason, the judgement is "C" (Rereview after major revision).
-- It should be revised according to following major comments and improved as necessary.
+- This paper constructs the prediction method by combining with the CEEMDAN-VMD and DBO-LSTM algorithms for electrical power load forcasting task. Moreover, it is verified that the prediction performance of this method is superior to several machine learning algorithms through numerical simulation using wind power data. 
+- It provides an interesting data through many comparisons, but I think it still needs extensive revisions to be acceptable for publication in terms of originality, creativity, and readability. 
+- From this reason, the judgement is "C" (Rereview after major revision). It should be revised according to following major comments and improved as necessary.
 
-## [major comments]
+## [Major Comments]
 ## major comment1 (General)
 - What is the originality and creativity of this paper?
 - The originality and creativity written in the current manuscript may not reach the level required for publication in this journal for the following reasons:
@@ -25,14 +21,13 @@
 - Overall, please describe "The main purpose of this study is to improve the prediction accuracy for short-term power load forcasting task by dealing with the time and space fluctuation and randomness of power load data." in Chapter 1.
 
 ## major comment3 (General)
-- Please review the current manuscript structure.
-- According to the general format, this paper should consist of introduction (Chapter 1), denosing time-series data / prediction method (Chapters 2 and 3), results and discussion (Chapter 4).
+- Please review the current manuscript structure so that the reader can understand the originality and creativity of this paper of this paper. According to the general format, this paper should consist of introduction (Chapter 1), denosing time-series data / prediction method (Chapters 2 and 3), results and discussion (Chapter 4). 
 - Overall, please revise the manuscript's structure according to the following my ideas:
-   - Chapter 2's title should be revised to "Denoising Time-Series Data" because this part explains the denoising method not simply data processing.
-   - Chapter 3's title should be revised to "LSTM-Based Prediction Method" because this part explains the prediction method.
-   - Mathematical equations and algorithms of each methods, which are not directly related to the ideas of this paper or used as tool, should be removed or transfered to Additional Materials, i.e., Appendix after rewriting them correctly, e.g., CEEMDAN algorithm (from Eqs.(1) to (6)), Sample Entropy algorithm (from Eqs.(7) to (10)), Variational Mode Decomposition algorithm (from Eqs.(11) to (16)), and DBO algorithm parts (from Sections 3.1 to 3.3).
-   - Explanation of denoising methods for time-series data by combined CEEMDAN-VMD, which is the part shown at the top of Fig.1, should be added to new Section 2.4.
-   - Some sentences for the combined data-processing steps in Section 4.2 be transfered to Section 2.4. 
+   - Chapter 2's title should be revised to "Denoising Time-Series Data" because this part explains the denoising method, not simply data processing.
+   - Mathematical equations and algorithms of each methods, which are not directly related to the original or creative ideas of this paper or used as tool, should be removed or transfered to Additional Materials (Appendix) after rewriting them correctly. For example, CEEMDAN algorithm (from Eqs.(1) to (6)), Sample Entropy algorithm (from Eqs.(7) to (10)), Variational Mode Decomposition algorithm (from Eqs.(11) to (16)), and DBO algorithm parts (from Sections 3.1 to 3.3).
+   - Explanation of denoising methods combined with CEEMDAN-VMD and Sanple Entropy, which is the part shown at the top of Fig.1, should be added to new Section 2.4.
+   - Some sentences for the combined data-processing steps in Section 4.2 should be transfered to new Section 2.4. 
+   - Chapter 3's title should be revised to "LSTM-Based Prediction Method" because this part explains the prediction method combined with data-processing method and DBO is simply used as tool.
 
 ## major comment4 (Chapter 3, Page 3)
 - What is the reason for using DBO as optimization algorithm?
@@ -49,12 +44,12 @@
 - Please specify the optimization variables correctly.
 
 ## major comment6 (Fig.1, Page 5)
-- There is no explanation about Fig.1.
-- Please add an explanation of configuration of Fig.1 and the expected effects after making the text and subfigures in Fig.1 larger for visible. 
+- There is no explanation or legend about Fig.1. The explanation of configuration of Fig.1. and the expected effects should be added in the current manuscript.
+- Moreover, the font and subfigures in Fig.1 should be larger for visiblity. The jounal format "Appendix 2: Guidelines for Figures, Photographs and Tables Preparation" says "Font size in figures, photographs and tables of 7 point should be used." and "As all figures and photographs should have captions, it is unacceptable without legend only Fig. ○. or (a)."  (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap02.pdf)
 
 ## major comment7 (All Figures and Tables, Pages 6 to 8)
-- 各TableとFigureの周辺スペースがかなり狭い。
-- 具体的には、Figureと本文のスペース、Figureとcaptionとのスペース、Table同士のスペース。
+- The space around each table and figure is quite small, i.e., between figure and sentense, figure and its caption, and tables.  for visiblity
+- The jounal format "Appendix 1: Sample of Paper and Technical Note" says .(https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf)
 - これらは、TEEEの論文フォーマットで指定されているはずなので、確認して必要なら修正すべきだ。
 
 ## major comment8 (From Sub-Sections 4.5.1 to 4.5.3, Page 7)
@@ -75,7 +70,7 @@
 
 
 Although the author does not have to revise everything, please refer to the following minor comments for improving the current manuscript:
-# [minor comments]
+# [Minor Comments]
 ## minor comment1 (General)
 - There are many misstatements in the current manuscript. While paying attention to the uniformity nd correspondences of symbols or words, please modify the following items:
 - DBO algorithm (from Sections 3.1 to 3.3)
@@ -88,14 +83,14 @@ Although the author does not have to revise everything, please refer to the foll
    - "h_{t-1}" should be mathematical style. (top of Eq.(28), Page 4)
    - What is the second equation? I guess 1つ目の式だけで十分である。(Eq.(29), Page 4)
 - Evaluation indicators (Section 4.3, Page 6)
-   - In the MAPE definition (Eq.(32)), "n" and "N" are used in the same meaning although it is inferred that n is the number of data. Unify the letters. (Eq.(32))
-   - In the experimental results, four metrics (RMSE, MAPE, MSE, and R-squared) are used, but the words "three main metrics" is used in the text describing the evaluation indicators. (Top of Eq.(31))
-   - In the R definition (Eq.(34)), the sum term on the right side in the denominator is included in the exponential part on the left side. (Eq.(34))
-   - The experimental results use R-squared, but Eq.(34) is the definition equation of Sample correlation coefficient or Pearson's correlation coefficient between actual and estimated values. Specify the definition formula for R-squared. (Eq.(34))
-   - The only explanation for "p" from Eqs.(31) to (34) is "In this formula, p_estimate(i) and p_actual(i) are the predicted and measured values." in the current manuscript. Please add that "p is the objective variable of the LSTM model." (Under Eq.(34))
-   - The caption symbols "p_estimate(i)" and "p_actual(i)" from Eqs.(31) to Eq.(34) are too long. のpのmeasured/predicted valueの変数は、下付けが長すぎる。一般的には、measured valueの変数としてp、predicted valueの変数としてp^\hatを用いることが多い。また、これらを使うことで数式がきれいに見えるだろう。
+   - Four metrics (RMSE, MAPE, MSE, and R-squared) are used in the experimental results, but the sentence "we use three main evaluation metrics in this paper." is written and there is no explanation of Eq.(34). (Top of Eq.(31))
+   - In the MAPE definition (Eq.(32)), "n" and "N" are used in the same meaning although it is inferred that "n" is the number of data. Unify the letters. (Eq.(32))
+   - In the R definition (Eq.(34)), the sum term on the right side in the denominator is included in the exponential part on the left side. Rewrite it correctly. (Eq.(34))
+   - The experimental results use R-squared, but Eq.(34) is the definition equation of "Sample correlation coefficient" or "Pearson's correlation coefficient" between actual and estimated values. Specify the definition formula for R-squared correctly. (Eq.(34))
+   - The only explanation for "p" from Eqs.(31) to (34) is "In this formula, p_estimate(i) and p_actual(i) are the predicted and measured values." in the current manuscript. Add the explanation "p is the objective variable of the LSTM model." (Under Eq.(34))
+   - The symbols "p_estimate(i)" and "p_actual(i)" are too long for visiblity. Generally, "y" is used as the symbol of measured value of the objective variable and "$\hat{y}$" is used as the symbol of predicted value of the objective variable. I suggest "p_estimate(i)" and "p_actual(i)" are replaced by them.
 - Model parameter setting (Section 4.4, Page 6)
-   - Section 3.4 explains "the activation function (usually Sigmoid or ReLU)", but what is "selu"? in Table 2? (Table 2)
+   - Section 3.4 explains "the activation function (usually Sigmoid or ReLU)", but what is "selu" in Table 2? (Table 2)
    - What is "BWO"? (Top of Table 3)
 
 ## minor comment2 (Title, Page 1)
@@ -113,6 +108,7 @@ Although the author does not have to revise everything, please refer to the foll
 ## minor comment4 (Reference)
 - referenced paperが中国語で執筆された文献に集中している恐れがある。このジャーナルは国際的なもので英文で執筆されるため、英文で執筆された文献を引用することが望ましい。同等の根拠を示す上で、適切な英文文献が無ければ、中国語文献の末尾に"(in Chinese)"と追記せよ。
 
+# [Additional References]
 - [28]: J. Waring et al.: "Automated machine learning: Review of the state-of-the-art and opportunities for healthcare,
    Artificial Intelligence in Medicine, Vol. 104, page 101822 (2020)
 - [29]: R. Luo et al.: "Neural Architecture Optimization", Advances in Neural Information Processing Systems, Vol. 31, pp. 1–12 (2018)
