@@ -9,8 +9,8 @@
 - The originality and creativity written in the current manuscript may not reach the level required for publication in this journal for the following reasons:
    - CEEMDAN-VMD, LSTM, and DBO algorithm as elements of the prediction method have been developed in other literature.
    - I guess the electrical power load prediction problem is generally well known and this paper do not add special or difficult situaions. Therefore, the problem formulation is existing.
-   - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks and be well-known as automated machine learning (AutoML) / Neural Architecture Search (NAS). For example, the exsiting studies [28]-[30] get neural network's hyperparameters by them and improve the prediction performance in various tasks. And, the study [31] costructs and uses the LSTM optimized by DBO. Therefore, introducing optimization function is existing. 
-   - Especially, the referenced paper [26] costructs a prediction method by combining with CEEMDAN and LSTM; and applies this to power load data. the exsiting studies [32]-[33] propose a methodology that LSTM-based prediction model is applied after data prepocessing combined with CEEMDAN and VMD is applied. They are very similar to the prediction methods in this paper.
+   - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks and be well-known as automated machine learning (AutoML) / Neural Architecture Search (NAS). For example, the exsiting studies [28,29,30] get neural network's hyperparameters by them and improve the prediction performance in various tasks. The study [31] costructs the LSTM optimized by DBO and applies it to short-term load forecasting task. Therefore, introducing optimization function is existing. 
+   - Especially, the referenced paper [26] costructs a prediction method by combining with CEEMDAN and LSTM; and applies this to power load data. The exsiting studies [32,33] propose a methodology that LSTM-based prediction model is applied after data prepocessing combined with CEEMDAN and VMD. They are very similar to the prediction methods in this paper.
 - 一方、In my understanding, Fig.1に示すように、CEEMDAN-VMDによるデータ処理の構成方法や、このデータ処理法とLSTMによる予測手法の組み合わせ方に、本論文の新規性・創造性があると推察する。
 - しかし、本論文が提案している部分や他の文献との差異が明記されていないため、私は本論文の新規性•創造性を判断できない。
 - Overall, please specify the originality and creativity of this paper in Chapter 1 with attention to differences from other literature.
@@ -27,6 +27,7 @@
    - Explanation of denoising methods combined with CEEMDAN-VMD and Sanple Entropy, which is the part shown at the top of Fig.1, should be added to new Section 2.4.
    - Some sentences for the combined data-processing steps in Section 4.2 should be transfered to new Section 2.4. 
    - Chapter 3's title should be revised to "LSTM-Based Prediction Method" because this part explains the prediction method combined with data-processing method and DBO is simply used as tool.
+   - For overall performance comparisons, Sub-sections 4.5.1 through 4.5.3 should be combined into a single section, Table 4 through Table 6 into a single table using two-column wide table as needed, Fig.2 through Fig.4 into a single figure for short-term prediction using subfigure configration (Fig.2(a),(b),(c)) as needed. The combined Sub-section 4.5.1 shows short-term prediction and the new Subsection 4.5.2 shows long-term prediction.
 
 ## major comment4 (Chapter 3, Page 3)
 - What is the reason for using DBO as optimization algorithm?
@@ -47,14 +48,12 @@
 
 ## major comment6 (All Figures and Tables)
 - The format of some figures and tables does not follow the author’s guidelines. The following items should be modified according to them for publication:
-   - There is no explanation or legend about Fig.1. The explanation of configuration of Fig.1 and the expected effects should be added in the current manuscript. The "Appendix 2: Guidelines for Figures, Photographs and Tables Preparation" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap02.pdf) says "As all figures and photographs should have captions, it is unacceptable without legend only Fig. ○. or (a)."
+   - There is no explanation or legend about Fig.1. The explanation of configuration of Fig.1 and the expected effects should be added in the current manuscript.
    - The font and subfigures in Fig.1 should be larger for visiblity. The "Appendix 2: Guidelines for Figures, Photographs and Tables Preparation" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap02.pdf) says "Font size in figures, photographs and tables of 7 point should be used."
    - Although there should be plenty of space around tables and figures for visiblity, it is too small in the current manuscript, i.e., between figure and sentense, figure and it's caption, and tables. The "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf) says "Double Space" around figures and tables.
-   - 図表は上か下に寄せる
+   - The position of figures, photographs and tables inserted should be at the tops and bottoms of columns. Avoid placing them in the middle of columns. (https://www.iee.jp/wp-content/uploads/honbu/32-doc-kenq/guideline.pdf)
 
 ## major comment7 (From Sub-Sections 4.5.1 to 4.5.3, Page 7)
-- 4.5.1節から4.5.3節は一つの節に統合すべきだろう。
-現在の原稿では、各節の小さな目的に対応して、Table4からTable6、Fig.2からFig.4のそれぞれで、予測性能を比較しているが、全体的な性能の比較がしにくい。
 - さらに、4.5.1節から4.5.3節の目的に対して、各Tableにおける比較対象は不適切だと思われる。
 - 例えば、4.5.3節は、LSTMのハイパーパラメータチューニングのために用いた最適化アルゴリズムの影響を調べるパートである。このため、SSA,MVO,PSO,DBOの4種をLSTMに適用した手法同士を調べるのが平等である。しかし、Table6では、SSA,MVO,PSO-LSTMと他の技術が含まれる提案手法を比較されている。
 - 前処理のやり方に新規性があるなら、先行研究の前処理と比べるのが適切では？
@@ -67,12 +66,13 @@
 - 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。The current manuscript shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning, but comparing them is questionable.
 
 ## major comment10 (Reference)
-- 文献の引用を見直せ。例えば、[5][13]、[14][25]、[21][22]が同じ文献になっている。重複せずに引用すべき。
+- Review the citation of references. For example, [5][13], [14][25], [21][22] are the same references. They should be cited without duplication.
 
 
 
-Although the author does not have to revise everything, please refer to the following minor comments for improving the current manuscript:
 # [Minor Comments]
+Although the author does not have to revise everything, please refer to the following minor comments for improving the current manuscript:
+
 ## minor comment1 (General)
 - There are many misstatements in the current manuscript. While paying attention to the uniformity nd correspondences of symbols or words, please modify the following items:
 - DBO algorithm (from Sections 3.1 to 3.3)
@@ -109,7 +109,7 @@ Although the author does not have to revise everything, please refer to the foll
 https://github.com/FateMurphy/CEEMDAN-VMD-GRU
 
 ## minor comment5 (Sub-Section 4.5.4, Page 8)
-- Fig.6 shows the prediction accuracy of CEEMDAN-VMD-DBO-LSTM for long-term forcasting case is quite high. But, the objective function of DBO is set as the mean error (RMSE) of the entire training data and it is may this could an over-fitting for the training data. In general, the evaluation index based on the cross validation (e.g., K-fold, hold-out, and LOOCV) is used for the objective function.
+- Fig.6 shows the prediction accuracy of CEEMDAN-VMD-DBO-LSTM for long-term forcasting case (about 2.5 months) is quite high although the objective function of DBO is set as the mean error (RMSE) of the entire training data. I guess it is may this could an over-fitting for the training data. In general, the evaluation index based on the cross validation (e.g., K-fold, hold-out, and LOOCV) is used for the objective function.
 - Please consider applying this method to various types of data in the future.
 
 ## minor comment6 (Reference)
@@ -124,7 +124,7 @@ https://github.com/FateMurphy/CEEMDAN-VMD-GRU
 - [32]: "TCN Short-Term Water Level Prediction Based on CEEMDAN-VMD Time-Frequency Double Layer Feature Extraction",
 - [33]: "Precipitation prediction based on CEEMDAN–VMD–BILSTM combined quadratic decomposition model",
 - [34]: "Ultra-Short-Term Power Prediction of a Photovoltaic Power Station Based on the VMD-CEEMDAN-LSTM Model", 
-- [35]: : "Dung beetle optimizer: a new meta-heuristic algorithm for global optimization", (2023).
+- [35]: J. Xue and B. Shen: "Dung beetle optimizer: a new meta-heuristic algorithm for global optimization", the journal of Supercomputing, Vol.79, pp.7305–7336, (2023)
 - [36]: N. Hansen et. al: "Impacts of Invariance in Search: When CMA-ES and PSO Face Ill-Conditioned and Non-Separable Problems", Journal of Applied Soft Computing, pp. 5755-5769 (2011)
 - [37]: N. Hansen: "Benchmarking a BI-population CMA-ES on the BBOB-2009 function testbed", Workshop Proceedings of the GECCO Genetic and Evolutionary Computation Conference, pp. 2389–2396 (2009)
 - [38]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp. 71-78 (2013)
