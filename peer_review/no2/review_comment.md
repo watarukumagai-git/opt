@@ -54,6 +54,7 @@
 現在の原稿では、各節の小さな目的に対応して、Table4からTable6、Fig.2からFig.4のそれぞれで、予測性能を比較しているが、全体的な性能の比較がしにくい。
 - さらに、4.5.1節から4.5.3節の目的に対して、各Tableにおける比較対象は不適切だと思われる。
 - 例えば、4.5.3節は、LSTMのハイパーパラメータチューニングのために用いた最適化アルゴリズムの影響を調べるパートである。このため、SSA,MVO,PSO,DBOの4種をLSTMに適用した手法同士を調べるのが平等である。しかし、Table6では、SSA,MVO,PSO-LSTMと他の技術が含まれる提案手法を比較されている。
+- 前処理のやり方に新規性があるなら、先行研究の前処理と比べるのが適切では？
 - よって、Table4からTable6は、全て一つの表に統一した上で、各検証目的に応じて、比較手法を適切に選び、結果を考察するのが良いだろう。
 
 ## major comment8 (From Sub-Sections 4.5.1 to 4.5.3, Page 7)
@@ -61,9 +62,6 @@
 
 ## major comment9 (Sub-Section 4.5.4, Page 8)
 - 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。The current manuscript shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning, but comparing them is questionable. 
-
-## major comment10 (Sub-Section 4.5.4, Page 8)
-- 学習データ全体の平均誤差（RMSE）を目的関数と設定することは、学習データに過学習する恐れがある。一般的には、汎化性能を高めるために、Cross Validation（例えばK-Fold Cross Validationは，hold-outとLOOCVなど）を用いた評価指標を目的関数として使用する。しかしながら、Fig.6に示すように、CEEMDAN-VMD-DBO-LSTMのlong-term forcastingの予測精度は良い。本論文ではどうしているのか？もし
 
 
 Although the author does not have to revise everything, please refer to the following minor comments for improving the current manuscript:
@@ -98,7 +96,13 @@ Although the author does not have to revise everything, please refer to the foll
 - But, CMA-ES[35,36] and SHADE[37,38] have the ability to adaptively and automatically adjust its own hyperparameters. They known as novel algorithm and far superior to many algorithms in many benchmark problems or Black-Box functions. The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[39]. If the authors think a difficulty to solve the machine learning or deep learning's hyperparamter tuning problem, CMA-ES / SHADE based algorithms are also expected to show higher performance than DBO in this case.
 - While there is no need to change to these algorithms and revalidate them in this paper, please mention "DBO had the best performance in Section 4.5." as shown in the major comment 4.
 
-## minor comment4 (Reference)
+## minor comment4 (Sub-Section 4.5.4, Page 8)
+- Fig.6に示すように、CEEMDAN-VMD-DBO-LSTMのlong-term forcastingの予測精度は非常に良い。
+- しかしながら、DBOの目的関数を学習データ全体の平均誤差(RMSE)としており、これは学習データに過学習する恐れがある。
+- 一般的には、汎化性能を高めるために、Cross Validation（例えばK-Fold Cross Validationは，hold-outとLOOCVなど）を用いた評価指標を目的関数として使用する。
+- 今後、この手法を色んなデータに適用する際には検討してほしい。
+
+## minor comment5 (Reference)
 - The references written in Chinese may be selective, but it is preferable to cite references written in English in this journal. Please cite any references written in English that provides an equivalent basis if possible. Otherwise, please add "(in Chinese)" at the end of Chinese references. For example, "The authors: "title", journal, pages (year) (in Chinese)".
 
 # [Additional References]
