@@ -9,8 +9,8 @@
 - The originality and creativity written in the current manuscript may not reach the level required for publication in this journal for the following reasons:
    - CEEMDAN-VMD, LSTM, and DBO algorithm as elements of the prediction method have been developed in other literature.
    - I guess the electrical power load prediction problem is generally well known and this paper do not add special or difficult situaions. Therefore, the problem formulation is existing.
-   - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks and be well-known as automated machine learning (AutoML) / Neural Architecture Search (NAS). For example, the exsiting studies [28]-[30] get neural network's hyperparameters by them and improve the prediction performance in various tasks. And, the study[] costructs and uses the LSTM optimized by DBO. Therefore, introducing optimization function is existing. [11] https://ieeexplore.ieee.org/document/10257027.
-   - Especially, the referenced paper [26] costructs a prediction method by combining with CEEMDAN and LSTM; and applies this to power load data. the exsiting studies [31]-[33] propose a methodology that LSTM-based prediction model is applied after data prepocessing combined with CEEMDAN and VMD is applied. They are very similar to the prediction methods in this paper.
+   - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks and be well-known as automated machine learning (AutoML) / Neural Architecture Search (NAS). For example, the exsiting studies [28]-[30] get neural network's hyperparameters by them and improve the prediction performance in various tasks. And, the study [31] costructs and uses the LSTM optimized by DBO. Therefore, introducing optimization function is existing. 
+   - Especially, the referenced paper [26] costructs a prediction method by combining with CEEMDAN and LSTM; and applies this to power load data. the exsiting studies [32]-[33] propose a methodology that LSTM-based prediction model is applied after data prepocessing combined with CEEMDAN and VMD is applied. They are very similar to the prediction methods in this paper.
 - 一方、In my understanding, Fig.1に示すように、CEEMDAN-VMDによるデータ処理の構成方法や、このデータ処理法とLSTMによる予測手法の組み合わせ方に、本論文の新規性・創造性があると推察する。
 - しかし、本論文が提案している部分や他の文献との差異が明記されていないため、私は本論文の新規性•創造性を判断できない。
 - Overall, please specify the originality and creativity of this paper in Chapter 1 with attention to differences from other literature.
@@ -32,9 +32,9 @@
 - What is the reason for using DBO as optimization algorithm?
 - I would guess that the answer is "because DBO showed the best performance through numerical experiments in Section 4.5", and I believe that this is not valid for any other task.
 - If this reason is correct, using DBO is not an original idea for this paper.
-- Moreover, there are many misstatements in the DBO algorithm's part of the current manuscript comparing with the DBO's original paper [34]. Details are described in minor comments.
+- Moreover, there are many misstatements in the DBO algorithm's part of the current manuscript comparing with the DBO's original paper [35]. Details are described in minor comments.
 - Overall, please modify the following items:
-   - To specify "To determine LSTM’s hyperparameters by an outside optimization function is categorized as a machine learning's hyperparameter tuning problem, i.e, black-box optimization. Although there are many known metaheristic algorithms for black-box optimization, this study uses DBO [34] which had the best performance in Section 4.5." in Chapter 3 citing the DBO's original paper [34].
+   - To specify "To determine LSTM’s hyperparameters by an outside optimization function is categorized as a machine learning's hyperparameter tuning problem, i.e, black-box optimization. Although there are many known metaheristic algorithms for black-box optimization, this study uses DBO [35] which had the best performance in Section 4.5." in Chapter 3 citing the DBO's original paper [35].
 - Otherwise, please specify why DBO is best choice for the LSTM performance in various tasks.
 
 ## major comment5 (Section 3.5, Page 4)
@@ -83,7 +83,7 @@ Although the author does not have to revise everything, please refer to the foll
    - There are wrong equation numbers; for example, "defined in the aforementioned formula (3)" in top of Eq.(21) and "we know from formula (5)" in top of Eq.(24). (Page 4)
 - LSTM (Section 3.4, Page 4)
    - "h_{t-1}" should be mathematical style. (top of Eq.(28))
-   - What is the second equation? I guess 1つ目の式だけで十分である。(Eq.(29))
+   - What is the second formula in Eq.(29)? I guess the first formula is sufficient. (Eq.(29))
 - Evaluation indicators (Section 4.3, Page 6)
    - Four metrics (RMSE, MAPE, MSE, and R-squared) are used in the experimental results, but the sentence "we use three main evaluation metrics in this paper." is written and there is no explanation of Eq.(34). (Top of Eq.(31))
    - In the MAPE definition (Eq.(32)), "n" and "N" are used in the same meaning although it is inferred that "n" is the number of data. Unify the letters. (Eq.(32))
@@ -100,7 +100,7 @@ Although the author does not have to revise everything, please refer to the foll
 
 ## minor comment3 (Chapter 3)
 - Although LSTM's hyperparameters is determined by DBO, DBO also has its own hyperparameters. In other words, the hyperparamters of high-level optimization function also affect the LSTM's prediction performance. Although the hyperparameters of metaheuristic algorithms can be flexibly set by the user according to the problem, it is difficult to find an appropriate setting-tuning method in black box problems and it is a common issue in this field.
-- But, CMA-ES[35,36] and SHADE[37,38] have the ability to adaptively and automatically adjust its own hyperparameters. They known as novel algorithm and far superior to many algorithms in many benchmark problems or Black-Box functions. The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[39]. If the authors think a difficulty to solve the machine learning or deep learning's hyperparamter tuning problem, CMA-ES / SHADE based algorithms are also expected to show higher performance than DBO in this case.
+- But, CMA-ES[36,37] and SHADE[38,39] have the ability to adaptively and automatically adjust its own hyperparameters. They known as novel algorithm and far superior to many algorithms in many benchmark problems or Black-Box functions. The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[40]. If the authors think a difficulty to solve the machine learning or deep learning's hyperparamter tuning problem, CMA-ES / SHADE based algorithms are also expected to show higher performance than DBO in this case.
 - While there is no need to change to these algorithms and revalidate them in this paper, please mention "DBO had the best performance in Section 4.5." as shown in the major comment 4.
 
 ## minor comment4 (Fig.1)
@@ -108,10 +108,8 @@ Although the author does not have to revise everything, please refer to the foll
 https://github.com/FateMurphy/CEEMDAN-VMD-GRU
 
 ## minor comment5 (Sub-Section 4.5.4, Page 8)
-- Fig.6に示すように、CEEMDAN-VMD-DBO-LSTMのlong-term forcastingの予測精度は非常に良い。
-- しかしながら、DBOの目的関数を学習データ全体の平均誤差(RMSE)としており、これは学習データに過学習する恐れがある。
-- 一般的には、汎化性能を高めるために、Cross Validation（例えばK-Fold Cross Validationは，hold-outとLOOCVなど）を用いた評価指標を目的関数として使用する。
-- 今後、この手法を色んなデータに適用する際には検討してほしい。
+- Fig.6 shows the prediction accuracy of CEEMDAN-VMD-DBO-LSTM for long-term forcasting case is quite high. But, the objective function of DBO is set as the mean error (RMSE) of the entire training data and it is may this could an over-fitting for the training data. In general, the evaluation index based on the cross validation (e.g., K-fold, hold-out, and LOOCV) is used for the objective function.
+- Please consider applying this method to various types of data in the future.
 
 ## minor comment6 (Reference)
 - The references written in Chinese may be selective, but it is preferable to cite references written in English for this journal. Please cite any references written in English that provides an equivalent basis if possible. Otherwise, please add "(in Chinese)" at the end of Chinese references. For example, "The authors: "title", journal, pages (year) (in Chinese)".
@@ -121,12 +119,13 @@ https://github.com/FateMurphy/CEEMDAN-VMD-GRU
    Artificial Intelligence in Medicine, Vol. 104, page 101822 (2020)
 - [29]: R. Luo et al.: "Neural Architecture Optimization", Advances in Neural Information Processing Systems, Vol. 31, pp. 1–12 (2018)
 - [30]: P. Ren et al.: "A comprehensive survey of neural architecture search: Challenges and solutions", ACM Computing Surveys, Vol. 54, No. 4, Article No.76, pp. 1–34 (2021)
-- [31]: "TCN Short-Term Water Level Prediction Based on CEEMDAN-VMD Time-Frequency Double Layer Feature Extraction",
-- [32]: "Precipitation prediction based on CEEMDAN–VMD–BILSTM combined quadratic decomposition model",
-- [33]: "Ultra-Short-Term Power Prediction of a Photovoltaic Power Station Based on the VMD-CEEMDAN-LSTM Model", 
-- [34]: : "Dung beetle optimizer: a new meta-heuristic algorithm for global optimization", (2023).
-- [35]: N. Hansen et. al: "Impacts of Invariance in Search: When CMA-ES and PSO Face Ill-Conditioned and Non-Separable Problems", Journal of Applied Soft Computing, pp. 5755-5769 (2011)
-- [36]: N. Hansen: "Benchmarking a BI-population CMA-ES on the BBOB-2009 function testbed", Workshop Proceedings of the GECCO Genetic and Evolutionary Computation Conference, pp. 2389–2396 (2009)
-- [37]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp. 71-78 (2013)
-- [38]: R. Tanabe and A. Fukunaga: “Improving the Search Performance of SHADE Using Linear Population Size Reduction,” Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp. 1658-1665 (2014)
-- [39]: The Black-box Optimization Benchmarking (BBOB) Workshop, http://numbbo.github.io/workshops/index.html
+- [31]: Y. Zhang et al.: "Short-Term Load Forecasting Based on DBO-LSTM Model", 2023 3rd International Conference on Energy Engineering and Power Systems (EEPS), pp. 972-977 (2023)
+- [32]: "TCN Short-Term Water Level Prediction Based on CEEMDAN-VMD Time-Frequency Double Layer Feature Extraction",
+- [33]: "Precipitation prediction based on CEEMDAN–VMD–BILSTM combined quadratic decomposition model",
+- [34]: "Ultra-Short-Term Power Prediction of a Photovoltaic Power Station Based on the VMD-CEEMDAN-LSTM Model", 
+- [35]: : "Dung beetle optimizer: a new meta-heuristic algorithm for global optimization", (2023).
+- [36]: N. Hansen et. al: "Impacts of Invariance in Search: When CMA-ES and PSO Face Ill-Conditioned and Non-Separable Problems", Journal of Applied Soft Computing, pp. 5755-5769 (2011)
+- [37]: N. Hansen: "Benchmarking a BI-population CMA-ES on the BBOB-2009 function testbed", Workshop Proceedings of the GECCO Genetic and Evolutionary Computation Conference, pp. 2389–2396 (2009)
+- [38]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp. 71-78 (2013)
+- [39]: R. Tanabe and A. Fukunaga: “Improving the Search Performance of SHADE Using Linear Population Size Reduction,” Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp. 1658-1665 (2014)
+- [40]: The Black-box Optimization Benchmarking (BBOB) Workshop, http://numbbo.github.io/workshops/index.html
