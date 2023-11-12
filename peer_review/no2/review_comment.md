@@ -8,8 +8,8 @@
 - What is the originality and creativity of this paper?
 - The originality and creativity written in the current manuscript may not reach the level required for publication in this journal for the following reasons:
    - CEEMDAN-VMD, LSTM, and DBO algorithm as elements of the prediction method have been developed in other literature.
-   - Morever, I guess the electrical power load prediction problem is generally well known and this paper do not add special or difficult situaions. Therefore, the problem formulation is existing.
-   - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks and be well-known as automated machine learning (AutoML) / Neural Architecture Search (NAS). For example, the exsiting studies [28]-[30] get neural network's hyperparameters by them and improve the prediction performance in various tasks. Therfore, introducing optimization function is existing. 
+   - I guess the electrical power load prediction problem is generally well known and this paper do not add special or difficult situaions. Therefore, the problem formulation is existing.
+   - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks and be well-known as automated machine learning (AutoML) / Neural Architecture Search (NAS). For example, the exsiting studies [28]-[30] get neural network's hyperparameters by them and improve the prediction performance in various tasks. And, the study[] costructs and uses the LSTM optimized by DBO. Therefore, introducing optimization function is existing. [11] https://ieeexplore.ieee.org/document/10257027.
    - Especially, the referenced paper [26] costructs a prediction method by combining with CEEMDAN and LSTM; and applies this to power load data. the exsiting studies [31]-[33] propose a methodology that LSTM-based prediction model is applied after data prepocessing combined with CEEMDAN and VMD is applied. They are very similar to the prediction methods in this paper.
 - 一方、In my understanding, Fig.1に示すように、CEEMDAN-VMDによるデータ処理の構成方法や、このデータ処理法とLSTMによる予測手法の組み合わせ方に、本論文の新規性・創造性があると推察する。
 - しかし、本論文が提案している部分や他の文献との差異が明記されていないため、私は本論文の新規性•創造性を判断できない。
@@ -44,9 +44,10 @@
 
 ## major comment6 (All Figures and Tables)
 - The format of some figures and tables does not follow the author’s guidelines. The following items should be modified according to them for publication:
-   - There is no explanation or legend about Fig.1. The explanation of configuration of Fig.1. and the expected effects should be added in the current manuscript. The "Appendix 2: Guidelines for Figures, Photographs and Tables Preparation" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap02.pdf) says "As all figures and photographs should have captions, it is unacceptable without legend only Fig. ○. or (a)."
+   - There is no explanation or legend about Fig.1. The explanation of configuration of Fig.1 and the expected effects should be added in the current manuscript. The "Appendix 2: Guidelines for Figures, Photographs and Tables Preparation" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap02.pdf) says "As all figures and photographs should have captions, it is unacceptable without legend only Fig. ○. or (a)."
    - The font and subfigures in Fig.1 should be larger for visiblity. The "Appendix 2: Guidelines for Figures, Photographs and Tables Preparation" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap02.pdf) says "Font size in figures, photographs and tables of 7 point should be used."
    - Although there should be plenty of space around tables and figures for visiblity, it is too small in the current manuscript, i.e., between figure and sentense, figure and it's caption, and tables. The "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf) says "Double Space" around figures and tables.
+   - 図表は上か下に寄せる
 
 ## major comment7 (From Sub-Sections 4.5.1 to 4.5.3, Page 7)
 - 4.5.1節から4.5.3節は一つの節に統合すべきだろう。
@@ -60,7 +61,11 @@
 - 結果の考察がほぼ無い。比較を通して、なぜその有意差が出た理由は？
 
 ## major comment9 (Sub-Section 4.5.4, Page 8)
-- 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。The current manuscript shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning, but comparing them is questionable. 
+- 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。The current manuscript shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning, but comparing them is questionable.
+
+## major comment10 (Reference)
+- 文献の引用を見直せ。例えば、[5][13]、[14][25]、[21][22]が同じ文献になっている。重複せずに引用すべき。
+
 
 
 Although the author does not have to revise everything, please refer to the following minor comments for improving the current manuscript:
@@ -96,13 +101,17 @@ Although the author does not have to revise everything, please refer to the foll
 - But, CMA-ES[35,36] and SHADE[37,38] have the ability to adaptively and automatically adjust its own hyperparameters. They known as novel algorithm and far superior to many algorithms in many benchmark problems or Black-Box functions. The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[39]. If the authors think a difficulty to solve the machine learning or deep learning's hyperparamter tuning problem, CMA-ES / SHADE based algorithms are also expected to show higher performance than DBO in this case.
 - While there is no need to change to these algorithms and revalidate them in this paper, please mention "DBO had the best performance in Section 4.5." as shown in the major comment 4.
 
-## minor comment4 (Sub-Section 4.5.4, Page 8)
+## minor comment4 (Fig.1)
+- この図を参考にわかりやすく描け
+https://github.com/FateMurphy/CEEMDAN-VMD-GRU
+
+## minor comment5 (Sub-Section 4.5.4, Page 8)
 - Fig.6に示すように、CEEMDAN-VMD-DBO-LSTMのlong-term forcastingの予測精度は非常に良い。
 - しかしながら、DBOの目的関数を学習データ全体の平均誤差(RMSE)としており、これは学習データに過学習する恐れがある。
 - 一般的には、汎化性能を高めるために、Cross Validation（例えばK-Fold Cross Validationは，hold-outとLOOCVなど）を用いた評価指標を目的関数として使用する。
 - 今後、この手法を色んなデータに適用する際には検討してほしい。
 
-## minor comment5 (Reference)
+## minor comment6 (Reference)
 - The references written in Chinese may be selective, but it is preferable to cite references written in English for this journal. Please cite any references written in English that provides an equivalent basis if possible. Otherwise, please add "(in Chinese)" at the end of Chinese references. For example, "The authors: "title", journal, pages (year) (in Chinese)".
 
 # [Additional References]
