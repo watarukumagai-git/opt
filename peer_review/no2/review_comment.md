@@ -38,11 +38,12 @@
 - Otherwise, please specify why DBO is best choice for the LSTM performance in various tasks.
 
 ## major comment5 (Section 3.5, Page 4)
-- Parameters and Variables should be 区別しされるべきだ。
-- しかし、Table2はこれらを区別せずに表記しており、読者に混乱を生じさせる。
-- What are the LSTM's hyperparameters optimized by DBO?
-- Section 3.5 explains "the number of iterations, the learning rate, and the number of neurons in the hidden layer of LSTM", but Table 3 shows "Learning rate, the number of neurons in the hidden layer 1, and the number of neurons in the hidden layer 2". They are different.
-- Please specify the optimization variables correctly.
+- The parameters and variables for LSTM's optimization should be distinguished and correctly. But, Table2 does not distinguish between these and it creats confusion for the reader.
+- Please specify them correctly according to the following items:
+   - What are the LSTM's hyperparameters optimized by DBO? Section 3.5 explains "the number of iterations, the learning rate, and the number of neurons in the hidden layer of LSTM", but Table 3 shows "Learning rate, the number of neurons in the hidden layer 1, and the number of neurons in the hidden layer 2". They are different. I guess "the number of iterations" is DBO's loop times and given by the users. Please specify the optimization variables correctly. 
+   - What does "Fitness Function: RMSE=1" mean in Table2? It shows the type of evaluation index as the objective function for DBO, not value.
+   - Although "Neuron number of range" is [10, 100] in Table2, "Number number in Layer2" is 213 in Table3. It shows the network violates the constraints.
+   - A collumn for attribute should be added to left side of Table2. The legend of the attributes are "DBO's hyperparameter", "Fixed LSTM's hyperparameter", and "Upper and lower range of LSTM hyperparameter". The first includes population size to stealing cockroach ratio, the second includes "Fitness Function" and Activation Function, and the third includes "Learning Rate Range" and "Neruron Number Range".
 
 ## major comment6 (All Figures and Tables)
 - The format of some figures and tables does not follow the author’s guidelines. The following items should be modified according to them for publication:
