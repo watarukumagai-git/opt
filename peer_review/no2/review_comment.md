@@ -12,12 +12,11 @@
    - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks and be well-known as automated machine learning (AutoML) / Neural Architecture Search (NAS). For example, the exsiting studies [28]-[30] get neural network's hyperparameters by them and improve the prediction performance in various tasks. Therfore, introducing optimization function is existing. 
    - Especially, the referenced paper [26] costructs a prediction method by combining with CEEMDAN and LSTM; and applies this to power load data. the exsiting studies [31]-[33] propose a methodology that LSTM-based prediction model is applied after data prepocessing combined with CEEMDAN and VMD is applied. They are very similar to the prediction methods in this paper.
 - 一方、In my understanding, Fig.1に示すように、CEEMDAN-VMDによるデータ処理の構成方法や、このデータ処理法とLSTMによる予測手法の組み合わせ方に、本論文の新規性・創造性があると推察する。
+- しかし、本論文が提案している部分や他の文献との差異が明記されていないため、私は本論文の新規性•創造性を判断できない。
 - Overall, please specify the originality and creativity of this paper in Chapter 1 with attention to differences from other literature.
 
 ## major comment2 (General)
-- The main purpose of this paper is to improve the prediction accuracy for short-term power load forcasting task.
-- But what is the secondary purpose or motivation?
-- I guess the reason why this paper uses the prediction method combined with some algorithms is to deal with the time and space fluctuation and randomness of power load data.
+- The main purpose of this paper is to improve the prediction accuracy for short-term power load forcasting task. But what is the secondary purpose or motivation? I guess the reason why this paper uses the prediction method combined with some algorithms is to deal with the time and space fluctuation and randomness of power load data.
 - Overall, please describe "The main purpose of this study is to improve the prediction accuracy for short-term power load forcasting task by dealing with the time and space fluctuation and randomness of power load data." in Chapter 1.
 
 ## major comment3 (General)
@@ -74,9 +73,10 @@ Although the author does not have to revise everything, please refer to the foll
    - In the sentence "..., p is a constant belonging to (0,1).", where is p in Eq.(17)? (Under Eq.(17), Page 3)
    - Eq.(18) is exactly the same as Eq.(17) and shoulud be modified to the updating equation for dung ball rolling beetle's position if \delta>0.9. (Eq.(18), Page 3)
    - There is no equation for updating brood ball, but only an explanatory note about variable. (Page 4)
+   - There are wrong equation numbers; for example, "defined in the aforementioned formula (3)" in top of Eq.(21) and "we know from formula (5)" in top of Eq.(24). (Page 4)
 - LSTM (Section 3.4, Page 4)
-   - "h_{t-1}" should be mathematical style. (top of Eq.(28), Page 4)
-   - What is the second equation? I guess 1つ目の式だけで十分である。(Eq.(29), Page 4)
+   - "h_{t-1}" should be mathematical style. (top of Eq.(28))
+   - What is the second equation? I guess 1つ目の式だけで十分である。(Eq.(29))
 - Evaluation indicators (Section 4.3, Page 6)
    - Four metrics (RMSE, MAPE, MSE, and R-squared) are used in the experimental results, but the sentence "we use three main evaluation metrics in this paper." is written and there is no explanation of Eq.(34). (Top of Eq.(31))
    - In the MAPE definition (Eq.(32)), "n" and "N" are used in the same meaning although it is inferred that "n" is the number of data. Unify the letters. (Eq.(32))
@@ -103,7 +103,7 @@ Although the author does not have to revise everything, please refer to the foll
 - 今後、この手法を色んなデータに適用する際には検討してほしい。
 
 ## minor comment5 (Reference)
-- The references written in Chinese may be selective, but it is preferable to cite references written in English in this journal. Please cite any references written in English that provides an equivalent basis if possible. Otherwise, please add "(in Chinese)" at the end of Chinese references. For example, "The authors: "title", journal, pages (year) (in Chinese)".
+- The references written in Chinese may be selective, but it is preferable to cite references written in English for this journal. Please cite any references written in English that provides an equivalent basis if possible. Otherwise, please add "(in Chinese)" at the end of Chinese references. For example, "The authors: "title", journal, pages (year) (in Chinese)".
 
 # [Additional References]
 - [28]: J. Waring et al.: "Automated machine learning: Review of the state-of-the-art and opportunities for healthcare,
