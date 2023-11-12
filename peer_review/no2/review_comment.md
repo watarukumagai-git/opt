@@ -24,7 +24,7 @@
    - Chapter 2's title should be revised to "Methodology" and Chapter 2 should include the element of the combined methods; i.e., CEEMDAN, Sample Entropy, Variational Mode Decomposition, and LSTM.
    - Chapter 3's title should be revised to "Proposed Method" and Chapter 3 should include an explanation of how to combine with denoising time-series data and prediction methods. The denosing method is combined with CEEMDAN, Sample Entropy, and VMD, which is the part shown at the top of Fig.1 and some sentences for the combined data-processing steps in Section 4.2 in my understanding. The prediction method is combined with LSTM and DBO.
    - Some mathematical equations and algorithms of each methods are not directly related to the original or creative ideas of this paper or used as tool. They should be removed from the current manuscript or transfered to Additional Materials (Appendix) after rewriting them correctly. For example, CEEMDAN algorithm (from Eqs.(1) to (6)), Sample Entropy algorithm (from Eqs.(7) to (10)), Variational Mode Decomposition algorithm (from Eqs.(11) to (16)), and DBO algorithm parts (from Sections 3.1 to 3.3).
-   - For overall performance comparisons, Sub-sections 4.5.1 through 4.5.3 should be combined into a single section, Table 4 through Table 6 into a single table, and Fig.2 through Fig.4 into a single figure for short-term prediction using two-column wide table and subfigure configuration (Fig.2(a),(b),(c)) as needed. The combined Subsection 4.5.1 shows short-term prediction and the new Subsection 4.5.2 shows long-term prediction.
+   - For overall performance comparisons, Subsections 4.5.1 through 4.5.3 should be combined into a single section, Table 4 through Table 6 into a single table, and Fig.2 through Fig.4 into a single figure for short-term prediction using two-column wide table and subfigure configuration (Fig.2(a),(b),(c)) as needed. The combined Subsection 4.5.1 shows short-term prediction and the new Subsection 4.5.2 shows long-term prediction.
 
 ## major comment4 (Chapter 3, Page 3)
 - What is the reason for using DBO as optimization algorithm?
@@ -44,12 +44,11 @@
    - A collumn for attribute should be added to left side of Table2. The legend of the attributes are "DBO's hyperparameter", "Fixed LSTM's hyperparameter", and "Upper and lower range of LSTM hyperparameter". The first includes population size to stealing cockroach ratio, the second includes "Fitness Function" and Activation Function, and the third includes "Learning Rate Range" and "Neruron Number Range".
 
 ## major comment6 (Chapter 4)
-- I also doubt the usability of CEEMDAN-DBO-LSTM is varified from the results. The comparison and discussion of results is very questionable. Please revise it with attention to the following points:
+- I also doubt the usability of CEEMDAN-DBO-LSTM is varified from the results and The comparison/discussion of results is very questionable. Please revise it with attention to the following points:
    - There is no discussion for the results. What is the reason there is the difference between CEENDAN-DBO-LSTM and the others?
-   - The compared methods is questiable. Table4 shows the superiority of denoisng method (with or without), Table5 shows the superioty of LSTM-based prediction method, and Table6 shows the superiority of DBO-based optimization method. But if the denosing time-series data method in CEEMDAN-DBO-LSTM is the originality of this paper, please provide an additional results using the other denosing methods [26,32,33].
-   - さらに、4.5.1節から4.5.3節の目的に対して、各Tableにおける比較対象は不適切だと思われる。例えば、4.5.3節は、LSTMのハイパーパラメータチューニングのために用いた最適化アルゴリズムの影響を調べるパートである。このため、SSA,MVO,PSO,DBOの4種をLSTMに適用した手法同士を調べるのが平等である。しかし、Table6では、SSA,MVO,PSO-LSTMと他の技術が含まれる提案手法を比較されている。前処理のやり方に新規性があるなら、先行研究の前処理と比べるのが適切では？よって、Table4からTable6は、全て一つの表に統一した上で、各検証目的に応じて、比較手法を適切に選び、結果を考察するのが良いだろう。
-   - long-term forcasting taskで他の手法と比較がない理由は？4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。
-   - long-term forcastingで精度が良いこと＝汎用性が高い、という理屈が理解できない。いくつかの季節のデータでの結果を総合的に見て、汎用性が高いとは言えない。
+   - The compared methods is questiable. Table4 shows the effect of denoising method, Table5 shows the superioty of LSTM-based prediction method, and Table6 shows the superiority of DBO-based optimization method. But if the denoising time-series data method of CEEMDAN-DBO-LSTM is the originality of this paper, please provide an additional results using the other denosing methods [26,32,33].
+   - Why is there no comparison with other methods for long-term forcasting task? To validate the superiority of CEEMDAN-DBO-LSTM, the paper needs to compare CEEMDAN-DBO-LSTM with other methods for long-term forcasting task.
+   - I cannot understand the logic that if long-term forcasting in one term is accurate, it has high generality. To show and validate the generality of CEEMDAN-DBO-LSTM, please provide an additional results using data from each season even short-term forecast task.
 
 
 ## major comment7 (All Figures and Tables)
@@ -61,7 +60,11 @@
 
 
 ## major comment8 (Reference)
-- Review the citation of references. For example, [5][13], [14][25], [21][22] are the same references. They should be cited without duplication.
+Review the citation of references accoding to the following items:
+- The referenced papers [5][13], [14][25], [21][22] are the same references. They should be cited without duplication.(Chapter 1)
+- "if hyperparameters are not properly adjusted (Feng J., Yang J., 2021)[12].", but the authour's name may be "(Fan, G.-F. et al. 2023)[12]" (Chapter 1).
+- "Examples include the Least Squares Support Vector Machine (LSSVM) model optimized by Sparrow Search Algorithm (SSA)[13]-[14]", but the reference paper [14] may use the arithmetic optimization algorithm (AOA), not SSA (Chapter 1).
+- "the new algorithm based on Spatial Autocorrelation and Convolutional Long Short-Term Memory (SAC-ConvLSTM)[17]-[18]", but the reference paper [17] do not use SAC-ConvLSTM (Chapter 1).
 
 
 
@@ -99,11 +102,12 @@ Although the author does not have to revise everything, please refer to the foll
 - But, CMA-ES[36,37] and SHADE[38,39] have the ability to adaptively and automatically adjust its own hyperparameters. They known as novel algorithm and far superior to many algorithms in many benchmark problems or Black-Box functions. The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[40]. If the authors think a difficulty to solve the machine learning or deep learning's hyperparamter tuning problem, CMA-ES / SHADE based algorithms are also expected to show higher performance than DBO in this case.
 - While there is no need to change to these algorithms and revalidate them in this paper, please mention "DBO had the best performance in Section 4.5." as shown in the major comment 4.
 
-## minor comment4 (Fig.1)
-- この図を参考にわかりやすく描け
-https://github.com/FateMurphy/CEEMDAN-VMD-GRU
 
-## minor comment5 (Sub-Section 4.5.4, Page 8)
+## minor comment4 (Fig.1)
+- Redraw Fig.1 for clarity refered to the figure about denosing steps in [40].
+
+
+## minor comment5 (Subsection 4.5.4, Page 8)
 - Fig.6 shows the prediction accuracy of CEEMDAN-VMD-DBO-LSTM for long-term forcasting case (about 2.5 months) is quite high although the objective function of DBO is set as the mean error (RMSE) of the entire training data. I guess it is may this could an over-fitting for the training data. In general, the evaluation index based on the cross validation (e.g., K-fold, hold-out, and LOOCV) is used for the objective function.
 - Please consider applying this method to various types of data in the future.
 
@@ -125,3 +129,4 @@ https://github.com/FateMurphy/CEEMDAN-VMD-GRU
 - [38]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp. 71-78 (2013)
 - [39]: R. Tanabe and A. Fukunaga: “Improving the Search Performance of SHADE Using Linear Population Size Reduction,” Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp. 1658-1665 (2014)
 - [40]: The Black-box Optimization Benchmarking (BBOB) Workshop, http://numbbo.github.io/workshops/index.html
+- [41]: F. Zhou et al.: "Carbon price forecasting based on CEEMDAN and LSTM", Applied Energy, Vol.311, p. 118601 (2022), (https://github.com/FateMurphy/CEEMDAN-VMD-GRU)
