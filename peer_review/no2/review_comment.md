@@ -46,26 +46,22 @@
    - Although "Neuron number of range" is [10, 100] in Table2, "Number number in Layer2" is 213 in Table3. It shows the network violates the constraints.
    - A collumn for attribute should be added to left side of Table2. The legend of the attributes are "DBO's hyperparameter", "Fixed LSTM's hyperparameter", and "Upper and lower range of LSTM hyperparameter". The first includes population size to stealing cockroach ratio, the second includes "Fitness Function" and Activation Function, and the third includes "Learning Rate Range" and "Neruron Number Range".
 
-## major comment6 (All Figures and Tables)
+## major comment6 (Chapter 4)
+- The comparison and discussion of results is very questionable. 下記の点に注意して、適切に修正せよ。
+   - There is no discussion for result.比較を通して、なぜその有意差が出た理由は？
+   - さらに、4.5.1節から4.5.3節の目的に対して、各Tableにおける比較対象は不適切だと思われる。例えば、4.5.3節は、LSTMのハイパーパラメータチューニングのために用いた最適化アルゴリズムの影響を調べるパートである。このため、SSA,MVO,PSO,DBOの4種をLSTMに適用した手法同士を調べるのが平等である。しかし、Table6では、SSA,MVO,PSO-LSTMと他の技術が含まれる提案手法を比較されている。前処理のやり方に新規性があるなら、先行研究の前処理と比べるのが適切では？よって、Table4からTable6は、全て一つの表に統一した上で、各検証目的に応じて、比較手法を適切に選び、結果を考察するのが良いだろう。
+   - 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。
+
+
+## major comment7 (All Figures and Tables)
 - The format of some figures and tables does not follow the author’s guidelines. The following items should be modified according to them for publication:
    - There is no explanation or legend about Fig.1. The explanation of configuration of Fig.1 and the expected effects should be added in the current manuscript.
    - The font and subfigures in Fig.1 should be larger for visiblity. The "Appendix 2: Guidelines for Figures, Photographs and Tables Preparation" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap02.pdf) says "Font size in figures, photographs and tables of 7 point should be used."
    - Although there should be plenty of space around tables and figures for visiblity, it is too small in the current manuscript, i.e., between figure and sentense, figure and it's caption, and tables. The "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf) says "Double Space" around figures and tables.
    - The position of figures, photographs and tables inserted should be at the tops and bottoms of columns. Avoid placing them in the middle of columns. (https://www.iee.jp/wp-content/uploads/honbu/32-doc-kenq/guideline.pdf)
 
-## major comment7 (From Sub-Sections 4.5.1 to 4.5.3, Page 7)
-- さらに、4.5.1節から4.5.3節の目的に対して、各Tableにおける比較対象は不適切だと思われる。
-- 例えば、4.5.3節は、LSTMのハイパーパラメータチューニングのために用いた最適化アルゴリズムの影響を調べるパートである。このため、SSA,MVO,PSO,DBOの4種をLSTMに適用した手法同士を調べるのが平等である。しかし、Table6では、SSA,MVO,PSO-LSTMと他の技術が含まれる提案手法を比較されている。
-- 前処理のやり方に新規性があるなら、先行研究の前処理と比べるのが適切では？
-- よって、Table4からTable6は、全て一つの表に統一した上で、各検証目的に応じて、比較手法を適切に選び、結果を考察するのが良いだろう。
 
-## major comment8 (From Sub-Sections 4.5.1 to 4.5.3, Page 7)
-- 結果の考察がほぼ無い。比較を通して、なぜその有意差が出た理由は？
-
-## major comment9 (Sub-Section 4.5.4, Page 8)
-- 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。The current manuscript shows the performance of the proposed PSO is superior to the classic GA and PSO in the path planning, but comparing them is questionable.
-
-## major comment10 (Reference)
+## major comment8 (Reference)
 - Review the citation of references. For example, [5][13], [14][25], [21][22] are the same references. They should be cited without duplication.
 
 
