@@ -38,6 +38,8 @@
 - Otherwise, please specify why DBO is best choice for the LSTM performance in various tasks.
 
 ## major comment5 (Section 3.5, Page 4)
+- Parameters and Variables should be 区別しされるべきだ。
+- しかし、Table2はこれらを区別せずに表記しており、読者に混乱を生じさせる。
 - What are the LSTM's hyperparameters optimized by DBO?
 - Section 3.5 explains "the number of iterations, the learning rate, and the number of neurons in the hidden layer of LSTM", but Table 3 shows "Learning rate, the number of neurons in the hidden layer 1, and the number of neurons in the hidden layer 2". They are different.
 - Please specify the optimization variables correctly.
