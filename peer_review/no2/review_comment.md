@@ -11,8 +11,7 @@
    - I guess the electrical power load prediction problem is generally well known and this paper do not add special or difficult situaions. Therefore, the problem formulation is existing.
    - The idea is existing which machine learning or deep learning's hyperparamter tuning by high-level optimization function. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks and be well-known as automated machine learning (AutoML) / Neural Architecture Search (NAS). For example, the exsiting studies [28,29,30] get neural network's hyperparameters by them and improve the prediction performance in various tasks. The study [31] costructs the LSTM optimized by DBO and applies it to short-term load forecasting task. Therefore, introducing optimization function is existing. 
    - Especially, the referenced paper [26] costructs a prediction method by combining with CEEMDAN and LSTM; and applies this to power load data. The exsiting studies [32,33] propose a methodology that LSTM-based prediction model is applied after data prepocessing combined with CEEMDAN and VMD. They are very similar to the prediction methods in this paper.
-- 一方、In my understanding, Fig.1に示すように、CEEMDAN-VMDによるデータ処理の構成方法や、このデータ処理法とLSTMによる予測手法の組み合わせ方に、本論文の新規性・創造性があると推察する。
-- しかし、本論文が提案している部分や他の文献との差異が明記されていないため、私は本論文の新規性•創造性を判断できない。
+- On the other hand, I guess the originality and creativity of this paper are related to how to carry out denosing time-series data by combining with CEEMDAN, VMD, and Sample Entropy-based clustering. However, I cannot judge the originality and creativity because it does not clearly state the proposal parts and the difference from other literature. 
 - Overall, please specify the originality and creativity of this paper in Chapter 1 with attention to differences from other literature.
 
 ## major comment2 (General)
@@ -20,13 +19,11 @@
 - Overall, please describe "The main purpose of this study is to improve the prediction accuracy for short-term power load forcasting task by dealing with the time and space fluctuation and randomness of power load data." in Chapter 1.
 
 ## major comment3 (General)
-- Please review the current manuscript structure so that the reader can understand the originality and creativity of this paper of this paper. According to the general format, this paper should consist of introduction (Chapter 1), denosing time-series data / prediction method (Chapters 2 and 3), results and discussion (Chapter 4). 
+- Please review the current manuscript structure so that the reader can understand the originality and creativity of this paper of this paper. According to the general format, this paper should consist of introduction (Chapter 1), methodology (Chapter 2), proposed method (Chapters 3), results and discussion (Chapter 4). 
 - Overall, please revise the manuscript's structure according to the following my ideas:
-   - Chapter 2's title should be revised to "Denoising Time-Series Data" because this part explains the denoising method, not simply data processing.
-   - Mathematical equations and algorithms of each methods, which are not directly related to the original or creative ideas of this paper or used as tool, should be removed or transfered to Additional Materials (Appendix) after rewriting them correctly. For example, CEEMDAN algorithm (from Eqs.(1) to (6)), Sample Entropy algorithm (from Eqs.(7) to (10)), Variational Mode Decomposition algorithm (from Eqs.(11) to (16)), and DBO algorithm parts (from Sections 3.1 to 3.3).
-   - Explanation of denoising methods combined with CEEMDAN-VMD and Sanple Entropy, which is the part shown at the top of Fig.1, should be added to new Section 2.4.
-   - Some sentences for the combined data-processing steps in Section 4.2 should be transfered to new Section 2.4. 
-   - Chapter 3's title should be revised to "LSTM-Based Prediction Method" because this part explains the prediction method combined with data-processing method and DBO is simply used as tool.
+   - Chapter 2's title should be revised to "Methodology" and Chapter 2 should include the element of the combined methods; i.e., CEEMDAN, Sample Entropy, Variational Mode Decomposition, and LSTM.
+   - Chapter 3's title should be revised to "Proposed Method" and Chapter 3 should include an explanation of how to combine with denoising time-series data and prediction methods. The denosing method is combined with CEEMDAN, Sample Entropy, and VMD, which is the part shown at the top of Fig.1 and some sentences for the combined data-processing steps in Section 4.2 in my understanding. The prediction method is combined with LSTM and DBO.
+   - Some mathematical equations and algorithms of each methods are not directly related to the original or creative ideas of this paper or used as tool. They should be removed from the current manuscript or transfered to Additional Materials (Appendix) after rewriting them correctly. For example, CEEMDAN algorithm (from Eqs.(1) to (6)), Sample Entropy algorithm (from Eqs.(7) to (10)), Variational Mode Decomposition algorithm (from Eqs.(11) to (16)), and DBO algorithm parts (from Sections 3.1 to 3.3).
    - For overall performance comparisons, Sub-sections 4.5.1 through 4.5.3 should be combined into a single section, Table 4 through Table 6 into a single table using two-column wide table as needed, Fig.2 through Fig.4 into a single figure for short-term prediction using subfigure configration (Fig.2(a),(b),(c)) as needed. The combined Sub-section 4.5.1 shows short-term prediction and the new Subsection 4.5.2 shows long-term prediction.
 
 ## major comment4 (Chapter 3, Page 3)
@@ -47,10 +44,11 @@
    - A collumn for attribute should be added to left side of Table2. The legend of the attributes are "DBO's hyperparameter", "Fixed LSTM's hyperparameter", and "Upper and lower range of LSTM hyperparameter". The first includes population size to stealing cockroach ratio, the second includes "Fitness Function" and Activation Function, and the third includes "Learning Rate Range" and "Neruron Number Range".
 
 ## major comment6 (Chapter 4)
-- The comparison and discussion of results is very questionable. 下記の点に注意して、適切に修正せよ。
+- Usability is also 理解できていない。The comparison and discussion of results is very questionable. 下記の点に注意して、適切に修正せよ。
    - There is no discussion for result.比較を通して、なぜその有意差が出た理由は？
    - さらに、4.5.1節から4.5.3節の目的に対して、各Tableにおける比較対象は不適切だと思われる。例えば、4.5.3節は、LSTMのハイパーパラメータチューニングのために用いた最適化アルゴリズムの影響を調べるパートである。このため、SSA,MVO,PSO,DBOの4種をLSTMに適用した手法同士を調べるのが平等である。しかし、Table6では、SSA,MVO,PSO-LSTMと他の技術が含まれる提案手法を比較されている。前処理のやり方に新規性があるなら、先行研究の前処理と比べるのが適切では？よって、Table4からTable6は、全て一つの表に統一した上で、各検証目的に応じて、比較手法を適切に選び、結果を考察するのが良いだろう。
-   - 4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。
+   - long-term forcasting taskで他の手法と比較がない理由は？4.5.4節のFig.6とTable7は、他の手法との比較があるほうが適切だと思われる。
+   - long-term forcastingで精度が良いこと＝汎用性が高い、という理屈が理解できない。いくつかの季節のデータでの結果を総合的に見て、汎用性が高いとは言えない。
 
 
 ## major comment7 (All Figures and Tables)
