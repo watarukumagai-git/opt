@@ -59,7 +59,7 @@ The format of some figures and tables does not follow the author’s guidelines.
 
 
 ## major comment8 (Reference)
-Review the citation of references accoding to the following items:
+Review the citation of references according to the following items:
 - The referenced papers [5][13], [14][25], [21][22] are the same references. They should be cited without duplication.(Chapter 1)
 - "if hyperparameters are not properly adjusted (Feng J., Yang J., 2021)[12].", but the authour's name may be "(Fan, G.-F. et al. 2023)[12]" (Chapter 1).
 - "Examples include the Least Squares Support Vector Machine (LSSVM) model optimized by Sparrow Search Algorithm (SSA)[13]-[14]", but the reference paper [14] may use the arithmetic optimization algorithm (AOA), not SSA (Chapter 1).
@@ -118,7 +118,7 @@ The references written in Chinese may be selective, but it is preferable to cite
 
 
 # [Additional References]
-- [28]: J. Waring et al.: "Automated machine learning: Review of the state-of-the-art and opportunities for healthcare,
+- [28]: J. Waring et al.: "Automated machine learning: Review of the state-of-the-art and opportunities for healthcare",
    Artificial Intelligence in Medicine, Vol. 104, page 101822 (2020)
 - [29]: R. Luo et al.: "Neural Architecture Optimization", Advances in Neural Information Processing Systems, Vol. 31, pp. 1–12 (2018)
 - [30]: P. Ren et al.: "A comprehensive survey of neural architecture search: Challenges and solutions", ACM Computing Surveys, Vol. 54, No. 4, Article No.76, pp. 1–34 (2021)
@@ -131,6 +131,6 @@ The references written in Chinese may be selective, but it is preferable to cite
 - [37]: N. Hansen et. al: "Impacts of Invariance in Search: When CMA-ES and PSO Face Ill-Conditioned and Non-Separable Problems", Journal of Applied Soft Computing, pp. 5755-5769 (2011)
 - [38]: N. Hansen: "Benchmarking a BI-population CMA-ES on the BBOB-2009 function testbed", Workshop Proceedings of the GECCO Genetic and Evolutionary Computation Conference, pp. 2389–2396 (2009)
 - [39]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp. 71-78 (2013)
-- [40]: R. Tanabe and A. Fukunaga: “Improving the Search Performance of SHADE Using Linear Population Size Reduction,” Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp. 1658-1665 (2014)
+- [40]: R. Tanabe and A. Fukunaga: "Improving the Search Performance of SHADE Using Linear Population Size Reduction," Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp. 1658-1665 (2014)
 - [41]: The Black-box Optimization Benchmarking (BBOB) Workshop, http://numbbo.github.io/workshops/index.html
 
