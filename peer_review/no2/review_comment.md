@@ -5,7 +5,7 @@
 
 ## [Major Comments]
 ## major comment1 (General)
-- What is the originality and creativity of this paper? The originality and creativity written in the current manuscript may not reach the level required for publication in this journal for the following reasons:
+What is the originality and creativity of this paper? The originality and creativity written in the current manuscript may not reach the level required for publication in this journal for the following reasons:
    - CEEMDAN-VMD, LSTM, and DBO algorithm as elements of the prediction method have been developed in other literature.
    - I guess the electrical power load prediction problem is generally well known and this paper do not add special or difficult situaions. Therefore, the problem formulation is existing.
    - The idea of machine learning or deep learning's hyperparamter tuning by high-level optimization function already exists. This has been a necessary task in recent years to bring the performance of deep learning to a practical level in various tasks and be well-known as automated machine learning (AutoML) / Neural Architecture Search (NAS). For example, the exsiting studies [28-30] get neural network's hyperparameters by them and improve the prediction performance in various tasks. The study [31] costructs the LSTM optimized by DBO and applies it to short-term load forecasting task. Therefore, introducing optimization function is existing. 
