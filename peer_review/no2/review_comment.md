@@ -20,16 +20,16 @@ Overall, please specify the originality and creativity of this paper in Chapter 
 
 
 ## major comment2 (General)
-The main purpose of this paper is to improve the prediction accuracy for short-term power load forcasting task. But what is the secondary purpose or motivation? I guess the reason why this paper uses the prediction method combined with some algorithms is to deal with the time and space fluctuation and randomness of power load data.
+The main purpose of this paper is to improve the prediction accuracy for short-term power load forcasting task. But what is the secondary purpose or motivation? I guess the reason why this paper uses the prediction method combined with some denoising algorithms is to address the time and space fluctuation and randomness of power load data.
 
-Overall, please describe "The main purpose of this study is to improve the prediction accuracy for short-term power load forcasting task by dealing with the time and space fluctuation and randomness of power load data." in Chapter 1.
+Overall, please describe "The main purpose of this study is to improve the prediction accuracy for short-term power load forcasting task by addressing the time and space fluctuation and randomness of power load data." in Chapter 1.
 
 
 ## major comment3 (General)
 Please review the current manuscript structure so that the reader can understand the originality and creativity of this paper of this paper. According to the general format, this paper should consist of introduction (Chapter 1), related methodology (Chapter 2), proposed method (Chapters 3), results and discussion (Chapter 4). Overall, please revise the manuscript's structure according to the following my ideas:
-- Chapter 2's title should be revised to "Related Methodology" and Chapter 2 should include the element of the combined methods; i.e., CEEMDAN, Sample Entropy, Variational Mode Decomposition, and LSTM.
-- Chapter 3's title should be revised to "Proposed Method" and Chapter 3 should include an explanation of how to combine with denoising time-series data and prediction methods. The denosing method is combined with CEEMDAN, Sample Entropy, and VMD, which is the part shown at the top of Fig.1 and some sentences for the combined data-processing steps in Section 4.2 in my understanding. The prediction method is combined with LSTM and DBO.
-- Some mathematical equations and algorithms of each methods are not directly related to the original or creative ideas of this paper or used as tool. Moreover, there are many misstatements in them of the current manuscript comparing with the original paper. Details are described in minor comments. They should be removed from the current manuscript or transfered to Additional Materials (Appendix) after rewriting them correctly. For example, CEEMDAN algorithm (from Eqs.(1) to (6)), Sample Entropy algorithm (from Eqs.(7) to (10)), Variational Mode Decomposition algorithm (from Eqs.(11) to (16)), and DBO algorithm parts (from Sections 3.1 to 3.3).
+- Chapter 2's title should be revised to "Related Methodology" and Chapter 2 should include the element of the combined methods; i.e., CEEMDAN, Sample Entropy, Variational Mode Decomposition, Secondary Decomposition, and LSTM. Especially, the section of secondary decomposition should review previous studies [37-40].
+- Chapter 3's title should be revised to "Proposed Method" and Chapter 3 should include an explanation of how to combine with denoising time-series data and prediction methods. The denosing method is combined with CEEMDAN, Sample Entropy, clustering, and VMD. In my understanding, it is the part shown at the top of Fig.1 and some sentences for the combined data-processing steps in Section. The prediction method is combined with LSTM and DBO.
+- Some mathematical equations and algorithms of each methods are not directly related to the original or creative ideas of this paper or used as tool. Moreover, there are many misstatements in them of the current manuscript comparing with the original paper. Details are described in minor comments. They should be removed from the current manuscript or transfered to Additional Materials (Appendix) after rewriting them correctly. For example, CEEMDAN algorithm (from Eqs.(1) to (6)), Sample Entropy algorithm (from Eqs.(7) to (10)), Variational Mode Decomposition (from Eqs.(11) to (16)), and DBO algorithm parts (from Sections 3.1 to 3.3).
 - For overall performance comparisons, Subsections 4.5.1 through 4.5.3 should be combined into a single section, Table 4 through Table 6 into a single table, and Fig.2 through Fig.4 into a single figure for short-term prediction using two-column wide table and subfigure configuration (Fig.2(a),(b),(c)) as needed. The combined Subsection 4.5.1 shows short-term prediction and the new Subsection 4.5.2 shows long-term prediction.
 
 
@@ -58,7 +58,9 @@ I also doubt the usability of CEEMDAN-VMD-DBO-LSTM is varified from the results 
 
 
 ## major comment7 (All Figures and Tables)
-The format of some figures and tables does not follow the author’s guidelines. The following items should be modified according to them for publication:
+The format of some figures and tables does not follow the author’s guidelines. Review and consider them and the already published papers in this journal.
+
+The following items should be modified according to them for publication:
 - There is no explanation or legend about Fig.1. The explanation of configuration of Fig.1 and the expected effects should be added in the current manuscript.
 - The font and subfigures in Fig.1 should be larger for visiblity. The "Appendix 2: Guidelines for Figures, Photographs and Tables Preparation" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap02.pdf) says "Font size in figures, photographs and tables of 7 point should be used."
 - Although there should be plenty of space around tables and figures for visiblity, it is too small in the current manuscript, i.e., between figure and sentense, figure and it's caption, and tables. The "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf) says "Double Space" around figures and tables.
