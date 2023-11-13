@@ -1,5 +1,5 @@
 # english review comments
-- This paper constructs the prediction method by combining with the CEEMDAN-VMD and DBO-LSTM algorithms for electrical power load forcasting task. Moreover, it is verified that the prediction performance of this method is superior to several machine learning algorithms through numerical simulation using wind power data. 
+This paper constructs the prediction method by combining with the CEEMDAN-VMD and DBO-LSTM algorithms for electrical power load forcasting task. Moreover, it is verified that the prediction performance of this method is superior to several machine learning algorithms through numerical simulation using wind power data. 
 - It provides an interesting data through many comparisons, but I think it still needs extensive revisions to be acceptable for publication in terms of originality, creativity, and readability. 
 - From this reason, the judgement is "C" (Rereview after major revision). It should be revised according to following major comments and improved as necessary.
 
@@ -15,13 +15,12 @@ What are the originality and creativity of this paper? The originality and creat
 
 
 ## major comment2 (General)
-- The main purpose of this paper is to improve the prediction accuracy for short-term power load forcasting task. But what is the secondary purpose or motivation? I guess the reason why this paper uses the prediction method combined with some algorithms is to deal with the time and space fluctuation and randomness of power load data.
+The main purpose of this paper is to improve the prediction accuracy for short-term power load forcasting task. But what is the secondary purpose or motivation? I guess the reason why this paper uses the prediction method combined with some algorithms is to deal with the time and space fluctuation and randomness of power load data.
 - Overall, please describe "The main purpose of this study is to improve the prediction accuracy for short-term power load forcasting task by dealing with the time and space fluctuation and randomness of power load data." in Chapter 1.
 
 
 ## major comment3 (General)
-- Please review the current manuscript structure so that the reader can understand the originality and creativity of this paper of this paper. According to the general format, this paper should consist of introduction (Chapter 1), related methodology (Chapter 2), proposed method (Chapters 3), results and discussion (Chapter 4).
-- Overall, please revise the manuscript's structure according to the following my ideas:
+Please review the current manuscript structure so that the reader can understand the originality and creativity of this paper of this paper. According to the general format, this paper should consist of introduction (Chapter 1), related methodology (Chapter 2), proposed method (Chapters 3), results and discussion (Chapter 4). Overall, please revise the manuscript's structure according to the following my ideas:
    - Chapter 2's title should be revised to "Related Methodology" and Chapter 2 should include the element of the combined methods; i.e., CEEMDAN, Sample Entropy, Variational Mode Decomposition, and LSTM.
    - Chapter 3's title should be revised to "Proposed Method" and Chapter 3 should include an explanation of how to combine with denoising time-series data and prediction methods. The denosing method is combined with CEEMDAN, Sample Entropy, and VMD, which is the part shown at the top of Fig.1 and some sentences for the combined data-processing steps in Section 4.2 in my understanding. The prediction method is combined with LSTM and DBO.
    - Some mathematical equations and algorithms of each methods are not directly related to the original or creative ideas of this paper or used as tool. Moreover, there are many misstatements in them of the current manuscript comparing with the original paper. Details are described in minor comments. They should be removed from the current manuscript or transfered to Additional Materials (Appendix) after rewriting them correctly. For example, CEEMDAN algorithm (from Eqs.(1) to (6)), Sample Entropy algorithm (from Eqs.(7) to (10)), Variational Mode Decomposition algorithm (from Eqs.(11) to (16)), and DBO algorithm parts (from Sections 3.1 to 3.3).
@@ -29,8 +28,8 @@ What are the originality and creativity of this paper? The originality and creat
 
 
 ## major comment4 (Chapter 3, Page 3)
-- What is the reason for using DBO as optimization algorithm? I would guess that the answer is "because DBO showed the best performance through numerical experiments in Section 4.5", and I believe that this is not valid for any other task.
-- If this reason is correct, using DBO is not an original idea for this paper. Overall, please specify "To determine LSTM’s hyperparameters by an outside optimization function is categorized as a machine learning's hyperparameter tuning problem, i.e, black-box optimization. Although there are many known metaheristic algorithms for black-box optimization, this study uses DBO [37] which had the best performance in Section 4.5." in Chapter 3 citing the DBO's original paper [37].
+What is the reason for using DBO as optimization algorithm? I would guess that the answer is "because DBO showed the best performance through numerical experiments in Section 4.5", and I believe that this is not valid for any other task.
+- If this reason is correct, using DBO is not an original idea for this paper. Overall, please specify "To determine LSTM’s hyperparameters by an outside optimization function is categorized as a machine learning's hyperparameter tuning problem, i.e, black-box optimization. Although there are many known metaheristic algorithms for black-box optimization, this study uses DBO [41] which had the best performance in Section 4.5." in Chapter 3 citing the DBO's original paper [41].
 - Otherwise, please specify why DBO is best choice for the LSTM performance in various tasks.
 
 
@@ -45,7 +44,7 @@ The parameters and variables for LSTM's optimization should be distinguished and
 ## major comment6 (Chapter 4)
 I also doubt the usability of CEEMDAN-VMD-DBO-LSTM is varified from the results and The comparison/discussion of results is very questionable. Please revise it with attention to the following points:
    - There is no discussion for the results. What is the reason there is the difference between CEENDAN-VMD-DBO-LSTM and the others?
-   - The compared methods is questiable. Table4 shows the effect of denoising method, Table5 shows the superioty of LSTM-based prediction method, and Table6 shows the superiority of DBO-based optimization method. But if the denoising time-series data method of CEEMDAN-VMD-DBO-LSTM is the originality of this paper, please provide an additional results using the other denosing methods [21-26,32-36].
+   - The compared methods is questiable. Table4 shows the effect of denoising method, Table5 shows the superioty of LSTM-based prediction method, and Table6 shows the superiority of DBO-based optimization method. But if the denoising time-series data method of CEEMDAN-VMD-DBO-LSTM is the originality of this paper, please provide an additional results using the other denosing methods [21-26,33-40].
    - Why is there no comparison with other methods for long-term forcasting task? To validate the superiority of CEEMDAN-VMD-DBO-LSTM, the paper needs to compare CEEMDAN-VMD-DBO-LSTM with other methods for long-term forcasting task.
    - I cannot understand the logic that if long-term forcasting in one term is accurate, it has high generality. To show and validate the generality of CEEMDAN-VMD-DBO-LSTM, please provide an additional results using data from each season even short-term forecast task.
 
@@ -100,7 +99,7 @@ Please remove the "1" at the end of the title if there is no particular reason.
 
 ## minor comment3 (Chapter 3)
 - Although LSTM's hyperparameters is determined by DBO, DBO also has its own hyperparameters. In other words, the hyperparamters of high-level optimization function also affect the LSTM's prediction performance. Although the hyperparameters of metaheuristic algorithms can be flexibly set by the user according to the problem, it is difficult to find an appropriate setting-tuning method in black-box problems and it is a common issue in this field.
-- But, CMA-ES[37,38] and SHADE[39,40] have the function of adaptive and automatic adjusting its own hyperparameters. They known as novel algorithm and far superior to many algorithms in many benchmark problems or black-box functions. The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[41]. If the authors think a difficulty to solve the machine learning or deep learning's hyperparamter tuning problem, CMA-ES / SHADE based algorithms are also expected to show higher performance than DBO in this case.
+- But, CMA-ES[42,43] and SHADE[44,45] have the function of adaptive and automatic adjusting its own hyperparameters. They known as novel algorithm and far superior to many algorithms in many benchmark problems or black-box functions. The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[46]. If the authors think a difficulty to solve the machine learning or deep learning's hyperparamter tuning problem, CMA-ES / SHADE based algorithms are also expected to show higher performance than DBO in this case.
 - While there is no need to change to these algorithms and revalidate them in this paper, please mention "DBO had the best performance in Section 4.5." as shown in the major comment 4.
 
 
@@ -123,14 +122,19 @@ The references written in Chinese may be selective, but it is preferable to cite
 - [29]: R. Luo et al.: "Neural Architecture Optimization", Advances in Neural Information Processing Systems, Vol. 31, pp. 1–12 (2018)
 - [30]: P. Ren et al.: "A comprehensive survey of neural architecture search: Challenges and solutions", ACM Computing Surveys, Vol. 54, No. 4, Article No.76, pp. 1–34 (2021)
 - [31]: Y. Zhang et al.: "Short-Term Load Forecasting Based on DBO-LSTM Model", 2023 3rd International Conference on Energy Engineering and Power Systems (EEPS), pp. 972-977 (2023)
-- [32]: X. Zhang et al.: "Precipitation prediction based on CEEMDAN–VMD–BILSTM combined quadratic decomposition model", Water Supply, Vol.23, No.9, pp.3597–3613 (2023)
-- [33]: S. Wang et al.: "Ultra-Short-Term Power Prediction of a Photovoltaic Power Station Based on the VMD-CEEMDAN-LSTM Model", Frontiers in Energy Research, Vol.10 (2022)
-- [34]: F. Zhou et al.: "Carbon price forecasting based on CEEMDAN and LSTM", Applied Energy, Vol.311, p 118601 (2022) (https://github.com/FateMurphy/CEEMDAN-VMD-GRU) 
-- [35] Y. Zheng et al.: "Multi-Step Forecasting for Household Power Consumption", IEEJ Trans. Electrical and Electronic Engineering, Vol.18, No.8, pp.1255-1263 (2023)
-- [36]: J. Xue and B. Shen: "Dung beetle optimizer: a new meta-heuristic algorithm for global optimization", the journal of Supercomputing, Vol.79, pp.7305–7336, (2023)
-- [37]: N. Hansen et. al: "Impacts of Invariance in Search: When CMA-ES and PSO Face Ill-Conditioned and Non-Separable Problems", Journal of Applied Soft Computing, pp. 5755-5769 (2011)
-- [38]: N. Hansen: "Benchmarking a BI-population CMA-ES on the BBOB-2009 function testbed", Workshop Proceedings of the GECCO Genetic and Evolutionary Computation Conference, pp. 2389–2396 (2009)
-- [39]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp. 71-78 (2013)
-- [40]: R. Tanabe and A. Fukunaga: "Improving the Search Performance of SHADE Using Linear Population Size Reduction," Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp. 1658-1665 (2014)
-- [41]: The Black-box Optimization Benchmarking (BBOB) Workshop, http://numbbo.github.io/workshops/index.html
+- [32]: Y. Chen et al.: "Survey of Decomposition-Reconstruction-Based Hybrid Approaches for Short-Term Traffic State Forecasting", Sensors, Vol.22, p.5263 (2022)
+- [33]: Y. Li et al.: "A Hybrid Short-Term Load Forecasting Model Based on a Multi-Trait-Driven Methodology and Secondary Decomposition", Energies, Vol.15, No.16, p.5875 (2022)
+- [34]: Y. Ma et al.: "Atmospheric turbulence forecasting using two-stage variational mode decomposition and autoregression towards free-space optical data-transmission link", Front. Phys. Vol. 10, p. 970025 (2022)
+- [35]: Y. Zheng et al.: "Multi-Step Forecasting for Household Power Consumption", IEEJ Trans. Electrical and Electronic Engineering, Vol.18, No.8, pp.1255-1263 (2023)
+- [36]: S. Wang et al.: "Ultra-Short-Term Power Prediction of a Photovoltaic Power Station Based on the VMD-CEEMDAN-LSTM Model", Frontiers in Energy Research, Vol.10 (2022)
+- [37]: F. Zhou et al.: "Carbon price forecasting based on CEEMDAN and LSTM", Applied Energy, Vol.311, p 118601 (2022) (https://github.com/FateMurphy/CEEMDAN-VMD-GRU) 
+- [38]: H. Li et al.: "A new secondary decomposition ensemble learning approach for carbon price forecasting", Knowledge-Based Systems, Vol.214, p.106686 (2021)
+- [39]: W. Sun et al.: "Multi-step wind speed forecasting based on secondary decomposition algorithm and optimized back propagation neural network", Applied Soft Computing, Vol.113, p.107894 (2021)
+- [40]: D. Yang et al.: "Short-term load forecasting with an improved dynamic decomposition-reconstruction-ensemble approach", Energy, Vol.263, p.125609 (2023)
+- [41]: J. Xue and B. Shen: "Dung beetle optimizer: a new meta-heuristic algorithm for global optimization", the journal of Supercomputing, Vol.79, pp.7305–7336, (2023)
+- [42]: N. Hansen et. al: "Impacts of Invariance in Search: When CMA-ES and PSO Face Ill-Conditioned and Non-Separable Problems", Journal of Applied Soft Computing, pp. 5755-5769 (2011)
+- [43]: N. Hansen: "Benchmarking a BI-population CMA-ES on the BBOB-2009 function testbed", Workshop Proceedings of the GECCO Genetic and Evolutionary Computation Conference, pp. 2389–2396 (2009)
+- [44]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp. 71-78 (2013)
+- [45]: R. Tanabe and A. Fukunaga: "Improving the Search Performance of SHADE Using Linear Population Size Reduction," Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp. 1658-1665 (2014)
+- [46]: The Black-box Optimization Benchmarking (BBOB) Workshop, http://numbbo.github.io/workshops/index.html
 
