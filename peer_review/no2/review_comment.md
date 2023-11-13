@@ -126,7 +126,7 @@ Please consider applying this method to various types of data in the future.
 
 
 ## minor comment6 (Reference)
-The references written in Chinese may be selective, but it is preferable to cite references written in English for this journal. Please cite any references written in English that provides an equivalent basis if possible. Otherwise, please add "(in Chinese)" at the end of Chinese references. For example, "The authors: "title", journal, pages (year) (in Chinese)".
+The references may be selective to those written in Chinese. I cannot understand and judge if the content is appropriate. It is preferable to cite references written in English for this journal. Please cite any references written in English that provides an equivalent basis if possible. Otherwise, please add "(in Chinese)" at the end of Chinese references. For example, "The authors: "title", journal, pages (year) (in Chinese)".
 
 
 # [Additional References]
@@ -150,4 +150,3 @@ The references written in Chinese may be selective, but it is preferable to cite
 - [44]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp. 71-78 (2013)
 - [45]: R. Tanabe and A. Fukunaga: "Improving the Search Performance of SHADE Using Linear Population Size Reduction," Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp. 1658-1665 (2014)
 - [46]: The Black-box Optimization Benchmarking (BBOB) Workshop, http://numbbo.github.io/workshops/index.html
-
