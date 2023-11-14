@@ -3,7 +3,7 @@ This paper constructs the prediction method by combining with the CEEMDAN-VMD an
 
 It provides an interesting data through many comparisons, but I think it still needs extensive revisions to be acceptable for publication in terms of originality, creativity, and readability. 
 
-From this reason, the judgement is "C" (Rereview after major revision). It should be revised according to following major comments and improved as necessary.
+From this reason, the judgement is "D" (Reject). It should be revised according to following major comments and improved as necessary.
 
 
 ## [Major Comments]
