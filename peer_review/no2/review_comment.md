@@ -1,12 +1,11 @@
-# english review comments
 This paper constructs the prediction method by combining with the CEEMDAN-VMD and DBO-LSTM algorithms for electrical power load forcasting task. Moreover, it is verified that the prediction performance of this method is superior to several machine learning algorithms through numerical simulation using wind power data. 
 
 It provides an interesting data through many comparisons, but I think it still needs extensive revisions to be acceptable for publication in terms of originality, creativity, and readability. 
 
-From this reason, the judgement is "D" (Reject). It should be revised according to following major comments and improved as necessary.
+From this reason, the judgement is "C" (Rereview after major revision). It should be revised according to following major comments and improved as necessary.
 
 
-## [Major Comments]
+# [Major Comments]
 ## major comment1 (General)
 What are the originality and creativity of this paper? The originality and creativity written in the current manuscript may not reach the level required for publication in this journal for the following reasons:
 - CEEMDAN-VMD, LSTM, and DBO algorithm as elements of the prediction method have been developed in other literature.
@@ -42,7 +41,7 @@ Otherwise, please specify why DBO is best choice for the LSTM performance in var
 
 
 ## major comment5 (Section 3.5, Page 4)
-The parameters and variables for LSTM's optimization should be distinguished and correctly. But, Table2 does not distinguish between them and it creats confusion for the reader. Please specify them correctly according to the following items:
+The parameters and variables for LSTM's optimization should be distinguished correctly. But, Table2 does not distinguish between them and it creats confusion for the reader. Please specify them correctly according to the following items:
 - What are the LSTM's hyperparameters optimized by DBO? Section 3.5 explains "the number of iterations, the learning rate, and the number of neurons in the hidden layer of LSTM", but Table 3 shows "Learning rate, the number of neurons in the hidden layer 1, and the number of neurons in the hidden layer 2". They are different. I guess "the number of iterations" is DBO's loop times and given by the users. Please specify the optimization variables correctly. 
 - What does "Fitness Function: RMSE=1" mean in Table2? It shows the type of evaluation index as the objective function for DBO, not value.
 - Although "Neuron number of range" is [10, 100] in Table2, "Number number in Layer2" is 213 in Table3. It shows the network violates the constraints.
@@ -50,7 +49,7 @@ The parameters and variables for LSTM's optimization should be distinguished and
 
 
 ## major comment6 (Chapter 4)
-I also doubt the usability of CEEMDAN-VMD-DBO-LSTM is varified from the results and The comparison/discussion of results is very questionable. Please revise it with attention to the following points:
+I also doubt the usability of CEEMDAN-VMD-DBO-LSTM is adequately varified enough from the results. The comparison and discussion of results is very questionable. Please revise it with attention to the following points:
 - There is no discussion for the results. What is the reason there is the difference between CEENDAN-VMD-DBO-LSTM and the others?
 - The compared methods is questiable. Table4 shows the effect of denoising method, Table5 shows the superioty of LSTM-based prediction method, and Table6 shows the superiority of DBO-based optimization method. But if the denoising time-series data method of CEEMDAN-VMD-DBO-LSTM is the originality of this paper, please provide an additional results using the other denosing methods [21-26,33-40].
 - Why is there no comparison with other methods for long-term forcasting task? To validate the superiority of CEEMDAN-VMD-DBO-LSTM, the paper needs to compare CEEMDAN-VMD-DBO-LSTM with other methods for long-term forcasting task.
@@ -75,30 +74,33 @@ Review the citation of references according to the following items:
 - "the new algorithm based on Spatial Autocorrelation and Convolutional Long Short-Term Memory (SAC-ConvLSTM)[17]-[18]", but the reference paper [17] do not use SAC-ConvLSTM (Chapter 1).
 
 
+## major comment9 (Reference)
+The references may be selective to those written in Chinese. I cannot understand and judge if the content is appropriate. It is preferable to cite references written in English for this journal. Please cite any references written in English that provides an equivalent basis if possible. Otherwise, please add "(in Chinese)" at the end of Chinese references. For example, "The authors: "title", journal, pages (year) (in Chinese)".
+
 
 # [Minor Comments]
 Although the author does not have to revise everything, please refer to the following minor comments for improving the current manuscript:
 
 ## minor comment1 (General)
 There are many misstatements in the current manuscript. While paying attention to the uniformity and correspondences of symbols or words, please modify the following items:
-- DBO algorithm (from Sections 3.1 to 3.3)
+i) DBO algorithm (from Sections 3.1 to 3.3)
    - What is b in Eq.(17)? (Eq.(17), Page 3)
    - In the sentence "Here, t represents the number of iterations now, ...", where is t in Eq.(17)? In my understanding, population’s position at t-th iteration should be x_i(t). (Eq.(17), Page 3)
    - In the sentence "..., p is a constant belonging to (0,1).", where is p in Eq.(17)? (Under Eq.(17), Page 3)
    - Eq.(18) is exactly the same as Eq.(17) and shoulud be modified to the updating equation for dung ball rolling beetle's position if \delta>0.9. (Eq.(18), Page 3)
    - There is no equation for updating brood ball, but only an explanatory note about variable. (Page 4)
    - There are wrong equation numbers; for example, "defined in the aforementioned formula (3)" in top of Eq.(21) and "we know from formula (5)" in top of Eq.(24). (Page 4)
-- LSTM (Section 3.4, Page 4)
+ii) LSTM (Section 3.4, Page 4)
    - "h_{t-1}" should be mathematical style. (top of Eq.(28))
    - What is the second formula in Eq.(29)? I guess the first formula is sufficient. (Eq.(29))
-- Evaluation indicators (Section 4.3, Page 6)
+iii) Evaluation indicators (Section 4.3, Page 6)
    - Four metrics (RMSE, MAPE, MSE, and R-squared) are used in the experimental results, but the sentence "we use three main evaluation metrics in this paper." is written and there is no explanation of Eq.(34). (Top of Eq.(31))
    - In the MAPE definition (Eq.(32)), "n" and "N" are used in the same meaning although it is inferred that "n" is the number of data. Unify the letters. (Eq.(32))
    - In the R definition (Eq.(34)), the sum term on the right side in the denominator is included in the exponential part on the left side. Rewrite it correctly. (Eq.(34))
    - The experimental results use R-squared, but Eq.(34) is the definition equation of "Sample correlation coefficient" or "Pearson's correlation coefficient" between actual and estimated values. Specify the definition formula for R-squared correctly. (Eq.(34))
    - The only explanation for "p" from Eqs.(31) to (34) is "In this formula, p_estimate(i) and p_actual(i) are the predicted and measured values." in the current manuscript. Add the explanation "p is the objective variable of the LSTM model." (Under Eq.(34))
    - The symbols "p_estimate(i)" and "p_actual(i)" are too long for visiblity. Generally, "y" is used as the symbol of measured value of the objective variable and "$\hat{y}$" is used as the symbol of predicted value of the objective variable. I suggest "p_estimate(i)" and "p_actual(i)" are replaced by them.
-- Model parameter setting (Section 4.4, Page 6)
+iv) Model parameter setting (Section 4.4, Page 6)
    - Section 3.4 explains "the activation function (usually Sigmoid or ReLU)", but what is "selu" in Table 2? (Table 2)
    - What is "BWO"? (Top of Table 3)
 
@@ -116,7 +118,7 @@ While there is no need to change to these algorithms and revalidate them in this
 
 
 ## minor comment4 (Fig.1)
-Please redraw Fig.1 for clarity refering to the figure about denosing steps in the exsisting studies [32-35].
+Please redraw Fig.1 for clarity refering to the figure about denosing steps in the exsisting studies [32-40].
 
 
 ## minor comment5 (Subsection 4.5.4, Page 8)
@@ -124,9 +126,6 @@ Fig.6 shows the prediction accuracy of CEEMDAN-VMD-DBO-LSTM for long-term forcas
 
 Please consider applying this method to various types of data in the future.
 
-
-## minor comment6 (Reference)
-The references may be selective to those written in Chinese. I cannot understand and judge if the content is appropriate. It is preferable to cite references written in English for this journal. Please cite any references written in English that provides an equivalent basis if possible. Otherwise, please add "(in Chinese)" at the end of Chinese references. For example, "The authors: "title", journal, pages (year) (in Chinese)".
 
 
 # [Additional References]
