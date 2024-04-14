@@ -61,4 +61,4 @@ There are still many misstatements in the revised manuscript although Reviewer B
 - [41]: J. Waring et al.: "Automated machine learning: Review of the state-of-the-art and opportunities for healthcare", Artificial Intelligence in Medicine, Vol. 104, page 101822 (2020)
 - [42]: R. Luo et al.: "Neural Architecture Optimization", Advances in Neural Information Processing Systems, Vol. 31, pp. 1–12 (2018)
 - [43]: P. Ren et al.: "A comprehensive survey of neural architecture search: Challenges and solutions", ACM Computing Surveys, Vol. 54, No. 4, Article No.76, pp. 1–34 (2021)
-- [44]: https://github.com/P-N-Suganthan/CEC2017/blob/master/Comparison%20of%20Results%20in%202019%20on%20CEC%20Competition%20on%20Constrained%20RealParameter%20Optimization-2017.pdf
+- [44]: Comparison of Results in 2019 on CEC Competition on Constrained RealParameter Optimization-2017 (https://github.com/P-N-Suganthan/CEC2017/blob/master/Comparison%20of%20Results%20in%202019%20on%20CEC%20Competition%20on%20Constrained%20RealParameter%20Optimization-2017.pdf)
