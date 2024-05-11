@@ -9,7 +9,7 @@ From this reason, the judgement is "C" (Rereview after major revision). It shoul
 
 # [Major Comments]
 ## major comment1 (General)
-I think the readers cannot understand the originality, creativity, and usability of this paper although Chapter 1 of the current manuscript describes the main innovations of this research work. Simply laying out previous relevant studies cannot explain the difference between them and this paper; especially, all sentences from "Then [5] explored..." in Chapter 1 to the end of Chapter 2. I believe there may be the following contributions: i) how to formulate the collaborative scheduling problem between production and transportation; ii) how to solve the problem using algorithm; and iii) how good the solution is.
+What is the originality, creativity, and usability of this paper? I think the readers cannot understand them although Chapter 1 describes the main innovations of this research work. Simply laying out previous relevant studies cannot explain the difference between them and this paper; especially, all sentences from "Then [5] explored..." in Chapter 1 to the end of Chapter 2. I believe there may be the following contributions: i) how to formulate the collaborative scheduling problem between production and transportation; ii) how to solve the problem using algorithm; and iii) how good the solution is, but I guess the originality in only ii).
 Please revise so that which parts are the same or different between them is clear based on the above perspectives (formulation, solver, and result). 
 
 ## major comment2 (General)
@@ -24,7 +24,8 @@ The end of Chapter 2 says "Furthermore, HPWL-IME has outperformed other techniqu
 The end of Chapter 2 says "Furthermore, HPWL-IME … when used with other heuristics taken for comparison like DTCST, ELNSs, and HMOVNS with various performance metrics.", but the performance of HPWL-IME (the proposed algorithm) should be written in Chapter 5 because it is shown in numerical experiments of this paper for the first time. Instead, please clarify the structural difference about how to solve the collaborative scheduling problem in Chapter 2.
 
 ## major comment5 (Chapter 3)
- I think the readers cannot understand the optimization problem which optimization variable, parameters, and objective and constraint functions. Please revise it considering my idea below:
+ I think the readers cannot understand the optimization problem which optimization variable, parameters, and objective and constraint functions. The optimization problem and algorithm’s part of the current manuscript should be rewritten with learning [22], which are nicely written.
+Moreover, please revise it considering my idea below:
 - Chapter 3 can be separated into optimization formulation and algorithm. So, the former is "Chapter 3: Collaborative Scheduling Problem" and the latter is "Chapter 4: Scheduling Algorithm".
 - Section 3.1 shows the whole of collaborative scheduling optimization problem. "minimize_[x] f_1(x) + f_2(x)" shows the objective function, f_1 shows make-span time about production, f_2 shows delivery time about transportation, "g(x)<=0" shows constraints, x shows optimization variables. More details about f_1, f_2, g, and x are given in later sections.
 - Section 3.2 shows objective and constraint functions about the production. 
@@ -35,23 +36,25 @@ The end of Chapter 2 says "Furthermore, HPWL-IME … when used with other heuris
 - There is suddenly Step7 and 8 in Section3.4. I think they should be moved to below Step6 in Section 3.3. 
 
 ## major comment7 (Chapter 4)
- I cannot the usability of this paper. Please revise the manuscript according to the following items: 
-- The evaluation index’s definition is not written correctly. Please add exact definition and description about the evaluation index.
+ I guess the readers cannot understand the usability of this paper because the evaluation index’s definition is not written correctly. Please add exact definition and description about the evaluation index according to the following items: 
 - What is ObjFn in Fig.4? I cannot understand "Figure4 diagram shows the number of objective functions…" as description for ObjFn. In general, the number of objective and constraint functions in the optimization problem are determined before solve it. I guess the objective functions are Eqs.(2) and (5) but ObjFn is the range of 100 – 400 in Fig.4. (Fig.4)
-  - I guess ARDI means the average of relative error about between observed (actual) and estimated make-span time, and "ARDI_S = 100*(1/N) \sum_[i=1]^N |(Est_i – Obj_i)/(Est_i)|, where N is the number of data, Est_i and Obj_i is the i-th estimated and observed make-span time (i=1,…,N)" may be correct. Moreover, it is more general called "mean absolute percentage error (MAPE) " or "mean absolute percentage deviation (MAPD)"[31] (Eq.7 and Fig.5).
-  - I guess the parameters is determined by [27], but I cannot understand which symbols are; e.g., actual and observed make-span are written in Eq.7.
+- I guess ARDI means the average of relative error about between observed (actual) and estimated make-span time, and "ARDI_S = 100*(1/N) \sum_[i=1]^N |(Est_i – Obj_i)/(Est_i)|, where N is the number of data, Est_i and Obj_i is the i-th estimated and observed make-span time (i=1,…,N)" may be correct. Moreover, it is more general called "mean absolute percentage error (MAPE) " or "mean absolute percentage deviation (MAPD)"[31] (Eq.7 and Fig.5).
+- I guess the parameters is determined by [27], but I cannot understand which symbols are; e.g., actual and observed make-span are written in Eq.7.
 
-## major comment8 (Fig.7)
+## major comment8 (Chapter 4) 
+Another reason I do not think the reader cannot understand the usability is the comparison in Chapter 4. 
+- Comparison is not correctly. 
+
+## major comment9 (Fig.7)
 Fig.7 shows both of departure and transportation time in the results of each methods using 3D graph. However, the most of HPWL-IME’s bar is hidden by the others. The results should be shown as normal 2D-line plot which has the horizontal axis "departure time" and the vertical axis is "transportation time " (or velocity?) with different color’s line and marker corresponding methods. 
 
-## major comment9 (Format)
+## major comment10 (Format)
 The format of manuscript does not follow the author’s guidelines[29, 30]. Review and consider them and the already published papers in this journal. The following items should be modified according to them for publication: 
 - The author’s affiliation and correspondence should be written on the left column in page 1 with multi rows.
 - Although there should be plenty of space around some parts for visiblity, it is too narrow in the current manuscript. The guideline says it needs "Double Space" between keywords and sentence (Chapter 1), space around chapter’s title, figure (table) and sentence, and figure (table) and its caption.
 - Although Figs. 1, 2, and 4 are placed in the middle of column, the guideline says the position of figures, photographs and tables inserted should be at the tops and bottoms of columns. 
 - The balance of the blanks in some itemizations is clearly different from the others. Please unify them. 
 - How to write the referenced literatures differs from the guideline. Is "published year" at the end?
-
 
 
 # [Minor Comments]
