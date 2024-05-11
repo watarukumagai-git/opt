@@ -9,14 +9,13 @@ From this reason, the judgement is "C" (Rereview after major revision). It shoul
 
 # [Major Comments]
 ## major comment1 (General)
-I think the readers cannot understand the originality, creativity, and usability of this paper although Section1 of the current manuscript describes the main innovations of this research work.
-Simply laying out previous relevant studies cannot explain the difference between them and this paper; especially, all sentences from "Then [5] explored..." to the end of Section1 and Section2.
-I believe there may be the following contributions: 1) how to formulate the collaborative scheduling problem between production and transportation; 2) how to solve the problem using algorithm; and 3) how good the solution is.
+I think the readers cannot understand the originality, creativity, and usability of this paper although Chapter 1 of the current manuscript describes the main innovations of this research work. Simply laying out previous relevant studies cannot explain the difference between them and this paper; especially, all sentences from "Then [5] explored..." in Chapter 1 to the end of Chapter 2. I believe there may be the following contributions: i) how to formulate the collaborative scheduling problem between production and transportation; ii) how to solve the problem using algorithm; and iii) how good the solution is.
 Please revise so that which parts are the same or different between them is clear based on the above perspectives (formulation, solver, and result). 
 
 ## major comment2 (General)
-As major comment1, いくつかの引用されている先行研究は直接的に関係がなく、不要だと思う。
-例えば、
+What is the issue in this field? Simply laying out previous studies is redundant and cannot explain the issue. Some referenced literatures in the current manuscript are not directly related to originality of this paper. For example, I guess most of the literatures for Intelligent Manufacturing [3]-[8] are redundant and unnecessary. 
+On the other hands, the authors should insist and clarify the issues about collaborative scheduling manufacturing and transportation citing literatures which are particularly relevant by re-organizing Chapters 1 and 2 because there may be the originality in Chapter 3. For example, add the sentence "Some previous studies proposes collaborative scheduling manufacturing and transportation algorithm in Intelligent Manufacturing Environment[17]-[26]. For example, Liu et al. [22] formulates the collaborative scheduling problem to minimize the overall order time considering interaction between production scheduling and delivery rooting, and suggests the scheduling method using Enhanced Large Neighborhood Search. However, the previous studies still have the issues…. Therefore, this research proposes…." to Chapter 1.
+As pointed out in major commment1, please clarify the issues and their difference as re-organizing the previous studies in short.
 
 ## major comment3 (Chapter 2)
 The end of Chapter 2 says "Furthermore, HPWL-IME has outperformed other techniques like SA, GA, CWOT, ACO, etc…," but there is no reference to this fact. If there is this paper’s originality in the proposed algorithm, the difference from conventional algorithms is important. To show this, please cite references or add the results using them in Chapter 4.
@@ -25,7 +24,7 @@ The end of Chapter 2 says "Furthermore, HPWL-IME has outperformed other techniqu
 The end of Chapter 2 says "Furthermore, HPWL-IME … when used with other heuristics taken for comparison like DTCST, ELNSs, and HMOVNS with various performance metrics.", but the performance of HPWL-IME (the proposed algorithm) should be written in Chapter 5 because it is shown in numerical experiments of this paper for the first time. Instead, please clarify the structural difference about how to solve the collaborative scheduling problem in Chapter 2.
 
 ## major comment5 (Chapter 3)
- I think the readers cannot understand the optimization problem which optimization variable, parameters, objective and constraint functions. Please revise it considering my idea below:
+ I think the readers cannot understand the optimization problem which optimization variable, parameters, and objective and constraint functions. Please revise it considering my idea below:
 - Chapter 3 can be separated into optimization formulation and algorithm. So, the former is "Chapter 3: Collaborative Scheduling Problem" and the latter is "Chapter 4: Scheduling Algorithm".
 - Section 3.1 shows the whole of collaborative scheduling optimization problem. "minimize_[x] f_1(x) + f_2(x)" shows the objective function, f_1 shows make-span time about production, f_2 shows delivery time about transportation, "g(x)<=0" shows constraints, x shows optimization variables. More details about f_1, f_2, g, and x are given in later sections.
 - Section 3.2 shows objective and constraint functions about the production. 
@@ -56,7 +55,7 @@ The format of manuscript does not follow the author’s guidelines[29, 30]. Revi
 
 
 # [Minor Comments]
-
+Although the author does not have to revise everything, please refer to the following minor comments for improving the current manuscript:
 ## minor comment1 (Subsection 3.3.3)
 The sentence "The goal is…" is twice in one paragraph and is difficult to read. For example, it should be "the goal is probably to reduce the overall makespan time considering both the process of production and transportation periods. Specifically, this is to identify T …."
 
