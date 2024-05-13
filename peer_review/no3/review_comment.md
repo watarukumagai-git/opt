@@ -24,19 +24,20 @@ Some sentences has no evidence or fact. Examples is listed below:
  I think the readers cannot understand the optimization problem which optimization variable, parameters, and objective and constraint functions because they are not written in an organized and current manner. This is serious and fatal for publication. The optimization problem and algorithm’s part of the current manuscript should be rewritten radically with learning the previous studies[22, 32], which are nicely written.
 Moreover, the points raised are presented for future reference below:
 - Chapter 3 can be separated into optimization problem’s formulation and optimization algorithm. So, the former is "Chapter 3: Collaborative Scheduling Problem" and the latter is "Chapter 4: Scheduling Algorithm".
-- Section 3.1 shows the whole of collaborative scheduling optimization problem. "minimize_[x] f_1(x) + f_2(x)" shows the objective function, f_1 shows the make-span time about production, f_2 shows the delivery time about transportation, "g(x)<=0" shows the constraints, x shows the optimization variables. More details about f_1, f_2, g, and x are given in later sections.
+- New Section 3.1 shows the whole of collaborative scheduling optimization problem.
+- New Section 3.2 shows objective and constraint functions about the production.
+- New Section 3.3 shows objective and constraint functions about the transportation.
 - As problem representation, after the whole of mathematical formulas firstly is written with equation’s number, the explanation sentence about each formula should be done.
+- Add the table defining the notations of that are used to describe the optimization problem.
+- "minimize_[x] f_1(x) + f_2(x)" shows the objective function, f_1 shows the make-span time about production, f_2 shows the delivery time about transportation, "g(x)<=0" shows the constraints, x shows the optimization variables. More details about f_1, f_2, g, and x are given in later sections.
 - Add more illustlations or figures for explanation about the variables to the manuscript.
-- Section 3.2 shows objective and constraint functions about the production. 
 - I think "t_{\mu,T}", "t_p", "t", and "t_ab" should be represented as different character because it avoids confusing the readers.
 - The constraints meaning machine’s total capacity is "t_p \in \mu <= \alpha" but "\sum_{x=1}^{\mu} t_{p, x} <= \alpha" is correct. (page 4, right column)
 - The constraints meaning transportation route’s total capacity is "\gamma \in T <= \beta" but "\sum_{q=1}^{d} \gamma_q <= \beta" is correct. (page 4, right column)
 - Eq.(2) represents the both of objective function "minimize alpha" and constraints "such that \sum~". They should be separated to different equations.
-- Eq.(2) represents "\sum~, y \in T and x \in \mu" but this is not written currently as Equality or Inequality constraints. Please revise it. I guess the authors want to write "minimize \sum ms~".
-- Section 3.3 shows objective and constraint functions about the transportation.
-- I think "O_ab", "O_r", and "O_tp" should be represented as different character because there it avoids to .
+- Eq.(2) represents "\sum..., y \in T and x \in \mu" but this is not written currently as Equality or Inequality constraints. Please revise it. I guess the authors want to write "minimize \sum ms...".
+- I think "O_ab", "O_r", and "O_tp" should be represented as different character because there it avoids to confuse the readers.
 - There is no explanation of Z_r,v in Eq.(4) and \phi in Eq.(5) of the manuscript.
-- Add the table defining the notations of that are used to describe the optimization problem.
 
 ## major reason5 (Section 3.4)
  It is important to describe and write the procedures or steps of the proposed algorithm because there is this paper’s originality in the proposed algorithm. There is suddenly Step7 and 8 in Section3.4. I guess they should be moved to below Step6 in Section 3.3, but cannot understand it correctly.
