@@ -50,15 +50,19 @@ Moreover, the points raised are presented for future reference below:
 - I guess the parameters is determined by [27], but I cannot understand which symbols are; e.g., actual and observed make-span are written in Eq.7.
 
 ## major reason7 (Chapter 4) 
-Another reason I do not think the reader cannot understand the usability is the comparison in Chapter 4. 
-- There are many meta-heuristic algorithms. WHOとPSOのハイブリッドは存在するし、CMA-ESなどの有名なアルゴリズムと比較していない。協調スケジューリング問題は汎用ソルバで解ける。そのため協調スケジューリングの先行研究だけでなく、一般のメタヒューリスティクスと比較すべきだが、全くされておらず、その有用性が判断できない。
+Another reason I do not think the reader cannot understand the usability is the comparison in Chapter 4.
+- As major reason 1 pointed out, the proposed algorithm should be compared to a MILP solver[29].
+- There are many meta-heuristic algorithms including the hybridized algorithm of PSO and Whale Optimization[30]. The proposed algorithm should be also compared to simple PSO and Whale Optimization because it consists of them.
+- Moreover, metaheuristic algorithm has adjustable hyperparameters but they must be determined by user. CMA-ES[35,36] and SHADE[37,38] have the function of adaptive and automatic adjusting its own hyperparameters. They known as novel algorithm and far superior to many algorithms in many benchmark problems or black-box functions. The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[39]. If the authors think a difficulty to solve the scheduling problem, CMA-ES / SHADE based algorithms are also expected to show higher performance than the proposed algorithm in this case.
+
+CMA-ESなどの有名なアルゴリズムと比較していない。協調スケジューリング問題は汎用ソルバで解ける。そのため協調スケジューリングの先行研究だけでなく、一般のメタヒューリスティクスと比較すべきだが、全くされておらず、その有用性が判断できない。
 
 
 ## major reason8 (Fig.7)
 Fig.7 shows both of departure and transportation time in the results of each methods using 3D graph. However, the most of HPWL-IME’s bar is hidden by the others. The results should be shown as normal 2D-line plot which has the horizontal axis "departure time" and the vertical axis is "transportation time " (or velocity?) with different color’s line and marker corresponding methods. 
 
 ## major reason9 (Format)
-The format of manuscript does not follow the author’s guidelines[35, 36]. Moreover, the authors do not review and consider them and the already published papers in this journal. Examples are listed below: 
+The format of manuscript does not follow the author’s guidelines[40, 41]. Moreover, the authors do not review and consider them and the already published papers in this journal. Examples are listed below: 
 - The author’s affiliation and correspondence should be written on the left column in page 1 with multi rows.
 - Although there should be plenty of space around some parts for visiblity, it is too narrow in the current manuscript. The guideline says it needs "Double Space" between keywords and sentence (Chapter 1), space around chapter’s title, figure (table) and sentence, and figure (table) and its caption.
 - Although Figs. 1, 2, and 4 are placed in the middle of column, the guideline says the position of figures, photographs and tables inserted should be at the tops and bottoms of columns. 
@@ -94,5 +98,6 @@ Please modify them according to the following items:
 [32]∶ S. Aminzadegan et al.: "An integrated production and transportation scheduling problem with order acceptance and resource allocation decisions", Applied Soft Computing, Vol.112, No.107770, Elsevier (2021)
 [33]: M. Babor et al.: "Modeling and optimization of bakery production scheduling to minimize makespan and oven idle time", Sci Rep Vol.13, No.235 (2023)(https://doi.org/10.1038/s41598-022-26866-9)
 [34]: D. Myttenaere et.al.: "Mean absolute percentage error for regression models", Neurocomputing 2016 (2015) (arXiv:1605.02541)
-[35]: "Author’s Guidelines for the Transactions of the Institute of Electrical Engineers of Japan" (https://www.iee.jp/wp-content/uploads/honbu/32-doc-kenq/guideline.pdf)
-[36]: "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf)
+[35]: 
+[40]: "Author’s Guidelines for the Transactions of the Institute of Electrical Engineers of Japan" (https://www.iee.jp/wp-content/uploads/honbu/32-doc-kenq/guideline.pdf)
+[41]: "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf)
