@@ -10,10 +10,11 @@ From this reason, the final judgement is "D" (reject). I think this paper needs 
 ## major reason1 (General)
 The readers cannot understand the creativity and originality although Chapter 1 describes the main innovations of this research work. Simply laying out previous relevant studies cannot explain the difference between them and this paper; especially, all sentences from "Then [5] explored..." in Chapter 1 to the end of Chapter 2. I believe there may be the following contributions: i) how to formulate the collaborative scheduling problem between production and transportation; ii) how to solve the problem using algorithm; and iii) how good the solution is, but cannot find the originality and creativity in anywhere. This is serious and fatal problem for pubilication. Examples are listed below:
 - Most of the previous studies [17]-[26] proposes the collaborative scheduling problem between production and transportation. Therefore, I judge the problem formulation has no new idea.
-- The previous [20],[22,23] and additional studies [29]-[31] propose metaheuristic algorithm for scheduling problem. Especially, [29] costructs a hybrid of PSO and Whale Optimization and applies it. Therefore, I judge the scheduling algorithm has also no new idea.
+- I guess the scheduling problem is formulated to a mixed-integer and continuous variable's linear programming problem. For example, the additional previous study [29] but there is no discussion.
+- The previous [20],[22,23] and additional studies [30]-[32] propose metaheuristic algorithm for scheduling problem. Especially, [30] costructs a hybrid of PSO and Whale Optimization and applies it. Moreover, the proposed algorithm has PSO, Whale Optimization, and Local Neighborhood Search steps, but is hybridized simply. Therefore, I judge the scheduling algorithm has also no new idea.
 
 ## major reason2 (General)
-This paper cannot clarify and find the issues about collaborative scheduling manufacturing and transportation by citing literatures which are particularly relevant. Simply laying out previous studies is redundant and cannot explain the issue. Some referenced literatures in the current manuscript are not directly related to this paper's contribution. For example, I guess most of the literatures for Intelligent Manufacturing [3]-[8] are redundant and unnecessary. Considering the publication level, it is diffucult to find the issues and their difference by organizing the previous studies in short.
+This paper cannot clarify and find the issues about collaborative scheduling manufacturing and transportation by citing literatures which are particularly relevant. Simply laying out previous studies is redundant and cannot explain the issue. Some referenced literatures in the current manuscript are not directly related to this paper's contribution. For example, I guess most of the literatures for Intelligent Manufacturing [3]-[8] are redundant and unnecessary. Instead, . Considering the publication level, it is diffucult to find the issues and their difference by organizing the previous studies in short.
 
 ## major reason3 (Chapter 2)
 Some sentences has no evidence or fact. Examples is listed below:
@@ -87,10 +88,11 @@ Please modify them according to the following items:
 - In optimization field, the optimization problem consists of "objective function" and "constraint conditions" (simply called constraints), not "restrictions". Please replace "restriction" with "constraint".
 
 # [Additional References]
-[29]: Punyakum V et al.: "Hybrid Particle Swarm and Whale Optimization Algorithm for Multi-Visit and Multi-Period Dynamic Workforce Scheduling and Routing Problems", Mathematics, No. 10 (19):3663 (2022) (https://doi.org/10.3390/math10193663)
-[30]: F.Zhao et al.: "A cooperative whale optimization algorithm for energy-efficient scheduling of the distributed blocking flow-shop with sequence-dependent setup time", Computers & Industrial Engineering, No. 0360-8352, Vol. 178, page 109082 (2023) (10.1016/j.cie.2023.109082)
-[31]∶ S. Aminzadegan et al.: "An integrated production and transportation scheduling problem with order acceptance and resource allocation decisions", Applied Soft Computing, Vol.112, No.107770, Elsevier (2021)
-[32]: Babor, M., Paquet-Durand, O., Kohlus, R. et al.: "Modeling and optimization of bakery production scheduling to minimize makespan and oven idle time", Sci Rep Vol.13, No.235 (2023)(https://doi.org/10.1038/s41598-022-26866-9)
-[33]: D. Myttenaere et.al.: "Mean absolute percentage error for regression models", Neurocomputing 2016 (2015) (arXiv:1605.02541)
-[34]: "Author’s Guidelines for the Transactions of the Institute of Electrical Engineers of Japan" (https://www.iee.jp/wp-content/uploads/honbu/32-doc-kenq/guideline.pdf)
-[35]: "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf)
+[29]: C. Celikbilek et al.: "Simulation and Mixed Integer Programming Optimization for Manufacturing and Transportation Scheduling", Proceedings of 25th Production and Operations Management Conference (2014)
+[30]: V. Punyakum et al.: "Hybrid Particle Swarm and Whale Optimization Algorithm for Multi-Visit and Multi-Period Dynamic Workforce Scheduling and Routing Problems", Mathematics, No. 10 (19):3663 (2022) (https://doi.org/10.3390/math10193663)
+[31]: F.Zhao et al.: "A cooperative whale optimization algorithm for energy-efficient scheduling of the distributed blocking flow-shop with sequence-dependent setup time", Computers & Industrial Engineering, No. 0360-8352, Vol. 178, page 109082 (2023) (10.1016/j.cie.2023.109082)
+[32]∶ S. Aminzadegan et al.: "An integrated production and transportation scheduling problem with order acceptance and resource allocation decisions", Applied Soft Computing, Vol.112, No.107770, Elsevier (2021)
+[33]: M. Babor et al.: "Modeling and optimization of bakery production scheduling to minimize makespan and oven idle time", Sci Rep Vol.13, No.235 (2023)(https://doi.org/10.1038/s41598-022-26866-9)
+[34]: D. Myttenaere et.al.: "Mean absolute percentage error for regression models", Neurocomputing 2016 (2015) (arXiv:1605.02541)
+[35]: "Author’s Guidelines for the Transactions of the Institute of Electrical Engineers of Japan" (https://www.iee.jp/wp-content/uploads/honbu/32-doc-kenq/guideline.pdf)
+[36]: "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf)
