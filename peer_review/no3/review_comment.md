@@ -50,13 +50,10 @@ Moreover, the points raised are presented for future reference below:
 - I guess the parameters is determined by [27], but I cannot understand which symbols are; e.g., actual and observed make-span are written in Eq.7.
 
 ## major reason7 (Chapter 4) 
-Another reason I do not think the reader cannot understand the usability is the comparison in Chapter 4.
+Another reason I do not think the reader cannot understand the usability is the comparison in Chapter 4. Example are listed below:
 - As major reason 1 pointed out, the proposed algorithm should be compared to a MILP solver[29].
 - There are many meta-heuristic algorithms including the hybridized algorithm of PSO and Whale Optimization[30]. The proposed algorithm should be also compared to simple PSO and Whale Optimization because it consists of them.
 - Moreover, metaheuristic algorithm has adjustable hyperparameters but they must be determined by user. CMA-ES[35,36] and SHADE[37,38] have the function of adaptive and automatic adjusting its own hyperparameters. They known as novel algorithm and far superior to many algorithms in many benchmark problems or black-box functions. The fact is shown as several papers or the competition Black-Box Optimization Benchmarking held at top international conferences IEEE CEC and ACM GECCO[39]. If the authors think a difficulty to solve the scheduling problem, CMA-ES / SHADE based algorithms are also expected to show higher performance than the proposed algorithm in this case.
-
-CMA-ESなどの有名なアルゴリズムと比較していない。協調スケジューリング問題は汎用ソルバで解ける。そのため協調スケジューリングの先行研究だけでなく、一般のメタヒューリスティクスと比較すべきだが、全くされておらず、その有用性が判断できない。
-
 
 ## major reason8 (Fig.7)
 Fig.7 shows both of departure and transportation time in the results of each methods using 3D graph. However, the most of HPWL-IME’s bar is hidden by the others. The results should be shown as normal 2D-line plot which has the horizontal axis "departure time" and the vertical axis is "transportation time " (or velocity?) with different color’s line and marker corresponding methods. 
@@ -76,7 +73,7 @@ Although the author does not have to revise everything, please refer to the foll
 The sentence "The goal is…" is twice in one paragraph and is difficult to read. For example, it should be "the goal is probably to reduce the overall makespan time considering both the process of production and transportation periods. Specifically, this is to identify T …."
 
 ## minor comment2 (Section 3)
-There are many misstatements in the current manuscript. Please modify the following items so as for readers to understand:
+There are many misstatements in the current manuscript. Modify the following items so as for readers to understand:
 - Is ":" needed behind Subsection 3.3.1, 3.3.2, and Section 3.4, 4.4, and 4.5’s title?
 - In Eq.(6), I think "where a, b=1 ,,, C" is unnecessary because a = 0,…,C and b = 1,…,C+1 are still defined in the sum part.
 - "Variable Neighbourhood Search" should be "Variable Neighborhood Search". (page 2, right column)
@@ -87,7 +84,7 @@ There are many misstatements in the current manuscript. Please modify the follow
 
 ## minor comment3 (Chapter 5)
 Some terms of the current manuscript are not common in the optimization field.
-Please modify them according to the following items: 
+Modify them according to the following items: 
 - In optimization field, the solution satisfying all constraint conditions should be called "infeasible" generally, not "viable". Please replace "viable" with "infeasible".
 - In optimization field, the optimization problem consists of "objective function" and "constraint conditions" (simply called constraints), not "restrictions". Please replace "restriction" with "constraint".
 
@@ -98,6 +95,10 @@ Please modify them according to the following items:
 [32]∶ S. Aminzadegan et al.: "An integrated production and transportation scheduling problem with order acceptance and resource allocation decisions", Applied Soft Computing, Vol.112, No.107770, Elsevier (2021)
 [33]: M. Babor et al.: "Modeling and optimization of bakery production scheduling to minimize makespan and oven idle time", Sci Rep Vol.13, No.235 (2023)(https://doi.org/10.1038/s41598-022-26866-9)
 [34]: D. Myttenaere et.al.: "Mean absolute percentage error for regression models", Neurocomputing 2016 (2015) (arXiv:1605.02541)
-[35]: 
+[35]: N. Hansen et. al: "Impacts of Invariance in Search: When CMA-ES and PSO Face Ill-Conditioned and Non-Separable Problems", Journal of Applied Soft Computing, pp. 5755-5769 (2011)
+[36]: N. Hansen: "Benchmarking a BI-population CMA-ES on the BBOB-2009 function testbed", Workshop Proceedings of the GECCO Genetic and Evolutionary Computation Conference, pp. 2389–2396 (2009)
+[37]: R. Tanabe and A. Fukunaga: "Success-History Based Parameter Adaptation for Differential Evolution," Proceedings of the 2013 IEEE Congress on Evolutionary Computation, pp. 71-78 (2013)
+[38]: R. Tanabe and A. Fukunaga: "Improving the Search Performance of SHADE Using Linear Population Size Reduction," Proceedings of the 2014 IEEE Congress on Evolutionary Computation, pp. 1658-1665 (2014)
+[39]: The Black-box Optimization Benchmarking (BBOB) Workshop (http://numbbo.github.io/workshops/index.html)
 [40]: "Author’s Guidelines for the Transactions of the Institute of Electrical Engineers of Japan" (https://www.iee.jp/wp-content/uploads/honbu/32-doc-kenq/guideline.pdf)
 [41]: "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf)
