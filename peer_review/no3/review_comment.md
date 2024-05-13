@@ -10,7 +10,7 @@ From this reason, the final judgement is "D" (reject). I think this paper needs 
 ## major reason1 (General)
 The readers cannot understand the creativity and originality although Chapter 1 describes the main innovations of this research work. Simply laying out previous relevant studies cannot explain the difference between them and this paper; especially, all sentences from "Then [5] explored..." in Chapter 1 to the end of Chapter 2. I believe there may be the following contributions: i) how to formulate the collaborative scheduling problem between production and transportation; ii) how to solve the problem using algorithm; and iii) how good the solution is, but cannot find the originality and creativity in anywhere. This is serious and fatal problem for pubilication. Examples are listed below:
 - Most of the previous studies [17]-[26] proposes the collaborative scheduling problem between production and transportation. Therefore, I judge the problem formulation has no new idea.
-- The previous [20],[22,23] and additional studies [29, 30] propose metaheuristic algorithm for scheduling problem. Especially, [29] costructs a hybrid of PSO and Whale Optimization and applies it. Therefore, I judge the scheduling algorithm has also no new idea.
+- The previous [20],[22,23] and additional studies [29]-[31] propose metaheuristic algorithm for scheduling problem. Especially, [29] costructs a hybrid of PSO and Whale Optimization and applies it. Therefore, I judge the scheduling algorithm has also no new idea.
 
 ## major reason2 (General)
 This paper cannot clarify and find the issues about collaborative scheduling manufacturing and transportation by citing literatures which are particularly relevant. Simply laying out previous studies is redundant and cannot explain the issue. Some referenced literatures in the current manuscript are not directly related to this paper's contribution. For example, I guess most of the literatures for Intelligent Manufacturing [3]-[8] are redundant and unnecessary. Considering the publication level, it is diffucult to find the issues and their difference by organizing the previous studies in short.
@@ -21,20 +21,22 @@ Some sentences has no evidence or fact. Examples is listed below:
 - The end of Chapter 2 says "Furthermore, HPWL-IME … when used with other heuristics taken for comparison like DTCST, ELNSs, and HMOVNS with various performance metrics.", but the performance of HPWL-IME (the proposed algorithm) should be written in Chapter 5 because it is shown in numerical experiments of this paper for the first time.
 
 ## major reason4 (Chapter 3)
- I think the readers cannot understand the optimization problem which optimization variable, parameters, and objective and constraint functions because they are not written in an organized and current manner. This is serious and fatal for publication. The optimization problem and algorithm’s part of the current manuscript should be rewritten radically with learning the previous studies[22, 31], which are nicely written.
+ I think the readers cannot understand the optimization problem which optimization variable, parameters, and objective and constraint functions because they are not written in an organized and current manner. This is serious and fatal for publication. The optimization problem and algorithm’s part of the current manuscript should be rewritten radically with learning the previous studies[22, 32], which are nicely written.
 Moreover, the points raised are presented for future reference below:
 - Chapter 3 can be separated into optimization problem’s formulation and optimization algorithm. So, the former is "Chapter 3: Collaborative Scheduling Problem" and the latter is "Chapter 4: Scheduling Algorithm".
 - Section 3.1 shows the whole of collaborative scheduling optimization problem. "minimize_[x] f_1(x) + f_2(x)" shows the objective function, f_1 shows the make-span time about production, f_2 shows the delivery time about transportation, "g(x)<=0" shows the constraints, x shows the optimization variables. More details about f_1, f_2, g, and x are given in later sections.
 - As problem representation, after the whole of mathematical formulas firstly is written with equation’s number, the explanation sentence about each formula should be done.
-- To add more illustlations or figures for explanation about the variables to the manuscript is better.
+- Add more illustlations or figures for explanation about the variables to the manuscript.
 - Section 3.2 shows objective and constraint functions about the production. 
-- I think the notation of the processing time is "t_p", but "\tau_x" meaning processing time each machine is better than before because there are many notation’s types of "t" in the manuscript.
+- I think "t_{\mu,T}", "t_p", "t", and "t_ab" should be represented as different character because it avoids confusing the readers.
 - The constraints meaning machine’s total capacity is "t_p \in \mu <= \alpha" but "\sum_{x=1}^{\mu} t_{p, x} <= \alpha" is correct. (page 4, right column)
 - The constraints meaning transportation route’s total capacity is "\gamma \in T <= \beta" but "\sum_{q=1}^{d} \gamma_q <= \beta" is correct. (page 4, right column)
 - Eq.(2) represents the both of objective function "minimize alpha" and constraints "such that \sum~". They should be separated to different equations.
 - Eq.(2) represents "\sum~, y \in T and x \in \mu" but this is not written currently as Equality or Inequality constraints. Please revise it. I guess the authors want to write "minimize \sum ms~".
-- Section 3.3 shows objective and constraint functions about the transportation. 
-- Please add the table defining the notations of that are used to describe the optimization problem.
+- Section 3.3 shows objective and constraint functions about the transportation.
+- I think "O_ab", "O_r", and "O_tp" should be represented as different character because there it avoids to .
+- There is no explanation of Z_r,v in Eq.(4) and \phi in Eq.(5) of the manuscript.
+- Add the table defining the notations of that are used to describe the optimization problem.
 
 ## major reason5 (Section 3.4)
  It is important to describe and write the procedures or steps of the proposed algorithm because there is this paper’s originality in the proposed algorithm. There is suddenly Step7 and 8 in Section3.4. I guess they should be moved to below Step6 in Section 3.3, but cannot understand it correctly.
@@ -86,7 +88,8 @@ Please modify them according to the following items:
 # [Additional References]
 [29]: Punyakum V et al.: "Hybrid Particle Swarm and Whale Optimization Algorithm for Multi-Visit and Multi-Period Dynamic Workforce Scheduling and Routing Problems", Mathematics, No. 10 (19):3663 (2022) (https://doi.org/10.3390/math10193663)
 [30]: F.Zhao et al.: "A cooperative whale optimization algorithm for energy-efficient scheduling of the distributed blocking flow-shop with sequence-dependent setup time", Computers & Industrial Engineering, No. 0360-8352, Vol. 178, page 109082 (2023) (10.1016/j.cie.2023.109082)
-[31]: Babor, M., Paquet-Durand, O., Kohlus, R. et al.: "Modeling and optimization of bakery production scheduling to minimize makespan and oven idle time", Sci Rep Vol. 13, No. 235 (2023). (https://doi.org/10.1038/s41598-022-26866-9)
-[32]: de Myttenaere et.al.: "Mean absolute percentage error for regression models", Neurocomputing 2016 (2015) (arXiv:1605.02541)
-[33]: "Author’s Guidelines for the Transactions of the Institute of Electrical Engineers of Japan" (https://www.iee.jp/wp-content/uploads/honbu/32-doc-kenq/guideline.pdf)
-[34]: "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf)
+[31]∶ S. Aminzadegan et al.: "An integrated production and transportation scheduling problem with order acceptance and resource allocation decisions", Applied Soft Computing, Vol.112, No.107770, Elsevier (2021)
+[32]: Babor, M., Paquet-Durand, O., Kohlus, R. et al.: "Modeling and optimization of bakery production scheduling to minimize makespan and oven idle time", Sci Rep Vol.13, No.235 (2023)(https://doi.org/10.1038/s41598-022-26866-9)
+[33]: D. Myttenaere et.al.: "Mean absolute percentage error for regression models", Neurocomputing 2016 (2015) (arXiv:1605.02541)
+[34]: "Author’s Guidelines for the Transactions of the Institute of Electrical Engineers of Japan" (https://www.iee.jp/wp-content/uploads/honbu/32-doc-kenq/guideline.pdf)
+[35]: "Appendix 1: Sample of Paper and Technical Note" (https://www.iee.jp/wp-content/uploads/honbu/data-9014/ap01.pdf)
