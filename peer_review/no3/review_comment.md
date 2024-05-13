@@ -1,6 +1,6 @@
 TEEE No.3 Reviewer A
 
-This paper constructs the optimization algorithm by combining with the PSO and Whale Optimization algorithm for production and transportation collaborative scheduling task in Intelligent Manufacturing Environment. Moreover, the optimization performance of this algorithm is verified comparing to the others through numerical simulation. 
+This paper constructs the optimization algorithm by combining with the PSO and Whale Optimization algorithm for production and transportation collaborative scheduling task in Intelligent Manufacturing Environment. Moreover, the optimization performance of this algorithm is verified by comparing to the others through numerical simulation. 
 
 It provides an interesting data, but I think this paper has very difficult problem to be acceptable for publication in terms of originality, creativity, and readability. 
 
@@ -10,7 +10,7 @@ From this reason, the final judgement is "D" (reject). I think this paper needs 
 ## major reason1 (General)
 The readers cannot understand the creativity and originality although Chapter 1 describes the main innovations of this research work. Simply laying out previous relevant studies cannot explain the difference between them and this paper; especially, all sentences from "Then [5] explored..." in Chapter 1 to the end of Chapter 2. I believe there may be the following contributions: i) how to formulate the collaborative scheduling problem between production and transportation; ii) how to solve the problem using algorithm; and iii) how good the solution is, but cannot find the originality and creativity in anywhere. This is serious and fatal problem for pubilication. Examples are listed below:
 - Most of the previous studies [17]-[26] and additional studies [29] proposes the collaborative scheduling problem between production and transportation. Therefore, I judge the problem formulation has no new idea.
-- I guess the scheduling problem is formulated to a mixed-integer and continuous variable's linear programming problem (MILP). For example, the additional previous study [29] by a MILP solver. But there is no discussion in the manuscript.
+- In general, the scheduling problem is formulated to a mixed-integer and continuous variable's linear programming problem (MILP). For example, the additional previous study [29] applies a MILP solver to it. But there is no discussion and difference between MILP solver and metaheuristic algorithm in the manuscript.
 - The previous studies [20],[22,23] and additional studies [30]-[32] propose metaheuristic algorithm for scheduling problem. Especially, [30] costructs a hybrid of PSO and Whale Optimization and applies it. Moreover, the proposed algorithm has PSO, Whale Optimization, and Local Neighborhood Search steps, but is hybridized simply. Therefore, I judge the scheduling algorithm has also no new idea.
 
 ## major reason2 (General)
