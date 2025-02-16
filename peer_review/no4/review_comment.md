@@ -5,10 +5,11 @@ From this reason, the judgement is "C" (Rereview after major revision). It shoul
 
 # [Major Comments]
 ## major comment 1 (General)
+- 表1に示す通り、問題(メイクスパン、エネルギー消費、AGV稼働時間)と解き方の両方が先行研究と違う。この辺りが新規性だと主張したいと推察するが、本研究の有用性、創造性はどこにあるのか。解き方も、NSGA-IIの他に、可変近傍探索を導入するなど、違いがある
 
 
 ## major comment 2 (Figure 12)
-Even though Figure 12 shows the results of a search with 100 population size, why are only 7 solutions obtained by IA-NSGA-II (Red Marker) and 6 solutions obtained by INSGA-II (Blue Marker) shown?
+- Even though Figure 12 shows the results of a search with 100 population size, why are only 7 solutions obtained by IA-NSGA-II (Red Marker) and 6 solutions obtained by INSGA-II (Blue Marker) shown?
 
 # [Minor Comments]
 Although the author does not have to revise everything, please refer to the following minor comments for improving the current manuscript:
