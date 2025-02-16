@@ -4,7 +4,7 @@ scheduling problem of flexible assembly job shop problem with AGVs
 - AGVのFAJSPにおける多目的包括的計画問題のための改良適応型NSGA-II
 
 # Abstruct
-
+- 本論文では、AGVハンドリングによるフレキシブル組立ジョブショップ(FAJSP-AGV)における包括的なスケジューリング問題を扱う。さらに、機械間のハンドリング時間を考慮し、工程ハンドリングのためにマルチAGVシステムを導入する。最適化目標には、 メークスパン、機械エネルギー消費、AGV作業時間の最小化が含まれる 。これらの目的に基づいて、FAJSP-AGVのための数学的モデルが確立される。この問題を解決するために、改良型適応NSGA-IIアルゴリズム(IA-NSGA-II)が導入され、組立制約を満たすために工程制約行列の符号化が利用される。突然変異操作は、遺伝操作中の染色体の合法性を保証するために、プロセス制約行列に適応される。さらに、可変近傍探索(VNS)を取り入れて探索空間を広げ、高品質な解の生成を強化する。シミュレーション実験により、提案アルゴリズムの有効性を検証する。さらに、動的事象が元のスケジューリング方式に与える影響を考慮し、本論文では動的再スケジューリングに研究を拡張し、安定性を確保しつつ、メークスパンを最小化することを目指す。シミュレーション実験により、動的再スケジューリング戦略の実現可能性を検証する。
 
 # Chapter 1: 導入
 - Flexible Job Shop Scheduling Problem (FJSP), as an extension of the Job Shop Scheduling Problem (JSP), enhances the flexibility of machine selection, thereby improving the flexibility of job processing. This makes the scheduling model more aligned with actual production needs, rendering it a more challenging NP-hard problem compared to JSP [1]. The Flexible Assembly Job Shop Scheduling Problem (FAJSP) extends FJSP by considering the assembly constraints of product components. Optimizing the coordination between production processes and assembly processes is crucial in addressing the Flexible Assembly Shop Scheduling Problem. 
@@ -35,6 +35,10 @@ scheduling problem of flexible assembly job shop problem with AGVs
 - In this study, a model of FAJSP with AGVs (FAJSP-AGVs) was established, and an improved adaptive NSGA-II [18] algorithm was proposed to optimize efficiency and green indicators. The main contributions of this paper include the following aspects: (1) A mathematical model for FAJSP-AGVs was established, with three objectives: minimizing the makespan, total machine energy consumption, and AGV working time. (2) An improved adaptive NSGA-II algorithm was proposed to optimize FAJSP-AGVs. (3) Specialized encoding methods, adaptive crossover, and adaptive mutation operators were designed. (4) A variable neighborhood search strategy was integrated to avoid local optima. (5) Practical scenarios were considered, and a dynamic scheduling strategy for machine failures was proposed and validated.
 - 本研究では、AGVを用いたFAJSP（FAJSP-AGV）のモデルを確立し、改良型適応NSGA-II [18]アルゴリズムを提案した。(1)FAJSP-AGVの数学モデルを確立し、3つの目的(メークスパンの最小化、機械エネルギー消費量の最小化、AGV作業時間の最小化)を設定した。(2) FAJSP-AGVを最適化するための改良型適応NSGA-IIアルゴリズムを提案した。(3) 特殊な符号化法、適応的クロスオーバー、適応的ミューテーション演算子を設計した。(4)局所最適を回避するために可変近傍探索戦略を統合した。(5)実用的なシナリオを考慮し、機械故障に対する動的スケジューリング戦略を提案し、検証した。
 
+- ●表1
+問題(メイクスパン、エネルギー消費、AGV稼働時間)と解き方の両方が先行研究と違う。
+この辺りが新規性だと主張したいと推察するが、本研究の有用性、創造性はどこにあるのか。
+解き方も、NSGA-IIの他に、可変近傍探索を導入するなど、違いがある
 
 # Chapter 2: 問題の説明とモデリング
 ## Section 2-1: 問題の説明
@@ -70,7 +74,8 @@ scheduling problem of flexible assembly job shop problem with AGVs
 
 
 ## Section 4-3: Experiment 2
-
+- ●図12
+100個体なのに、IA-NSGA-IIとINSGA-IIの解は10個以下なのはなぜか。
 
 ## Section 4-4: Experiment 3
 - When a machine fails during production, the machine cannot process any processes until the repair is completed, and scheduling tasks for this machine must wait until the repair is finished. In this experiment, Machine 1 is set to fail during processing, with failure times set to 5 unit times, 10 unit times, 15 unit times, and 20 unit times. Upon failure, complete rescheduling of the remaining processes is performed based on the duration of the failure. Based on the 20 scheduling results obtained from Experiment 2, three sets of results were randomly selected for rescheduling experiments to test the stability of IA-NSGA-II in dynamic scheduling. The objective metric used is the delay degree DE as indicated in Equation (15), where both μ1 and μ2 are set to 0.5.
