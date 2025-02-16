@@ -71,8 +71,6 @@ scheduling problem of flexible assembly job shop problem with AGVs
 
 
 ## Section 4-3: Experiment 2
-- ●図12
-100個体なのに、IA-NSGA-IIとINSGA-IIの解は10個以下なのはなぜか。
 
 ## Section 4-4: Experiment 3
 - When a machine fails during production, the machine cannot process any processes until the repair is completed, and scheduling tasks for this machine must wait until the repair is finished. In this experiment, Machine 1 is set to fail during processing, with failure times set to 5 unit times, 10 unit times, 15 unit times, and 20 unit times. Upon failure, complete rescheduling of the remaining processes is performed based on the duration of the failure. Based on the 20 scheduling results obtained from Experiment 2, three sets of results were randomly selected for rescheduling experiments to test the stability of IA-NSGA-II in dynamic scheduling. The objective metric used is the delay degree DE as indicated in Equation (15), where both μ1 and μ2 are set to 0.5.
