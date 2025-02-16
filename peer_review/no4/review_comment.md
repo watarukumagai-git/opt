@@ -5,7 +5,7 @@ From this reason, the judgement is "C" (Rereview after major revision). It shoul
 
 # [Major Comments]
 ## major comment 1 (General)
-- Table 1 shows both of the optimization problem and algorithm of this paper differs from the existing papers. While this is recognized as originality, I cannot understand the usefulness created by this feature.
+- Table 1 shows both of the optimization problem and algorithm of this paper differs from the existing papers. While this is recognized as originality, I guess the readers cannot understand the usefulness created by this feature.
 解き方も、NSGA-IIの他に、可変近傍探索を導入するなど、違いがある
 
 
