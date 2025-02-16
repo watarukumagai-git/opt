@@ -66,9 +66,6 @@ scheduling problem of flexible assembly job shop problem with AGVs
 - 現在、従来のJSPとFJSPには多くの標準的なベンチマーク・インスタンスが存在する。しかし、FAJSPについては、確立された標準ベンチマーク・インスタンス・ライブラリは作成されておらず、完全に標準化されていない。提案手法の実現可能性を検証するために、参考文献であるWuら[22]の既存のベンチマークインスタンスをテスト用に選択した。本論文で紹介する改良型適応型NSGA-IIスケジューリング手法を「IA-NSGA-II」と呼び、文献で提案されているオリジナルのスケジューリング手法を「INSGA-II」と呼ぶ。アルゴリズムに関するパラメータは、初期集団サイズを100、遺伝的世代数を100とし、プログラミング言語MATLABを用いて実装する。各インスタンスについて、信頼性と一貫性を確保するために、10回の実行によって解を独立に求める。
 - Then, in the context of FAJSP-AGVs, instances cited from Wu et al. [27] are chosen for testing. The scheduling method proposed in the literature is referred to as "IGA." The obtained results will be compared with those obtained using both IGA and NSGA-II. Algorithm-related parameters are set as follows: the initial population size is 100, the number of genetic generations is 100, and the implementation is done using the MATLAB programming language. For each instance, the solution is independently obtained through 20 runs.
 - 次に、FAJSP-AGVの文脈で、Wuら[27]から引用されたインスタンスをテスト用に選択する。この文献で提案されているスケジューリング法を「IGA」と呼ぶ。得られた結果は、IGAとNSGA-IIの両方を用いて得られた結果と比較する。アルゴリズム関連のパラメータは以下のように設定される：初期集団サイズは100、遺伝的世代数は100、実装はMATLABプログラミング言語を用いて行われる。各インスタンスについて、20回の実行により解が独立に得られる。
-- INSGA-IIは文献[23]のものかを明記したほうがよい、IGAは文献[27]のものかを明記したほうがよい。
-- 4.1節の中で、各実験の概要、インスタンス、比較手法、パラメータ設定の対応関係が少し曖昧であり、誤解が生じる。私の意見としては、4章では三つの実験内容を簡潔に述べた後に、実験番号と対応させてそれぞれを書くか、各セクションの冒頭に移したほうが良いだろう。
-- 例えば、下記の文章案を参考にしてほしい。「数値実験を通して、本論文で提案する改良型適応型NSGA-IIスケジューリング手法（IA-NSGA-II）の有用性を検証する。実験1、2では静的スケジューリング問題、実験3では動的スケジューリング問題を扱う。実験1では、テスト用のベンチマークインスタンスとして、参考文献であるWuら[22]の中から選択し、IA-NSGA-IIの結果を、文献[23]で提案されているオリジナルのスケジューリング手法「INSGA-II」と比較する。実験2では、テスト用のベンチマークインスタンスとして、FAJSP-AGVの文脈で、Wuら[27]の中から選択し、IA-NSGA-IIの結果を、文献[27]で提案されているスケジューリング法「IGA」、NSGA-IIの結果と比較する。実験1、2では、信頼性と一貫性を確保するために、各インスタンスについて解を独立に求め、実験1は10回、実験2は20回実行した。実験3では、実験2で得た20個のスケジューリング結果から3つをランダムに選択し、3.4節の再スケジューリング方法を用いる。全実験におけるアルゴリズムに関するパラメータは、初期集団サイズを100、遺伝的世代数を100と設定し、プログラミング言語MATLABを用いて実装する。」
 
 ## Section 4-2: Experiment 1
 
