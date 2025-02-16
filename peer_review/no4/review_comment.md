@@ -1,5 +1,6 @@
-This paper constructs the optimization algorithm by combining with the PSO and Whale Optimization algorithm for production and transportation collaborative scheduling task in Intelligent Manufacturing Environment. Moreover, it is verified that the optimization performance of this algorithm is superior to the others through numerical simulation. 
-It provides an interesting data, but I think it still needs extensive revisions to be acceptable for publication in terms of originality, creativity, and readability. 
+This paper constructs the comprehensive scheduling problem in a flexible assembly job shop with AGV handling and proposes improved adaptive NSGA-II.
+Moreover, it is verified that the optimization performance of this algorithm is superior to the others through numerical simulation. 
+It provides an originality and creativity by careful comparison with previous studies, but I think it still needs extensive revisions to be acceptable for publication in terms of usability. 
 From this reason, the judgement is "C" (Rereview after major revision). It should be revised according to following major comments and improved as necessary.
 
 # [Major Comments]
