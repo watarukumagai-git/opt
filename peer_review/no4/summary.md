@@ -35,10 +35,6 @@ scheduling problem of flexible assembly job shop problem with AGVs
 - In this study, a model of FAJSP with AGVs (FAJSP-AGVs) was established, and an improved adaptive NSGA-II [18] algorithm was proposed to optimize efficiency and green indicators. The main contributions of this paper include the following aspects: (1) A mathematical model for FAJSP-AGVs was established, with three objectives: minimizing the makespan, total machine energy consumption, and AGV working time. (2) An improved adaptive NSGA-II algorithm was proposed to optimize FAJSP-AGVs. (3) Specialized encoding methods, adaptive crossover, and adaptive mutation operators were designed. (4) A variable neighborhood search strategy was integrated to avoid local optima. (5) Practical scenarios were considered, and a dynamic scheduling strategy for machine failures was proposed and validated.
 - 本研究では、AGVを用いたFAJSP（FAJSP-AGV）のモデルを確立し、改良型適応NSGA-II [18]アルゴリズムを提案した。(1)FAJSP-AGVの数学モデルを確立し、3つの目的(メークスパンの最小化、機械エネルギー消費量の最小化、AGV作業時間の最小化)を設定した。(2) FAJSP-AGVを最適化するための改良型適応NSGA-IIアルゴリズムを提案した。(3) 特殊な符号化法、適応的クロスオーバー、適応的ミューテーション演算子を設計した。(4)局所最適を回避するために可変近傍探索戦略を統合した。(5)実用的なシナリオを考慮し、機械故障に対する動的スケジューリング戦略を提案し、検証した。
 
-- ●表1
-問題(メイクスパン、エネルギー消費、AGV稼働時間)と解き方の両方が先行研究と違う。
-この辺りが新規性だと主張したいと推察するが、本研究の有用性、創造性はどこにあるのか。
-解き方も、NSGA-IIの他に、可変近傍探索を導入するなど、違いがある
 
 # Chapter 2: 問題の説明とモデリング
 ## Section 2-1: 問題の説明
