@@ -7,7 +7,8 @@ From this reason, the judgement is "C" (Rereview after major revision). It shoul
 ## major comment 1 (General)
 
 
-## 
+## major comment 2 (Figure 12)
+Even though Figure 12 shows the results of a search with 100 population size, why are only 7 solutions obtained by IA-NSGA-II (Red Marker) and 6 solutions obtained by INSGA-II (Blue Marker) shown?
 
 # [Minor Comments]
 Although the author does not have to revise everything, please refer to the following minor comments for improving the current manuscript:
