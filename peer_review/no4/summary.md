@@ -46,10 +46,14 @@ scheduling problem of flexible assembly job shop problem with AGVs
 
 # Chapter 3: 設計された改良適応型NSGA-II
 - The NSGA-II algorithm is a classic multi-objective optimization algorithm. However, it cannot be directly applied to this problem and has some drawbacks. For instance, in solving FAJSP-AGVs, the algorithm may generate infeasible solutions during the initialization of the population and genetic operations due to assembly constraints. Additionally, it is prone to getting trapped in local optima during the iterative process. Therefore, to effectively address the FAJSP-AGVs, an improved adaptive NSGA-II algorithm (IA-NSGA-II) is proposed. (1) The algorithm's encoding, crossover, and mutation methods are tailored to the problem's characteristics. (2) Using improved adaptive crossover and mutation probabilities to further assist the algorithm in improving convergence. (3) A variable neighborhood search method is incorporated into the algorithm to further expand the solution space, thereby avoiding getting stuck in local optima.
+- NSGA-IIは古典的な多目的最適化アルゴリズムだが、この問題に直接適用されたことはない。例えば、FAJSP-AGVsを解く中で、このアルゴリズムは個体群の初期化や組み立ての制約による遺伝的操作において、実行不可能解を生じ得る。さらに、逐次的なプロセスで局所的最適解に陥る可能性がある。故に、the FAJSP-AGVsを効果的に対処するために、IA-NSGA-IIを提案する。(1) アルゴリズムの符号化、クロスオーバー、突然変異の方法を問題の特性に合わせる。(2) 改善された適応的クロスオーバーと突然変異の確率を使用することで、アルゴリズムの収束性をさらに向上させる。(3) 可変近傍探索法をアルゴリズムに組み込み、解空間をさらに拡大することで、局所最適にはまり込むことを回避する。
 
 ## Section 3-1: Encoding Method
 
 ## Section 3-2: Genetic operations
+### Subsection 3.2.3: Adaptive Crossover and Mutation Probability
+- クロスオーバーと突然変異はNSGA-IIにおける大域探索と局所探索の主要な操作であり、アルゴリズムの性能を大きく左右する。通常、初期集団の質が低い進化の初期段階では、解空間を可能な限り探索し、より有利な解を見つけるために、クロスオーバーと突然変異の確率を高くする必要がある。進化が進み、集団の質がある程度向上すると、有利な個体の親情報の破壊を減らし、収束速度を速めるために、クロスオーバーや突然変異の確率を小さくする必要がある。しかし、上述した一般的に用いられている適応的遺伝操作は、集団の異なる進化段階における遺伝操作確率の必要条件を大まかに説明しているに過ぎない。適応効率をさらに向上させるために、本論文では、アルゴリズムの異なる反復における交叉と突然変異の確率の要件を考慮するだけでなく、異なる進化段階における交叉と突然変異の対象の非優位の状況を統合し、集団個体の進化をより具体的に反映することで、アルゴリズムの探索能力を効果的に向上させることができる。適応遺伝操作確率PacとPamの計算式は以下の通りである：
+- 式中、パラメータαciとαmiはそれぞれ交叉確率制御係数と突然変異確率制御係数を表す。αとδrは正のパラメータであり、iは母集団の現在の反復番号を示す。rakiは現在の反復番号の下での交叉または突然変異対象の非優勢順位を表す。具体的には、交叉の際、rakiは選択された2つの個体のうち、小さい方の非優勢順位を表す。両者が等しい場合、一方がランダムに選ばれる。突然変異の場合、rakiは選択された個体自体の非優勢順位を表す。
 
 ## Section 3-3: Variable Neighborhood Search
 
