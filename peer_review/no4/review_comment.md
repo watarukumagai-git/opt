@@ -5,13 +5,16 @@ From this reason, the judgement is "C" (Rereview after major revision). It shoul
 
 # [Major Comments]
 ## major comment 1 (General)
-- Table 1 shows both of the optimization problem and algorithm of this paper differs from the existing papers. While this is recognized as originality, I guess the readers cannot understand the usability created by this feature.
+- Table 1 shows both of the optimization problem and algorithm of this paper differs from the existing papers. While this is recognized as originality, I guess the reader cannot understand the usability created by this feature.
 解き方も、NSGA-IIの他に、可変近傍探索を導入するなど、違いがある
 
 ## major comment 2 (Page3, Equations (1), (2), and (5))
-- This paper proposes the three-objective optimization problem but Equations (1), (2), and (5) show minimization problems independent of each other. Please rewrite these as follows: "minimize (Cmax, Et, Tv)...(1)", "a. Makespan: Cmax = max(...)...(2)", "b. Total machine energy consumption: Et = Epro + Est...(3)", "c. Total AGV working time: Tv= ...(6)".
+- This paper proposes the three-objective optimization problem as the FAJSP-AGVs but Equations (1), (2), and (5) show minimization problems independent of each other. Please rewrite these as follows: "minimize (Cmax, Et, Tv)...(1)", "a. Makespan: Cmax = max(...)...(2)", "b. Total machine energy consumption: Et = Epro + Est...(3)", and "c. Total AGV working time: Tv= ...(6)".
 
-## major comment 3 (Figure 12)
+## major comment 3 (Table 2)
+- Table 2 shows the symbolic description of model parameters and the FAJSP-AGVs should be formulated to the mixed-integer linear programming problem (MILP). But I guess the reader cannot distinguish between the decision variables and fixed parameters in the FAJSP-AGVs. Therefore, please add a description of decision variables under Eqution (12) as follows: "The FAJSP-AGVs is formulated to the mixed-integer linear programming problem (MILP). The integer variables $X_{i,j,k}, Y^k_{i,j,p,q}, V_{i,j,v}, and Z_{i,j,p,q,v} \in {0, 1}$; and the continuous variables $S_{i,j}, S_{p,q,k}, S_{i,j,k} \in \mathbb{R}$ are mixed. Number of the integer variables is ~ and number of the continuous variables is ~."
+
+## major comment 4 (Figure 12)
 - Even though Figure 12 shows the results of a search with 100 population size, why are only 7 solutions obtained by IA-NSGA-II (Red Marker) and 6 solutions obtained by INSGA-II (Blue Marker) shown? Please add a description of Figure 12.
 
 
