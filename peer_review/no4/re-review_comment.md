@@ -1,4 +1,4 @@
-I read the answer and revised manuscript, but I think it still needs some revisions to be acceptable for publication in terms of usability. From this reason, the judgement is "B" (review after major revision). It should be revised according to following major comments and improved as necessary.
+I checked the revised manuscript and author's response to reviewer's comments. Although some points have improved, this paper has still some problems to be acceptable for publication. From this reason, the judgement is "B" (acceptance after minor revision). It should be revised according to following major comments and improved as necessary.
 
 # major comment1 (Section 4.1)
 - Section 4.1 says "Experiments 1 and 2 deal with static scheduling problem, while Experiment 3 deals with dynamic scheduling problem.", but the authors added the new Experiment 3 (Fig.19) to the manuscript. Therefore, Section 4.1 should explain the four experiments.
