@@ -1,7 +1,10 @@
-著者らの修正済原稿と回答書を拝読した結果、各査読者の照会事項での問題点が適切に修正され、本論文の新規性が読者により伝わるように改善されたと思います。
-以上を踏まえ、本論文は採録に値すると改めて判断し、「掲載決定（判定A）」といたします。
+Having read the authors' revised manuscript and written responses, I find that the issues raised in each reviewer's queries have been appropriately corrected and improved to better convey the novelty of this paper to the readers.
+Based on the above, I consider the paper to be worthy of acceptance, and give it a Decision to Publish (Decision A).
 
+# Minor comments for future research.
+In reading the authors' written responses, I would like to comment on future research. Please note that these comments do not affect the current acceptance of the paper, but are intended to be used in future research. I would like to emphasise that it is up to the authors to decide whether the manuscript of this paper should be revised based on the comments below.
 
-# 今後の研究に向けた軽微なコメント
-著者らの回答書を拝読する中で、一部の照会事項あるいはコメントに対して、「十分に理解できなかった」等の記述がありました。
-これを踏まえ、下記のコメントにて、可能な限り補足しておきます。なお、このコメントは今回の採録に影響するものではなく、今後の研究での活用を目的としたものです。下記コメントに基づく、本論文の原稿修正は不要であることを強調しておきます。
+## Comment 1
+Although this paper is an applied study, the modifications made to the algorithm are also an achievement. On the other hand, when proposing improvements to the algorithm, it is necessary to impose experimental conditions and compare them, taking into good account the characteristics of other algorithms that are being compared. An impartial experimental setting is very important for the future development of this paper.
+For example, in response to a question on Fig. 19, the authors answered: "Therefore, to ensure a fair and consistent comparison, we regenerated the experimental results using the same initial population without applying VNS at generation 0 for all three variants." This means that, for the sake of a fair comparison, some of the algorithms were modified to be limited to this experiment, based on the characteristics of the algorithm. I can understand this explanation, but readers may have doubts because this has not been added to the latest manuscript.
+As the reviewers have pointed out, additional evidence has been added to this paper to make it acceptable for publishing, and I judge Decision A. But in future studies, the conditions for fair comparisons should be accurately described in the paper.
