@@ -1,0 +1,6 @@
+# 移動
+$ cd C:\Users\12970U04\Desktop\python_src\yamanashi\pdf_rename\add_cover
+# 環境構築
+$ pipenv install --python 3.9.13 -r ./requirements.txt
+# 立ち上げ
+$ pipenv shell
